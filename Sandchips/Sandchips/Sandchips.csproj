@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
-    <Compile Include="DAL\DALServicios.cs" />
+    <Compile Include="DAL\DALEmpresa.cs" />
     <Compile Include="DAL\DALTipo_Servicios.cs" />
     <Compile Include="DAL\DALTipo_Habitaciones.cs" />
     <Compile Include="DAL\DALHabitaciones.cs" />
@@ -126,11 +126,11 @@
     <Compile Include="Formularios\Login_Restaurante.designer.cs">
       <DependentUpon>Login_Restaurante.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Servicios.cs">
+    <Compile Include="Formularios\Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Servicios.designer.cs">
-      <DependentUpon>Servicios.cs</DependentUpon>
+    <Compile Include="Formularios\Empresa.designer.cs">
+      <DependentUpon>Empresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Tiempo de estadia.cs">
       <SubType>Form</SubType>
@@ -139,7 +139,7 @@
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelUsuario.cs" />
-    <Compile Include="Models\ModelServicios.cs" />
+    <Compile Include="Models\ModelEmpresa.cs" />
     <Compile Include="Models\ModelTipoServicio.cs" />
     <Compile Include="Models\ModelTipoHabitacion.cs" />
     <Compile Include="Models\ModelHabitaciones.cs" />
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="Formularios\Login_Restaurante.resx">
       <DependentUpon>Login_Restaurante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Servicios.resx">
-      <DependentUpon>Servicios.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Empresa.resx">
+      <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tiempo de estadia.resx">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
@@ -196,6 +196,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

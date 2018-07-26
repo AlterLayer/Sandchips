@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Sandchips.Formularios
 {
-    public partial class Servicios : Form
+    public partial class Empresa : Form
     {
-        public Servicios()
+        public Empresa()
         {
             InitializeComponent();
         }
@@ -33,10 +33,10 @@ namespace Sandchips.Formularios
 
         private void Servicios_Load(object sender, EventArgs e)
         {
-            dgvServicios.DataSource = DALServicios.mostrartabla();
+            dgvServicios.DataSource = DALEmpresa.mostrartabla();
             dgvTipo_Servicio.DataSource = DALTipo_Servicios.mostrartabla();
             Conexion.obtenerconexion();
-            cmbTipo_Servicio.DataSource = DALServicios.ObtenerTipo_Ser();
+            cmbTipo_Servicio.DataSource = DALEmpresa.ObtenerTipo_Ser();
             cmbTipo_Servicio.DisplayMember = "Tipo_Servicio";
             cmbTipo_Servicio.ValueMember = "Id_Tipo_Servicio";
             cmbTipo_Servicio.SelectedIndex = 0;
@@ -79,14 +79,14 @@ namespace Sandchips.Formularios
             //Validar contraseñas que sean iguales
             if (ValidarSer())
             {
-                ModelServicios model = new ModelServicios();
-                model.Nombre_Servicio = txtServicio.Text;
+                ModelEmpresa model = new ModelEmpresa();
+                model.Empresa = txtServicio.Text;
                 model.Id_Tipo_Servicios = Convert.ToInt32(cmbTipo_Servicio.SelectedValue.ToString()); 
-                int datos = DALServicios.agregar(model);
+                int datos = DALEmpresa.agregar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvServicios.DataSource = DALServicios.mostrartabla();
+                    dgvServicios.DataSource = DALEmpresa.mostrartabla();
                     txtServicio.Clear();
                     cmbTipo_Servicio.SelectedIndex = 0; 
                 }
@@ -106,15 +106,15 @@ namespace Sandchips.Formularios
             //Validar contraseñas que sean iguales
             if (ValidarSer())
             {
-                ModelServicios model = new ModelServicios();
+                ModelEmpresa model = new ModelEmpresa();
                 model.Id_Sercicios = Convert.ToInt32(txtId_Servicio.Text);
                 model.Nombre_Servicio = txtServicio.Text;
                 model.Id_Tipo_Servicios = Convert.ToInt32(cmbTipo_Servicio.SelectedValue.ToString());
-                int datos = DALServicios.modificar(model);
+                int datos = DALEmpresa.modificar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvServicios.DataSource = DALServicios.mostrartabla();
+                    dgvServicios.DataSource = DALEmpresa.mostrartabla();
                     txtServicio.Clear();
                     cmbTipo_Servicio.SelectedIndex = 0;
                 }
@@ -131,19 +131,19 @@ namespace Sandchips.Formularios
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
-            DALServicios.eliminar(Convert.ToInt32(txtId_Servicio.Text));
+            DALEmpresa.eliminar(Convert.ToInt32(txtId_Servicio.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvServicios.DataSource = DALServicios.mostrartabla();
+            dgvServicios.DataSource = DALEmpresa.mostrartabla();
         }
 
         private void btnBuscarT_Click(object sender, EventArgs e)
         {
-            dgvServicios.DataSource = DALServicios.buscar(Convert.ToInt32(txtId_Servicio.Text));
+            dgvServicios.DataSource = DALEmpresa.buscar(Convert.ToInt32(txtId_Servicio.Text));
         }
 
         private void btnConsultarT_Click(object sender, EventArgs e)
         {
-            dgvServicios.DataSource = DALServicios.mostrartabla();
+            dgvServicios.DataSource = DALEmpresa.mostrartabla();
         }
 
         private void dgvServicios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -248,6 +248,25 @@ namespace Sandchips.Formularios
             pocision = dgvTipo_Servicio.CurrentRow.Index;
             txtIdTipo_Servicio.Text = dgvTipo_Servicio[0, pocision].Value.ToString();
             txtTipo_Servicio.Text = dgvTipo_Servicio[1, pocision].Value.ToString(); 
+        }
+         
+
+        private void pEmpresas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form tipos_de_habitaciones = new Menu_Hotel();
+            tipos_de_habitaciones.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
         }
     }
 }

@@ -10,9 +10,9 @@ using Sandchips;
 
 namespace Sandchips.DAL
 {
-    public class DALServicios
+    public class DALEmpresa
     {
-        public static int agregar(ModelServicios Modelo)
+        public static int agregar(ModelEmpresa Modelo)
         {
             int retorno = 0;
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeservicios(Nombre_Servicio,Id_Tipo_Servicios)VALUES('{0}','{1}')", Modelo.Nombre_Servicio, Modelo.Id_Tipo_Servicios), Conexion.obtenerconexion());
@@ -20,7 +20,7 @@ namespace Sandchips.DAL
             return retorno;
         }
 
-        public static int modificar(ModelServicios Modelo)
+        public static int modificar(ModelEmpresa Modelo)
         {
             int retorno = 0;
             MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeservicios SET Nombre_Servicio='{1}', Id_Tipo_Servicios='{2}' WHERE 	Id_Sercicios='{0}'", Modelo.Id_Sercicios, Modelo.Nombre_Servicio, Modelo.Id_Tipo_Servicios), Conexion.obtenerconexion());
@@ -69,9 +69,9 @@ namespace Sandchips.DAL
             return retorno;
 
         }
-        public static List<ModelServicios> buscar(int user)
+        public static List<ModelEmpresa> buscar(int user)
         {
-            List<ModelServicios> listabuscar = new List<ModelServicios>();
+            List<ModelEmpresa> listabuscar = new List<ModelEmpresa>();
             try
             {
                 MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM tbmaeservicios WHERE Numero_Habitacion LIKE '%" + user + "%'"), Conexion.obtenerconexion());
@@ -79,7 +79,7 @@ namespace Sandchips.DAL
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    listabuscar.Add(new ModelServicios()
+                    listabuscar.Add(new ModelEmpresa()
                     {
                         Id_Sercicios = reader.GetInt32(0),
                         Nombre_Servicio = reader.GetString(1),

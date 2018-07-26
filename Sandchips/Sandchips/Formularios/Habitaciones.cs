@@ -42,7 +42,7 @@ namespace Sandchips.Formularios
         #region Habitacion
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form tipos_de_habitaciones = new Chequeo_habitaciones();
+            Form tipos_de_habitaciones = new Menu_Hotel();
             tipos_de_habitaciones.Show();
             this.Hide();
         }
@@ -291,5 +291,9 @@ namespace Sandchips.Formularios
         }
         #endregion
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
