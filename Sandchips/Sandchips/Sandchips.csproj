@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{997ED052-3430-405D-99EF-83834B4224CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sandchips</RootNamespace>
+    <AssemblyName>Sandchips</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Sandchips.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="DAL\DALServicios.cs" />
+    <Compile Include="DAL\DALTipo_Servicios.cs" />
+    <Compile Include="DAL\DALTipo_Habitaciones.cs" />
+    <Compile Include="DAL\DALHabitaciones.cs" />
+    <Compile Include="DAL\DALClientes.cs" />
+    <Compile Include="DAL\DALUsuarios.cs" />
+    <Compile Include="Formularios\Menu_Restaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Menu_Restaurante.designer.cs">
+      <DependentUpon>Menu_Restaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Menu_Hotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Menu_Hotel.designer.cs">
+      <DependentUpon>Menu_Hotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Chequeo habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Chequeo habitaciones.designer.cs">
+      <DependentUpon>Chequeo habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios.designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Habitaciones.designer.cs">
+      <DependentUpon>Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login_Hotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login_Hotel.designer.cs">
+      <DependentUpon>Login_Hotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Introduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Introduccion.designer.cs">
+      <DependentUpon>Introduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pagina Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pagina Principal.designer.cs">
+      <DependentUpon>Pagina Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Personas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Personas.designer.cs">
+      <DependentUpon>Personas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\reserva de pabellon y salon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\reserva de pabellon y salon.designer.cs">
+      <DependentUpon>reserva de pabellon y salon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login_Restaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login_Restaurante.designer.cs">
+      <DependentUpon>Login_Restaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Servicios.designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tiempo de estadia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tiempo de estadia.designer.cs">
+      <DependentUpon>Tiempo de estadia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelUsuario.cs" />
+    <Compile Include="Models\ModelServicios.cs" />
+    <Compile Include="Models\ModelTipoServicio.cs" />
+    <Compile Include="Models\ModelTipoHabitacion.cs" />
+    <Compile Include="Models\ModelHabitaciones.cs" />
+    <Compile Include="Models\ModelClientes.cs" />
+    <Compile Include="Models\ModelEstado.cs" />
+    <Compile Include="Models\ModelMunicipio.cs" />
+    <Compile Include="Models\ModelTipoUsuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Menu_Restaurante.resx">
+      <DependentUpon>Menu_Restaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Menu_Hotel.resx">
+      <DependentUpon>Menu_Hotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Chequeo habitaciones.resx">
+      <DependentUpon>Chequeo habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Habitaciones.resx">
+      <DependentUpon>Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login_Hotel.resx">
+      <DependentUpon>Login_Hotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Introduccion.resx">
+      <DependentUpon>Introduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pagina Principal.resx">
+      <DependentUpon>Pagina Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Personas.resx">
+      <DependentUpon>Personas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\reserva de pabellon y salon.resx">
+      <DependentUpon>reserva de pabellon y salon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login_Restaurante.resx">
+      <DependentUpon>Login_Restaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tiempo de estadia.resx">
+      <DependentUpon>Tiempo de estadia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
