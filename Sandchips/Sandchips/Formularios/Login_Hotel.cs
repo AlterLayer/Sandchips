@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using Sandchips;
 using Sandchips.DAL;
 using Sandchips.Formularios;
@@ -19,10 +18,7 @@ namespace Sandchips.Formularios
     public partial class Login_Hotel : Form
     {
         public Login_Hotel()
-        {
-            //
-            // Required for Windows Form Designer support
-            //
+        {            
             InitializeComponent();
         }
 
@@ -62,6 +58,7 @@ namespace Sandchips.Formularios
 
         private string HassPassword(string cadena)
         {
+            //Encriptar
             UTF8Encoding enc = new UTF8Encoding();
             byte[] data = enc.GetBytes(cadena);
             byte[] result;
