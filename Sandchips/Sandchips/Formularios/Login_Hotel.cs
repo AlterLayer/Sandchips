@@ -36,8 +36,7 @@ namespace Sandchips.Formularios
                 model.password = HassPassword(mtbcontraseña.Text);
                 bool datos = DALUsuarios.IniciarSession(model);
                 if (datos)
-                {
-                    MessageBox.Show("");
+                { 
                     MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Menu_Hotel hab = new Menu_Hotel();
                     hab.Show();

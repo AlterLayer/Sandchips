@@ -150,6 +150,7 @@ namespace Sandchips.Formularios
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 3;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click_1);
             // 
             // panel6
             // 
@@ -284,9 +285,9 @@ namespace Sandchips.Formularios
             this.label24.Location = new System.Drawing.Point(147, 330);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(129, 40);
+            this.label24.Size = new System.Drawing.Size(126, 40);
             this.label24.TabIndex = 5;
-            this.label24.Text = "Servicios";
+            this.label24.Text = "Empresa";
             // 
             // label3
             // 

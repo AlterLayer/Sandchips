@@ -44,6 +44,11 @@ namespace Sandchips.DAL
                 MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoHabitacion, Tipo_Habitacion FROM tbdettipo_habitacion"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
+                listabuscar.Add(new ModelTipoHabitacion()
+                {
+                    IdTipoHabitacion = 0,
+                    TipoHabitacion = "Seleccione una opción"
+                });
                 while (reader.Read())
                 {
                     listabuscar.Add(new ModelTipoHabitacion()
@@ -68,6 +73,11 @@ namespace Sandchips.DAL
                 MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdEstado, Estado FROM tbdetestado"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
+                listabuscar.Add(new ModelEstado()
+                {
+                    IdEstado = 0,
+                    Estado = "Seleccione una opción"
+                });
                 while (reader.Read())
                 {
                     listabuscar.Add(new ModelEstado()

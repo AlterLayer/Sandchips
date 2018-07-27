@@ -86,5 +86,13 @@ namespace Sandchips.Formularios
         {
 
         }
+
+        private void pictureBox14_Click_1(object sender, EventArgs e)
+        {
+
+            Form Form1 = new Empresa();
+            Form1.Show();
+            this.Hide();
+        }
     }
 }

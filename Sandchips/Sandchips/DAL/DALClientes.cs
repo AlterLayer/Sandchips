@@ -35,30 +35,7 @@ namespace Sandchips.DAL
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
             return Consulta;
-        }
-        //public static List<ModelMunicipio> ObtenerMunicipio()
-        //{
-        //    List<ModelMunicipio> listabuscar = new List<ModelMunicipio>();
-        //    try
-        //    {
-        //        MySqlCommand comando = new MySqlCommand(string.Format("SELECT Id_Municipio, Municipio FROM tbdetmunicipio"), Conexion.obtenerconexion());
-        //        //* seleccione todo de la tabla..
-        //        MySqlDataReader reader = comando.ExecuteReader();
-        //        while (reader.Read())
-        //        {
-        //            listabuscar.Add(new ModelMunicipio()
-        //            {
-        //                Id_Municipio = reader.GetInt32(0),
-        //                Municipio = reader.GetString(1)
-        //            });
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    return listabuscar;
-        //}
+        } 
         public static int eliminar(ModelClientes model)
         {
             int retorno = 0;

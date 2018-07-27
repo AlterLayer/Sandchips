@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sandchips.Models
 {
-    public class ModelTipoServicio
+    public class ModelTipoEmpresa
     {
-        public int Id_Tipo_Servicio { get; set; }
-        public string Tipo_Servicio { get; set; }  
+        public int IdTipoEmpresa { get; set; }
+        public string TipoEmpresa { get; set; }  
     }
 }
