@@ -29,8 +29,10 @@ namespace Sandchips.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pEmpresas = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -63,12 +65,26 @@ namespace Sandchips.Formularios
             this.txtIdEmpresa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscarT = new System.Windows.Forms.TextBox();
+            this.txtTipoEmpresa = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnBuscarT = new System.Windows.Forms.Button();
+            this.btnConsultatT = new System.Windows.Forms.Button();
+            this.btnEliminarT = new System.Windows.Forms.Button();
+            this.btnModificarT = new System.Windows.Forms.Button();
+            this.dgvTipoEmpresa = new System.Windows.Forms.DataGridView();
+            this.btnAgregarT = new System.Windows.Forms.Button();
+            this.txtIdTipoEmpresaT = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.pEmpresas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // pEmpresas
@@ -79,7 +95,7 @@ namespace Sandchips.Formularios
             this.pEmpresas.Controls.Add(this.tabControl2);
             this.pEmpresas.Location = new System.Drawing.Point(2, 2);
             this.pEmpresas.Name = "pEmpresas";
-            this.pEmpresas.Size = new System.Drawing.Size(1376, 766);
+            this.pEmpresas.Size = new System.Drawing.Size(1378, 761);
             this.pEmpresas.TabIndex = 0;
             this.pEmpresas.Paint += new System.Windows.Forms.PaintEventHandler(this.pEmpresas_Paint);
             // 
@@ -297,6 +313,7 @@ namespace Sandchips.Formularios
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnConsultar
             // 
@@ -316,6 +333,7 @@ namespace Sandchips.Formularios
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -333,26 +351,27 @@ namespace Sandchips.Formularios
             this.dgvEmpresas.AllowUserToDeleteRows = false;
             this.dgvEmpresas.AllowUserToResizeColumns = false;
             this.dgvEmpresas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpresas.Location = new System.Drawing.Point(49, 349);
             this.dgvEmpresas.MultiSelect = false;
             this.dgvEmpresas.Name = "dgvEmpresas";
             this.dgvEmpresas.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpresas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresas.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvEmpresas.RowHeadersVisible = false;
             this.dgvEmpresas.RowTemplate.Height = 24;
             this.dgvEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpresas.Size = new System.Drawing.Size(1220, 298);
             this.dgvEmpresas.TabIndex = 4;
+            this.dgvEmpresas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresas_CellClick);
             // 
             // btnAgregar
             // 
@@ -392,6 +411,18 @@ namespace Sandchips.Formularios
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Controls.Add(this.txtBuscarT);
+            this.tabPage4.Controls.Add(this.txtTipoEmpresa);
+            this.tabPage4.Controls.Add(this.label19);
+            this.tabPage4.Controls.Add(this.btnBuscarT);
+            this.tabPage4.Controls.Add(this.btnConsultatT);
+            this.tabPage4.Controls.Add(this.btnEliminarT);
+            this.tabPage4.Controls.Add(this.btnModificarT);
+            this.tabPage4.Controls.Add(this.dgvTipoEmpresa);
+            this.tabPage4.Controls.Add(this.btnAgregarT);
+            this.tabPage4.Controls.Add(this.txtIdTipoEmpresaT);
+            this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -399,6 +430,134 @@ namespace Sandchips.Formularios
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Tipos Empresa";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(672, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 17);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Buscar por Tipo Empresa";
+            // 
+            // txtBuscarT
+            // 
+            this.txtBuscarT.Location = new System.Drawing.Point(860, 99);
+            this.txtBuscarT.Name = "txtBuscarT";
+            this.txtBuscarT.Size = new System.Drawing.Size(293, 22);
+            this.txtBuscarT.TabIndex = 50;
+            // 
+            // txtTipoEmpresa
+            // 
+            this.txtTipoEmpresa.Location = new System.Drawing.Point(501, 32);
+            this.txtTipoEmpresa.Name = "txtTipoEmpresa";
+            this.txtTipoEmpresa.Size = new System.Drawing.Size(242, 22);
+            this.txtTipoEmpresa.TabIndex = 36;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(346, 37);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(105, 17);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Tipo Empresa *";
+            // 
+            // btnBuscarT
+            // 
+            this.btnBuscarT.Location = new System.Drawing.Point(1210, 98);
+            this.btnBuscarT.Name = "btnBuscarT";
+            this.btnBuscarT.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarT.TabIndex = 34;
+            this.btnBuscarT.Text = "Buscar";
+            this.btnBuscarT.UseVisualStyleBackColor = true;
+            this.btnBuscarT.Click += new System.EventHandler(this.btnBuscarT_Click);
+            // 
+            // btnConsultatT
+            // 
+            this.btnConsultatT.Location = new System.Drawing.Point(489, 99);
+            this.btnConsultatT.Name = "btnConsultatT";
+            this.btnConsultatT.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultatT.TabIndex = 33;
+            this.btnConsultatT.Text = "Consultar";
+            this.btnConsultatT.UseVisualStyleBackColor = true;
+            this.btnConsultatT.Click += new System.EventHandler(this.btnConsultatT_Click);
+            // 
+            // btnEliminarT
+            // 
+            this.btnEliminarT.Location = new System.Drawing.Point(350, 99);
+            this.btnEliminarT.Name = "btnEliminarT";
+            this.btnEliminarT.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarT.TabIndex = 32;
+            this.btnEliminarT.Text = "Eliminar";
+            this.btnEliminarT.UseVisualStyleBackColor = true;
+            this.btnEliminarT.Click += new System.EventHandler(this.btnEliminarT_Click);
+            // 
+            // btnModificarT
+            // 
+            this.btnModificarT.Location = new System.Drawing.Point(212, 99);
+            this.btnModificarT.Name = "btnModificarT";
+            this.btnModificarT.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarT.TabIndex = 31;
+            this.btnModificarT.Text = "Modifcar";
+            this.btnModificarT.UseVisualStyleBackColor = true;
+            this.btnModificarT.Click += new System.EventHandler(this.btnModificarT_Click);
+            // 
+            // dgvTipoEmpresa
+            // 
+            this.dgvTipoEmpresa.AllowUserToAddRows = false;
+            this.dgvTipoEmpresa.AllowUserToDeleteRows = false;
+            this.dgvTipoEmpresa.AllowUserToResizeColumns = false;
+            this.dgvTipoEmpresa.AllowUserToResizeRows = false;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoEmpresa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvTipoEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoEmpresa.Location = new System.Drawing.Point(65, 139);
+            this.dgvTipoEmpresa.MultiSelect = false;
+            this.dgvTipoEmpresa.Name = "dgvTipoEmpresa";
+            this.dgvTipoEmpresa.ReadOnly = true;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTipoEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvTipoEmpresa.RowHeadersVisible = false;
+            this.dgvTipoEmpresa.RowTemplate.Height = 24;
+            this.dgvTipoEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTipoEmpresa.Size = new System.Drawing.Size(1220, 298);
+            this.dgvTipoEmpresa.TabIndex = 30;
+            this.dgvTipoEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoEmpresa_CellClick);
+            // 
+            // btnAgregarT
+            // 
+            this.btnAgregarT.Location = new System.Drawing.Point(65, 99);
+            this.btnAgregarT.Name = "btnAgregarT";
+            this.btnAgregarT.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarT.TabIndex = 29;
+            this.btnAgregarT.Text = "Agregar";
+            this.btnAgregarT.UseVisualStyleBackColor = true;
+            this.btnAgregarT.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // txtIdTipoEmpresaT
+            // 
+            this.txtIdTipoEmpresaT.Location = new System.Drawing.Point(217, 32);
+            this.txtIdTipoEmpresaT.Multiline = true;
+            this.txtIdTipoEmpresaT.Name = "txtIdTipoEmpresaT";
+            this.txtIdTipoEmpresaT.ReadOnly = true;
+            this.txtIdTipoEmpresaT.Size = new System.Drawing.Size(100, 22);
+            this.txtIdTipoEmpresaT.TabIndex = 27;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(62, 37);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(111, 17);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "Id Tipo Empresa";
             // 
             // Empresa
             // 
@@ -408,6 +567,7 @@ namespace Sandchips.Formularios
             this.Controls.Add(this.pEmpresas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Empresa_Load);
             this.pEmpresas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -416,6 +576,9 @@ namespace Sandchips.Formularios
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoEmpresa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +617,17 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtBuscarE;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBuscarT;
+        private System.Windows.Forms.TextBox txtTipoEmpresa;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnBuscarT;
+        private System.Windows.Forms.Button btnConsultatT;
+        private System.Windows.Forms.Button btnEliminarT;
+        private System.Windows.Forms.Button btnModificarT;
+        private System.Windows.Forms.DataGridView dgvTipoEmpresa;
+        private System.Windows.Forms.Button btnAgregarT;
+        private System.Windows.Forms.TextBox txtIdTipoEmpresaT;
+        private System.Windows.Forms.Label label20;
     }
 }

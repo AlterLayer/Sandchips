@@ -21,6 +21,7 @@ namespace Sandchips.Formularios
         private void Empresa_Load(object sender, EventArgs e)
         {
             dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
+            dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
             Conexion.obtenerconexion();
             cmbTipoEmpresa.DataSource = DALEmpresa.ObtenerTipoEmpresa();
             cmbTipoEmpresa.DisplayMember = "TipoEmpresa";
@@ -80,52 +81,32 @@ namespace Sandchips.Formularios
             } 
             return validar;
 
-        }  
-
-        /// Métodos tipos de servicios
-        /// 
-        public bool ValidarSerT()
+        }   
+        public bool ValidarTipoEmpresa()
         {
             bool validar = false;
-            if (txtEmpresa.Text != "")
+            if (txtTipoEmpresa.Text != "")
             {
                 validar = true;
             }
             else
             {
                 validar = false;
-                MessageBox.Show("El campo nombre de servicio es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo tipo empresa es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return validar;
             }
             return validar;
 
         }
         
-
-        private void btnEliminarTS_Click(object sender, EventArgs e)
-        {
-            DALTipo_Servicios.eliminar(Convert.ToInt32(txtBuscarE.Text));
-            MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvEmpresas.DataSource = DALTipo_Servicios.mostrartabla();
-        }
-
-        private void btnConsultarTS_Click(object sender, EventArgs e)
-        {
-            dgvEmpresas.DataSource = DALTipo_Servicios.mostrartabla();
-        }
+         
+ 
 
         private void btnBuscar_TS_Click(object sender, EventArgs e)
         {
-            dgvEmpresas.DataSource = DALTipo_Servicios.buscar(txtBuscarE.Text);
+            dgvEmpresas.DataSource = DALTipoEmpresa.buscar(txtBuscarE.Text);
         }
-
-        private void dgvTipo_Servicio_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int pocision;
-            pocision = dgvEmpresas.CurrentRow.Index;
-            ////txtIdTipo_Servicio.Text = dgvTipo_Servicio[0, pocision].Value.ToString();
-            ////txtTipo_Servicio.Text = dgvTipo_Servicio[1, pocision].Value.ToString(); 
-        }
+         
          
 
         private void pEmpresas_Paint(object sender, PaintEventArgs e)
@@ -146,6 +127,7 @@ namespace Sandchips.Formularios
             Application.Exit();
         }
 
+        //AGREGAR EMPRESA
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //Validar contraseñas que sean iguales
@@ -179,11 +161,7 @@ namespace Sandchips.Formularios
             }
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
-        }
-
+        //MODIFICAR EMPRESA
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
@@ -191,7 +169,7 @@ namespace Sandchips.Formularios
             if (ValidarEmpresa())
             {
                 ModelEmpresa model = new ModelEmpresa();
-                model.IdEmpresa = Convert.ToInt32(txtEmpresa.Text);
+                model.IdEmpresa = Convert.ToInt32(txtIdEmpresa.Text);
                 model.Empresa = txtEmpresa.Text;
                 model.NRC = txtNRC.Text;
                 model.NIT = txtNIT.Text;
@@ -217,6 +195,128 @@ namespace Sandchips.Formularios
             {
                 //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
             }
+        }
+
+        //ELIMINAR EMPRESA
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ModelEmpresa model = new ModelEmpresa();
+            model.IdEmpresa = Convert.ToInt32(txtIdEmpresa.Text);
+            DALEmpresa.eliminar(model);
+            MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
+        }
+
+        //MOSTRAR DATOS EMPRESA
+        private void dgvEmpresas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int pocision;
+            pocision = dgvEmpresas.CurrentRow.Index;
+            txtIdEmpresa.Text = dgvEmpresas[0, pocision].Value.ToString();
+            txtEmpresa.Text = dgvEmpresas[1, pocision].Value.ToString();
+            txtNRC.Text = dgvEmpresas[2, pocision].Value.ToString();
+            txtNIT.Text = dgvEmpresas[3, pocision].Value.ToString();
+            txtDescripcion.Text = dgvEmpresas[4, pocision].Value.ToString();
+            txtCorreo.Text = dgvEmpresas[5, pocision].Value.ToString();
+            cmbTipoEmpresa.Text = dgvEmpresas[6, pocision].Value.ToString();
+            txtRegistroIVA.Text = dgvEmpresas[7, pocision].Value.ToString();
+            txtRegistroAuditor.Text = dgvEmpresas[8, pocision].Value.ToString();
+        }
+
+        //CONSUTLAR EMPRESAS
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
+        }
+
+        //BUSCAR EMPRESA
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvEmpresas.DataSource = DALEmpresa.buscar(txtBuscarE.Text);
+        }
+
+
+        //METODOS TIPO EMPRESA--------------------------------
+        //AGREGAR TIPO EMPRESA
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Validar contraseñas que sean iguales
+            if (ValidarTipoEmpresa())
+            {
+                ModelTipoEmpresa model = new ModelTipoEmpresa();
+                model.TipoEmpresa = txtTipoEmpresa.Text;
+                int datos = DALTipoEmpresa.agregar(model);
+                if (datos > 0)
+                {
+                    MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
+                    txtTipoEmpresa.Clear(); 
+                }
+                else
+                {
+                    MessageBox.Show("Registro no ingresado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+            }
+        }
+
+        //MODIFICAR TIPO EMPRESA
+        private void btnModificarT_Click(object sender, EventArgs e)
+        {  //Validar contraseñas que sean iguales
+            if (ValidarTipoEmpresa())
+            {
+                ModelTipoEmpresa model = new ModelTipoEmpresa();
+                model.IdTipoEmpresa = Convert.ToInt32(txtIdTipoEmpresaT.Text);
+                model.TipoEmpresa = txtTipoEmpresa.Text;
+                int datos = DALTipoEmpresa.agregar(model);
+                if (datos > 0)
+                {
+                    MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
+                    txtTipoEmpresa.Clear();
+                    txtIdTipoEmpresaT.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Registro no modificado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+            }
+        }
+
+        //ELMINAR TIPO EMPRESA
+        private void btnEliminarT_Click(object sender, EventArgs e)
+        { 
+            int id = Convert.ToInt32(txtIdEmpresa.Text);
+            int respuesta = DALTipoEmpresa.eliminar(id);
+            MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
+            txtTipoEmpresa.Clear();
+            txtIdTipoEmpresaT.Clear(); 
+        }
+
+        private void btnConsultatT_Click(object sender, EventArgs e)
+        {
+            dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
+        }
+
+        private void dgvTipoEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int pocision;
+            pocision = dgvTipoEmpresa.CurrentRow.Index;
+            txtIdTipoEmpresaT.Text = dgvTipoEmpresa[0, pocision].Value.ToString();
+            txtTipoEmpresa.Text = dgvTipoEmpresa[1, pocision].Value.ToString();
+        }
+
+        private void btnBuscarT_Click(object sender, EventArgs e)
+        {
+            dgvTipoEmpresa.DataSource = DALTipoEmpresa.buscar(txtBuscarT.Text);
         }
     }
 }

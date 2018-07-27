@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
-    <Compile Include="DAL\DALTipo_Servicios.cs" />
+    <Compile Include="DAL\DALTipoEmpresa.cs" />
     <Compile Include="DAL\DALTipo_Habitaciones.cs" />
     <Compile Include="DAL\DALHabitaciones.cs" />
     <Compile Include="DAL\DALClientes.cs" />

@@ -74,7 +74,7 @@ namespace Sandchips.DAL
             return retorno;
 
         }
-        public static List<ModelEmpresa> buscar(int user)
+        public static List<ModelEmpresa> buscar(string user)
         {
             List<ModelEmpresa> listabuscar = new List<ModelEmpresa>();
             try
