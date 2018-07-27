@@ -56,7 +56,7 @@
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
     <Compile Include="DAL\DALTipoEmpresa.cs" />
-    <Compile Include="DAL\DALTipo_Habitaciones.cs" />
+    <Compile Include="DAL\DALTipoHabitaciones.cs" />
     <Compile Include="DAL\DALHabitaciones.cs" />
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />

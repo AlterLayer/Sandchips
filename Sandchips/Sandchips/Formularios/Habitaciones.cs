@@ -26,7 +26,7 @@ namespace Sandchips.Formularios
         private void Habitaciones_Load_1(object sender, EventArgs e)
         {
             dgvHabitaciones.DataSource = DALHabitaciones.mostrartabla();
-            dgvTipoHabitacion.DataSource = DALTipo_Habitaciones.mostrartabla();
+            dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
             Conexion.obtenerconexion();
             cmbTipo_hab.DataSource = DALHabitaciones.ObtenerTipo_Hab();
             cmbTipo_hab.DisplayMember = "Tipo_Habitacion";
@@ -205,11 +205,11 @@ namespace Sandchips.Formularios
             {
                 ModelTipoHabitacion model = new ModelTipoHabitacion();
                 model.TipoHabitacion = txtTipo_Habitacion.Text;
-                int datos = DALTipo_Habitaciones.agregar(model);
+                int datos = DALTipoHabitaciones.agregar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvTipoHabitacion.DataSource = DALTipo_Habitaciones.mostrartabla();
+                    dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
                     txtTipo_Habitacion.Clear(); 
                 }
                 else
@@ -230,11 +230,11 @@ namespace Sandchips.Formularios
                 ModelTipoHabitacion model = new ModelTipoHabitacion();
                 model.IdTipoHabitacion = Convert.ToInt32(txtId_Tipo_Habitacion.Text);
                 model.TipoHabitacion = txtTipo_Habitacion.Text;
-                int datos = DALTipo_Habitaciones.modificar(model);
+                int datos = DALTipoHabitaciones.modificar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvTipoHabitacion.DataSource = DALTipo_Habitaciones.mostrartabla();
+                    dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
                     txtTipo_Habitacion.Clear();
                 }
                 else
@@ -250,14 +250,14 @@ namespace Sandchips.Formularios
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
-            DALTipo_Habitaciones.eliminar(Convert.ToInt32(txtId_Tipo_Habitacion.Text));
+            DALTipoHabitaciones.eliminar(Convert.ToInt32(txtId_Tipo_Habitacion.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvTipoHabitacion.DataSource = DALTipo_Habitaciones.mostrartabla();
+            dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
         }
 
         private void btnConsultarT_Click(object sender, EventArgs e)
         {
-            dgvTipoHabitacion.DataSource = DALTipo_Habitaciones.mostrartabla();
+            dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
         }
 
 
@@ -271,7 +271,7 @@ namespace Sandchips.Formularios
 
         private void btnBuscarT_Click(object sender, EventArgs e)
         {
-            dgvTipoHabitacion.DataSource = DALTipo_Habitaciones.buscar(txtBuscarT.Text);
+            dgvTipoHabitacion.DataSource = DALTipoHabitaciones.buscar(txtBuscarT.Text);
         }
 
         public bool ValidarHabT()
