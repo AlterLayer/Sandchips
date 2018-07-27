@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using Sandchips;
 using Sandchips.DAL;
 using Sandchips.Formularios;
@@ -20,9 +19,6 @@ namespace Sandchips.Formularios
     {
         public Login_Hotel()
         {
-            //
-            // Required for Windows Form Designer support
-            //
             InitializeComponent();
         }
 
