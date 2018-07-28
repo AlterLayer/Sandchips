@@ -12,7 +12,6 @@ namespace Sandchips.DAL
 {
     public class DALClientes
     {
-        //agregar
         public static int agregar(ModelClientes Modelo)
         {
             int retorno = 0;
