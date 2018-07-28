@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Sandchips.Models
 {
-   public class ModelTipoUsuario
+   public class ModelTipoDocumento
     {
-        public int IdTipoUsuario { get; set; }
-        public string TipoUsuario { get; set; }
+        public int IdTipoDocumento { get; set; }
+        public string Documento { get; set; }
     }
 }

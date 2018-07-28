@@ -13,9 +13,9 @@ using Sandchips;
 
 namespace Sandchips.Formularios
 {
-    public partial class Form1 : Form
+    public partial class Clientes : Form
     {
-        public Form1()
+        public Clientes()
         {
             InitializeComponent();
         }
@@ -32,12 +32,7 @@ namespace Sandchips.Formularios
             cmbTipoDoc.SelectedIndex = 0;
             cmbGenero.SelectedIndex = 0;
             cmbMunicipio.SelectedIndex = 0;
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
+        } 
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -176,6 +171,24 @@ namespace Sandchips.Formularios
 
             dgvPersonas.DataSource = DALClientes.mostrartabla();
             txtBuscar.Clear();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+            Form Chequeo_habitaciones = new Menu_Restaurante();
+            Chequeo_habitaciones.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -67,12 +67,25 @@ namespace Sandchips.Formularios
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            Form Form1 = new Form1();
+            Form Form1 = new Clientes();
             Form1.Show();
             this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click_1(object sender, EventArgs e)
+        {
+
+            Form Form1 = new Clientes();
+            Form1.Show();
+            this.Hide();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }

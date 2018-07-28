@@ -32,7 +32,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form Chequeo_Mesa = new inicio();
+            Form Chequeo_Mesa = new Menu_Hotel();
             Chequeo_Mesa.Show();
             this.Hide();
         }
@@ -47,66 +47,6 @@ namespace Sandchips.Formularios
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            //Validar contraseñas que sean iguales
-            if (ValidarUsu())
-            {
-                ModelUsuario model = new ModelUsuario(); 
-                model.Usuario = txtusuario.Text;
-                model.password = HassPassword(mtbcontrasena.Text);
-               model.Id_Persona = Convert.ToInt32(cmbPersona.SelectedValue);
-                model.Tipo_Usuario = Convert.ToInt32(cmbtipousuario.SelectedValue);
-                model.estado = Convert.ToInt32(cmbestado.SelectedValue);
-                int datos = DALUsuarios.agregarusuario(model);
-                if (datos > 0)
-                {
-                    MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvusuarios.DataSource = DALUsuarios.mostrartabla();
-                    txtusuario.Clear();
-                    mtbcontrasena.Clear();
-                    mtbconfirmcontrasena.Clear();
-                    cmbestado.SelectedIndex = 0;
-                    cmbPersona.SelectedIndex = -1;
-                    cmbtipousuario.SelectedIndex = -1;
-
-                }
-                else
-                {
-                    MessageBox.Show("Registro no ingresado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
-            }
-        }
-
-        public enum Mode
-        {
-            ENCRYPT, 
-            DECRYPT
-        }
-
-        public static byte[] AESCrypto(Mode mode, AesCryptoServiceProvider aes, byte[] message)
-        {
-            using (var memStream = new MemoryStream())
-            {
-                CryptoStream cryptostream = null;
-
-                if (mode == Mode.ENCRYPT)
-                    cryptostream = new CryptoStream(memStream, aes.CreateEncryptor(), CryptoStreamMode.Write);
-                else if (mode == Mode.DECRYPT)
-                    cryptostream = new CryptoStream(memStream, aes.CreateDecryptor(), CryptoStreamMode.Write);
-
-                if (cryptostream == null)
-                    return null;
-
-                cryptostream.Write(message, 0, message.Length);
-                cryptostream.FlushFinalBlock();
-                return memStream.ToArray();
-            }
-        }
 
 
         private string HassPassword(string cadena)
@@ -133,6 +73,7 @@ namespace Sandchips.Formularios
             //Devolvemos la cadena con el hash en mayúsculas
             return sb.ToString().ToUpper();
         }
+
         public bool ValidarUsu()
         {
             bool validar = false;
@@ -176,27 +117,7 @@ namespace Sandchips.Formularios
                 MessageBox.Show("Las contraseñas no coinciden", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return validar;
             }
-            if (cmbPersona.Text != "")
-            {
-                validar = true;
-            }
-            else
-            {
-                validar = false;
-                MessageBox.Show("El campo persona es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return validar;
-            }
-            if (cmbestado.SelectedIndex > 0)
-            {
-                validar = true;
-            }
-            else
-            {
-                validar = false;
-                MessageBox.Show("El campo estado es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return validar;
-            }
-            if (cmbtipousuario.Text != "")
+            if (cmbTipoDocumento.SelectedIndex > 0)
             {
                 validar = true;
             }
@@ -216,34 +137,112 @@ namespace Sandchips.Formularios
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            dgvusuarios.DataSource = DALUsuarios.mostrartabla(); 
+            dgvusuarios.DataSource = DALUsuarios.mostrartabla();
             Conexion.obtenerconexion();
-            cmbPersona.DataSource = DALUsuarios.ObtenerPersona();
-            cmbPersona.DisplayMember = "Persona";
-            cmbPersona.ValueMember = "Id_Persona";
-            cmbtipousuario.DataSource = DALUsuarios.ObtenerTipoUsuario();
-            cmbtipousuario.DisplayMember = "Tipo_Usuario";
-            cmbtipousuario.ValueMember = "Id_Tipo_Usuario";
-            cmbestado.DataSource = DALUsuarios.ObtenerEstado();
-            cmbestado.DisplayMember = "Estado";
-            cmbestado.ValueMember = "Id_Estado";
-            cmbPersona.SelectedIndex = -1;
-            cmbtipousuario.SelectedIndex = -1;
-            cmbestado.SelectedIndex = 0;
+            cmbTipoDocumento.DataSource = DALUsuarios.ObtenerTipoDocumento();
+            cmbTipoDocumento.DisplayMember = "Documento";
+            cmbTipoDocumento.ValueMember = "IdTipoDocumento";
+            cmbTipoUsuario.DataSource = DALUsuarios.ObtenerTipoUsuario();
+            cmbTipoUsuario.DisplayMember = "TipoUsuario";
+            cmbTipoUsuario.ValueMember = "IdTipoUsuario";
+            cmbGenero.DataSource = DALUsuarios.ObtenerGenero();
+            cmbGenero.DisplayMember = "Genero";
+            cmbGenero.ValueMember = "IdGenero";
+            cmbTipoUsuario.SelectedIndex = 0;
+            cmbTipoDocumento.SelectedIndex = 0;
+            cmbGenero.SelectedIndex = 0;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {  //Validar contraseñas que sean iguales
+        private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int pocision;
+            pocision = dgvusuarios.CurrentRow.Index;
+            txtIdUsuario.Text = dgvusuarios[0, pocision].Value.ToString();
+            txtusuario.Text = dgvusuarios[1, pocision].Value.ToString();
+            mtbcontrasena.Text = dgvusuarios[2, pocision].Value.ToString();
+            mtbconfirmcontrasena.Text = dgvusuarios[2, pocision].Value.ToString();
+            txtNombre.Text = dgvusuarios[3, pocision].Value.ToString();
+            txtApellidos.Text = dgvusuarios[4, pocision].Value.ToString();
+            Correo.Text = dgvusuarios[5, pocision].Value.ToString();
+            txtNumeroDocumento.Text = dgvusuarios[6, pocision].Value.ToString();
+            txtDireccion.Text = dgvusuarios[7, pocision].Value.ToString();
+            mtbTelefono.Text = dgvusuarios[8, pocision].Value.ToString();
+            dtpNacimiento.Value = Convert.ToDateTime(dgvusuarios[9, pocision].Value);
+            cmbTipoDocumento.SelectedValue = Convert.ToInt32(dgvusuarios[10, pocision].Value.ToString());
+            cmbGenero.SelectedValue = Convert.ToInt32(dgvusuarios[11, pocision].Value.ToString());
+            cmbTipoUsuario.SelectedValue = Convert.ToInt32(dgvusuarios[13, pocision].Value.ToString());
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            dgvusuarios.DataSource = DALUsuarios.mostrartabla();
+        }
+
+        //GUARDAR USUARIO
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            //Validar contraseñas que sean iguales
             if (ValidarUsu())
             {
                 ModelUsuario model = new ModelUsuario();
-                model.Id_Usuario = Convert.ToInt32(txtIdUsuario.Text);
                 model.Usuario = txtusuario.Text;
-                model.password = HassPassword(mtbcontrasena.Text);
-                model.Id_Persona = Convert.ToInt32(cmbPersona.SelectedValue);
-                model.Tipo_Usuario = Convert.ToInt32(cmbtipousuario.SelectedValue);
-                model.estado = Convert.ToInt32(cmbestado.SelectedValue);
-                int datos = DALUsuarios.actualizar(model);
+                model.Clave = HassPassword(mtbcontrasena.Text);
+                model.Nombre = txtNombre.Text;
+                model.Apellidos = txtApellidos.Text;
+                model.Correo = Correo.Text;
+                model.NumeroDocumento = txtNumeroDocumento.Text;
+                model.Direccion = txtDireccion.Text;
+                model.Telefono = mtbTelefono.Text; 
+                var fecN = dtpNacimiento.Text.Split('/')[2] + "-" + dtpNacimiento.Text.Split('/')[1] + "-" + dtpNacimiento.Text.Split('/')[0];
+                model.Nacimiento = fecN;
+                model.IdTipoDocumento = Convert.ToInt32(cmbTipoDocumento.SelectedValue);
+                model.IdTipoUsuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue);
+                model.IdGenero = Convert.ToInt32(cmbGenero.SelectedValue);
+                int datos = DALUsuarios.agregarusuario(model);
+                if (datos > 0)
+                {
+                    MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvusuarios.DataSource = DALUsuarios.mostrartabla();
+                    txtusuario.Clear();
+                    mtbcontrasena.Clear();
+                    mtbconfirmcontrasena.Clear();
+                    cmbGenero.SelectedIndex = 0;
+                    cmbTipoUsuario.SelectedIndex = 0;
+                    cmbTipoDocumento.SelectedIndex = 0;
+
+                }
+                else
+                {
+                    MessageBox.Show("Registro no ingresado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            //Validar contraseñas que sean iguales
+            if (ValidarUsu())
+            {
+                ModelUsuario model = new ModelUsuario();
+                model.IdUsuario = Convert.ToInt32(txtIdUsuario.Text);
+                model.Usuario = txtusuario.Text;
+                model.Clave = HassPassword(mtbcontrasena.Text);
+                model.Nombre = txtNombre.Text;
+                model.Apellidos = txtApellidos.Text;
+                model.Correo = Correo.Text;
+                model.NumeroDocumento = txtNumeroDocumento.Text;
+                model.Direccion = txtDireccion.Text;
+                model.Telefono = mtbTelefono.Text;
+                var fecN = dtpNacimiento.Text.Split('/')[2] + "-" + dtpNacimiento.Text.Split('/')[1] + "-" + dtpNacimiento.Text.Split('/')[0];
+                model.Nacimiento = fecN;
+                model.IdTipoDocumento = Convert.ToInt32(cmbTipoDocumento.SelectedValue);
+                model.IdTipoUsuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue);
+                model.IdGenero = Convert.ToInt32(cmbGenero.SelectedValue);
+                int datos = DALUsuarios.agregarusuario(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -251,9 +250,9 @@ namespace Sandchips.Formularios
                     txtusuario.Clear();
                     mtbcontrasena.Clear();
                     mtbconfirmcontrasena.Clear();
-                    cmbestado.SelectedIndex = 0;
-                    cmbPersona.SelectedIndex = -1;
-                    cmbtipousuario.SelectedIndex = -1;
+                    cmbGenero.SelectedIndex = 0;
+                    cmbTipoUsuario.SelectedIndex = 0;
+                    cmbTipoDocumento.SelectedIndex = 0;
 
                 }
                 else
@@ -267,34 +266,11 @@ namespace Sandchips.Formularios
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             DALUsuarios.eliminar(Convert.ToInt32(txtIdUsuario.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvusuarios.DataSource = DALUsuarios.mostrartabla();
-        }
-
-        private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int pocision;
-            pocision = dgvusuarios.CurrentRow.Index;
-            txtIdUsuario.Text = dgvusuarios[0, pocision].Value.ToString();
-            cmbPersona.SelectedValue = Convert.ToInt32(dgvusuarios[1, pocision].Value.ToString());
-            txtusuario.Text = dgvusuarios[2, pocision].Value.ToString();
-            mtbcontrasena.Text = dgvusuarios[3, pocision].Value.ToString();
-            mtbconfirmcontrasena.Text = dgvusuarios[3, pocision].Value.ToString();
-            cmbtipousuario.SelectedValue = Convert.ToInt32(dgvusuarios[4, pocision].Value.ToString());
-            cmbestado.SelectedValue = Convert.ToInt32(dgvusuarios[5, pocision].Value.ToString());
         }
     }
 }

@@ -157,6 +157,7 @@ namespace Sandchips.Formularios
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(413, 382);
             this.panel6.TabIndex = 10;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // pictureBox12
             // 
@@ -168,6 +169,7 @@ namespace Sandchips.Formularios
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click_1);
             // 
             // label22
             // 
@@ -177,9 +179,9 @@ namespace Sandchips.Formularios
             this.label22.Location = new System.Drawing.Point(132, 320);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(133, 40);
+            this.label22.Size = new System.Drawing.Size(116, 40);
             this.label22.TabIndex = 3;
-            this.label22.Text = "Personas";
+            this.label22.Text = "Clientes";
             // 
             // pictureBox13
             // 
@@ -276,12 +278,12 @@ namespace Sandchips.Formularios
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(147, 330);
+            this.label24.Location = new System.Drawing.Point(104, 330);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(129, 40);
+            this.label24.Size = new System.Drawing.Size(126, 40);
             this.label24.TabIndex = 5;
-            this.label24.Text = "Servicios";
+            this.label24.Text = "Empresa";
             // 
             // Menu_Restaurante
             // 

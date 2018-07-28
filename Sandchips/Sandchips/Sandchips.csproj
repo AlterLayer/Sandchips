@@ -108,11 +108,11 @@
     <Compile Include="Formularios\Pagina Principal.designer.cs">
       <DependentUpon>Pagina Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Personas.cs">
+    <Compile Include="Formularios\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Personas.designer.cs">
-      <DependentUpon>Personas.cs</DependentUpon>
+    <Compile Include="Formularios\Clientes.designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\reserva de pabellon y salon.cs">
       <SubType>Form</SubType>
@@ -138,6 +138,8 @@
     <Compile Include="Formularios\Tiempo de estadia.designer.cs">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelGenero.cs" />
+    <Compile Include="Models\ModelTipoDocumento.cs" />
     <Compile Include="Models\ModelUsuario.cs" />
     <Compile Include="Models\ModelEmpresa.cs" />
     <Compile Include="Models\ModelTipoEmpresa.cs" />
@@ -173,8 +175,8 @@
     <EmbeddedResource Include="Formularios\Pagina Principal.resx">
       <DependentUpon>Pagina Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Personas.resx">
-      <DependentUpon>Personas.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\reserva de pabellon y salon.resx">
       <DependentUpon>reserva de pabellon y salon.cs</DependentUpon>

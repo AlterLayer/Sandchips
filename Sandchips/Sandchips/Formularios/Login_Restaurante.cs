@@ -48,11 +48,10 @@ namespace Sandchips.Formularios
                 string Contra = HassPassword(mtbcontraseña.Text);
                 ModelUsuario model = new ModelUsuario();
                 model.Usuario = txtusuario.Text;
-                model.password = HassPassword(mtbcontraseña.Text);
+                model.Clave = HassPassword(mtbcontraseña.Text);
                 bool datos = DALUsuarios.IniciarSession(model);
                 if (datos)
-                {
-                    MessageBox.Show("");
+                { 
                     MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Menu_Restaurante hab = new Menu_Restaurante();
                     hab.Show();

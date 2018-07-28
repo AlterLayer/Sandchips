@@ -108,6 +108,7 @@
             this.btnacceder.Text = "Acceder";
             this.btnacceder.UseVisualStyleBackColor = true;
             this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click);
+            this.btnacceder.Enter += new System.EventHandler(this.btnacceder_Enter);
             // 
             // label5
             // 

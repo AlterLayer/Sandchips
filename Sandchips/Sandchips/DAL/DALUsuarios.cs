@@ -17,8 +17,8 @@ namespace Sandchips.DAL
         //Agregar Usuario
         public static int agregarusuario(ModelUsuario add)
         {
-            int retorno;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeusuario(Id_Persona,Usuario,Contraseña,Id_Tipo_Usuario,Id_Estado)VALUES('{0}','{1}','{2}','{3}','{4}')", add.Id_Persona, add.Usuario, add.password, add.Tipo_Usuario, add.estado), Conexion.obtenerconexion());
+            int retorno; 
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeusuario(Usuario,Clave,Nombres,Apellidos, Correo, NumeroDocumento, Direccion, Telefono, Nacimiento, IdTipoDocumento, IdGenero, IdEstado, IdTipoUsuarios)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.Usuario, add.Clave, add.Nombre, add.Apellidos, add.Correo, add.NumeroDocumento, add.Direccion, add.Telefono, add.Nacimiento, add.IdTipoDocumento, add.IdGenero, 1, add.IdTipoUsuarios), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -30,7 +30,7 @@ namespace Sandchips.DAL
 
             //Guardamos en una variable tipo string la consulta a realizar a la base 
             //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
-            instruccion = "SELECT*FROM  tbmaeusuario";
+            instruccion = "SELECT * FROM  tbmaeusuario  WHERE IdEstado = 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
@@ -41,7 +41,7 @@ namespace Sandchips.DAL
         public static int actualizar(ModelUsuario update)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuario SET Id_Persona='{0}', Usuario='{1}', Contraseña='{2}', Id_Tipo_Usuario='{3}', Id_Estado='{4}' WHERE IdUsuario='{5}'", update.Id_Persona, update.Usuario, update.password, update.Tipo_Usuario, update.estado, update.Id_Usuario), Conexion.obtenerconexion());
+            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuario SET Usuario='{1}',Clave='{2}',Nombres='{3}',Apellidos='{4}', Correo='{5}', NumeroDocumento='{6}', Direccion,='{7}' Telefono='{8}', Nacimiento='{9}', IdTipoDocumento='{10}', IdGenero='{11}', IdEstado='{12}', IdTipoUsuarios='{13}' WHERE IdUsuario='{5}'",update.IdUsuario, update.Usuario, update.Clave, update.Nombre, update.Apellidos, update.Correo, update.NumeroDocumento, update.Direccion, update.Telefono, update.Nacimiento, update.IdTipoDocumento, update.IdGenero, 1, update.IdTipoUsuarios), Conexion.obtenerconexion());
             retorno = consulta.ExecuteNonQuery();
             return retorno;
         }
@@ -50,7 +50,7 @@ namespace Sandchips.DAL
         public static int eliminar(int iduser)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeusuario WHERE IdUsuario='{0}'", iduser), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaeusuario SET IdEstado=2 WHERE IdUsuario= '{0}'", iduser), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 
@@ -60,17 +60,27 @@ namespace Sandchips.DAL
             List<ModelUsuario> listabuscar = new List<ModelUsuario>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM tbmaeusuario WHERE Usuario LIKE '%" + user + "%'"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM tbmaeusuario WHERE IdEstado = 1 AND Usuario LIKE '%" + user + "%'"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     listabuscar.Add(new ModelUsuario()
                     {
-                        Id_Usuario = reader.GetInt32(0),
-                        Id_Persona = reader.GetInt32(1),
-                        Usuario = reader.GetString(2),
-                        estado = reader.GetInt32(5)
+                        IdUsuario = reader.GetInt32(0),
+                        Usuario = reader.GetString(1),
+                        Clave = reader.GetString(2),
+                        Nombre = reader.GetString(3),
+                        Apellidos = reader.GetString(4),
+                        Correo = reader.GetString(5),
+                        NumeroDocumento = reader.GetString(6),
+                        Direccion = reader.GetString(7),
+                        Telefono = reader.GetString(8),
+                        Nacimiento = reader.GetString(9),
+                        IdTipoDocumento = reader.GetInt32(10),
+                        IdGenero = reader.GetInt32(11),
+                        IdEstado = reader.GetInt32(12),
+                        IdTipoUsuarios = reader.GetInt32(13),
                     });
                 }
             }
@@ -83,20 +93,25 @@ namespace Sandchips.DAL
         }
 
         //Obtiene las personas de la base de datos
-        public static List<ModelUsuario> ObtenerPersona()
+        public static List<ModelTipoDocumento> ObtenerTipoDocumento()
         {
-            List<ModelUsuario> listabuscar = new List<ModelUsuario>();
+            List<ModelTipoDocumento> listabuscar = new List<ModelTipoDocumento>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT Id_Persona, CONCAT(Apellidos, ', ', Nombre) AS Nombre FROM tbmaepersonas"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoDocumento, Documento FROM tbdettipodocumento"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
+                listabuscar.Add(new ModelTipoDocumento()
+                {
+                    IdTipoDocumento = 0,
+                    Documento = "Seleccione una opción"
+                });
                 while (reader.Read())
                 {
-                    listabuscar.Add(new ModelUsuario()
+                    listabuscar.Add(new ModelTipoDocumento()
                     {
-                        Id_Persona = reader.GetInt32(0),
-                        Persona = reader.GetString(1)
+                        IdTipoDocumento = reader.GetInt32(0),
+                        Documento   = reader.GetString(1)
                     });
                 }
             }
@@ -113,15 +128,20 @@ namespace Sandchips.DAL
             List<ModelTipoUsuario> listabuscar = new List<ModelTipoUsuario>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT Id_Tipo_Usuario, Tipo_Usuario FROM tbdettipo_usuario"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoUsuarios, TipoUsuario FROM tbdettipousuarios"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
+                listabuscar.Add(new ModelTipoUsuario()
+                {
+                    IdTipoUsuario = 0,
+                    TipoUsuario = "Seleccione una opción"
+                });
                 while (reader.Read())
                 {
                     listabuscar.Add(new ModelTipoUsuario()
                     {
-                        Id_Tipo_Usuario = reader.GetInt32(0),
-                        Tipo_Usuario = reader.GetString(1)
+                        IdTipoUsuario = reader.GetInt32(0),
+                        TipoUsuario = reader.GetString(1)
                     });
                 }
             }
@@ -133,20 +153,25 @@ namespace Sandchips.DAL
         }
 
         //Obtiene los estados que estan en la base de datos
-        public static List<ModelEstado> ObtenerEstado()
+        public static List<ModelGenero> ObtenerGenero()
         {
-            List<ModelEstado> listabuscar = new List<ModelEstado>();
+            List<ModelGenero> listabuscar = new List<ModelGenero>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT Id_Estado, Estado FROM tbdetestado"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdGenero, Genero FROM tbdetgenero"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
+                listabuscar.Add(new ModelGenero
+                {
+                    IdGenero = 0,
+                    Genero = "Seleccione una opción"
+                });
                 while (reader.Read())
                 {
-                    listabuscar.Add(new ModelEstado
+                    listabuscar.Add(new ModelGenero
                     {
-                        IdEstado = reader.GetInt32(0),
-                        Estado = reader.GetString(1)
+                        IdGenero = reader.GetInt32(0),
+                        Genero = reader.GetString(1)
                     });
                 }
             }
@@ -166,7 +191,7 @@ namespace Sandchips.DAL
             {
                 bool valid = false;
 
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdUsuario FROM tbmaeusuarios WHERE Usuario = '" + model.Usuario + "' and Clave = '" + model.password + "' "), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdUsuario FROM tbmaeusuario WHERE Usuario = '" + model.Usuario + "' and Clave = '" + model.Clave + "' "), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())

@@ -174,6 +174,7 @@ namespace Sandchips.Formularios
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click_1);
             // 
             // label22
             // 
@@ -183,9 +184,9 @@ namespace Sandchips.Formularios
             this.label22.Location = new System.Drawing.Point(132, 320);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(133, 40);
+            this.label22.Size = new System.Drawing.Size(116, 40);
             this.label22.TabIndex = 3;
-            this.label22.Text = "Personas";
+            this.label22.Text = "Clientes";
             // 
             // pictureBox13
             // 
@@ -231,6 +232,7 @@ namespace Sandchips.Formularios
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 4;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click_1);
             // 
             // panel8
             // 
