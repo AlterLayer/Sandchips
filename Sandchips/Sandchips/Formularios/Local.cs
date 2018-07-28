@@ -128,13 +128,13 @@ namespace Sandchips.Formularios
         
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (ValidarHab())
+            if (ValidarLocal())
             {
-                ModelHabitaciones model = new ModelHabitaciones();
-                model.IdHabitacion = Convert.ToInt32(txtIdLocal.Text);
-                model.NumeroHabitacion = Convert.ToInt32(txtCodigoLocal.Text);
-                model.IdTipoHabitacion = Convert.ToInt32(cmbTipoLocal.SelectedValue.ToString());
-                model.IdEstado = Convert.ToInt32(cmbEstado_hab.SelectedValue.ToString());
+                ModelLocal model = new ModelLocal();
+                model.IdLocales = Convert.ToInt32(txtIdLocal.Text);
+                model.CodigoLocal = Convert.ToInt32(txtCodigoLocal.Text);
+                model.NombreLocal = txtNombreLocal.Text;
+                model.IdTipoLocal = Convert.ToInt32(cmbTipoLocal.SelectedValue.ToString());
                 int datos = DALLocal.modificar(model);
                 if (datos > 0)
                 {
@@ -142,7 +142,6 @@ namespace Sandchips.Formularios
                     dgvLocal.DataSource = DALLocal.mostrartabla();
                     txtCodigoLocal.Clear();
                     cmbTipoLocal.SelectedIndex = 0;
-                    cmbEstado_hab.SelectedIndex = 0;
                 }
                 else
                 {
@@ -161,15 +160,14 @@ namespace Sandchips.Formularios
             pocision = dgvLocal.CurrentRow.Index;
             txtIdLocal.Text = dgvLocal[0, pocision].Value.ToString();
             txtCodigoLocal.Text = dgvLocal[1, pocision].Value.ToString();
-            cmbTipoLocal.Text = dgvLocal[2, pocision].Value.ToString();
-            cmbEstado_hab.Text = dgvLocal[3, pocision].Value.ToString();
+            txtNombreLocal.Text = dgvLocal[2, pocision].Value.ToString();
+            cmbTipoLocal.Text = dgvLocal[3, pocision].Value.ToString(); 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ModelHabitaciones model = new ModelHabitaciones();
-            model.IdHabitacion = Convert.ToInt32(txtIdLocal.Text); 
-            model.IdEstado = Convert.ToInt32(cmbEstado_hab.SelectedValue.ToString());
+            ModelLocal model = new ModelLocal();
+            model.IdLocales = Convert.ToInt32(txtIdLocal.Text);  
             DALLocal.eliminar(model);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvLocal.DataSource = DALLocal.mostrartabla();
