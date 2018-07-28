@@ -137,7 +137,7 @@ namespace Sandchips.Formularios
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.txtBuscarE);
             this.tabPage3.Controls.Add(this.label17);
@@ -164,6 +164,7 @@ namespace Sandchips.Formularios
             this.tabPage3.Controls.Add(this.cmbTipoEmpresa);
             this.tabPage3.Controls.Add(this.txtIdEmpresa);
             this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.ForeColor = System.Drawing.Color.White;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
@@ -175,6 +176,7 @@ namespace Sandchips.Formularios
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(492, 255);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
@@ -193,6 +195,7 @@ namespace Sandchips.Formularios
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(674, 84);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
@@ -211,6 +214,7 @@ namespace Sandchips.Formularios
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(672, 44);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
@@ -229,6 +233,7 @@ namespace Sandchips.Formularios
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(374, 157);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
@@ -247,6 +252,7 @@ namespace Sandchips.Formularios
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(374, 121);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
@@ -266,6 +272,7 @@ namespace Sandchips.Formularios
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(374, 44);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
@@ -284,6 +291,7 @@ namespace Sandchips.Formularios
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(34, 158);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
@@ -302,6 +310,7 @@ namespace Sandchips.Formularios
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(34, 121);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
@@ -320,6 +329,7 @@ namespace Sandchips.Formularios
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(34, 85);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -329,9 +339,9 @@ namespace Sandchips.Formularios
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Location = new System.Drawing.Point(873, 242);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
@@ -343,9 +353,9 @@ namespace Sandchips.Formularios
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
             this.btnConsultar.Location = new System.Drawing.Point(367, 243);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConsultar.Name = "btnConsultar";
@@ -357,9 +367,9 @@ namespace Sandchips.Formularios
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(258, 242);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
@@ -371,9 +381,9 @@ namespace Sandchips.Formularios
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.Location = new System.Drawing.Point(146, 243);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
@@ -414,9 +424,9 @@ namespace Sandchips.Formularios
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(38, 243);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
@@ -448,6 +458,7 @@ namespace Sandchips.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(34, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -522,7 +533,7 @@ namespace Sandchips.Formularios
             // 
             this.btnBuscarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnBuscarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarT.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarT.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarT.Location = new System.Drawing.Point(894, 131);
             this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarT.Name = "btnBuscarT";
@@ -536,7 +547,7 @@ namespace Sandchips.Formularios
             // 
             this.btnConsultatT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnConsultatT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultatT.ForeColor = System.Drawing.Color.White;
+            this.btnConsultatT.ForeColor = System.Drawing.Color.Black;
             this.btnConsultatT.Location = new System.Drawing.Point(369, 131);
             this.btnConsultatT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConsultatT.Name = "btnConsultatT";
@@ -550,7 +561,7 @@ namespace Sandchips.Formularios
             // 
             this.btnEliminarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnEliminarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarT.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarT.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarT.Location = new System.Drawing.Point(264, 131);
             this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarT.Name = "btnEliminarT";
@@ -607,7 +618,7 @@ namespace Sandchips.Formularios
             // 
             this.btnAgregarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnAgregarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.btnAgregarT.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarT.Location = new System.Drawing.Point(53, 131);
             this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarT.Name = "btnAgregarT";
