@@ -109,6 +109,33 @@ namespace Sandchips.Formularios
             }
 
         }
-        
+
+        private void Login_Hotel_Enter(object sender, EventArgs e)
+        {
+            try
+            {
+                string Contra = HassPassword(mtbcontraseña.Text);
+                ModelUsuario model = new ModelUsuario();
+                model.Usuario = txtusuario.Text;
+                model.Clave = HassPassword(mtbcontraseña.Text);
+                bool datos = DALUsuarios.IniciarSession(model);
+                if (datos)
+                {
+                    MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Menu_Hotel hab = new Menu_Hotel();
+                    hab.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Haz introducido el nombre o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception " + ex);
+            }
+
+        }
     }
 }

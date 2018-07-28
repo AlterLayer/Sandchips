@@ -244,12 +244,12 @@ namespace Sandchips.Formularios
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(135, 330);
+            this.label23.Location = new System.Drawing.Point(157, 330);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(98, 40);
+            this.label23.Size = new System.Drawing.Size(80, 40);
             this.label23.TabIndex = 4;
-            this.label23.Text = "Mesas";
+            this.label23.Text = "Local";
             // 
             // pictureBox11
             // 

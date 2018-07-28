@@ -55,11 +55,18 @@
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
+    <Compile Include="DAL\DALLocal.cs" />
     <Compile Include="DAL\DALTipoEmpresa.cs" />
     <Compile Include="DAL\DALTipoHabitaciones.cs" />
     <Compile Include="DAL\DALHabitaciones.cs" />
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
+    <Compile Include="Formularios\Local.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Local.designer.cs">
+      <DependentUpon>Local.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Menu_Restaurante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +147,7 @@
     </Compile>
     <Compile Include="Models\ModelGenero.cs" />
     <Compile Include="Models\ModelTipoDocumento.cs" />
+    <Compile Include="Models\ModelTipoLocal.cs" />
     <Compile Include="Models\ModelUsuario.cs" />
     <Compile Include="Models\ModelEmpresa.cs" />
     <Compile Include="Models\ModelTipoEmpresa.cs" />
@@ -147,10 +155,13 @@
     <Compile Include="Models\ModelHabitaciones.cs" />
     <Compile Include="Models\ModelClientes.cs" />
     <Compile Include="Models\ModelEstado.cs" />
-    <Compile Include="Models\ModelMunicipio.cs" />
+    <Compile Include="Models\ModelLocal.cs" />
     <Compile Include="Models\ModelTipoUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Local.resx">
+      <DependentUpon>Local.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Menu_Restaurante.resx">
       <DependentUpon>Menu_Restaurante.cs</DependentUpon>
     </EmbeddedResource>

@@ -18,7 +18,7 @@ namespace Sandchips.DAL
         public static int agregarusuario(ModelUsuario add)
         {
             int retorno; 
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeusuario(Usuario,Clave,Nombres,Apellidos, Correo, NumeroDocumento, Direccion, Telefono, Nacimiento, IdTipoDocumento, IdGenero, IdEstado, IdTipoUsuarios)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.Usuario, add.Clave, add.Nombre, add.Apellidos, add.Correo, add.NumeroDocumento, add.Direccion, add.Telefono, add.Nacimiento, add.IdTipoDocumento, add.IdGenero, 1, add.IdTipoUsuarios), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeusuarios(Usuario,Clave,Nombres,Apellidos, Correo, NumeroDocumento, Direccion, Telefono, Nacimiento, IdTipoDocumento, IdGenero, IdEstado, IdTipoUsuarios)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.Usuario, add.Clave, add.Nombre, add.Apellidos, add.Correo, add.NumeroDocumento, add.Direccion, add.Telefono, add.Nacimiento, add.IdTipoDocumento, add.IdGenero, 1, add.IdTipoUsuarios), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -30,7 +30,7 @@ namespace Sandchips.DAL
 
             //Guardamos en una variable tipo string la consulta a realizar a la base 
             //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
-            instruccion = "SELECT * FROM  tbmaeusuario  WHERE IdEstado = 1";
+            instruccion = "SELECT * FROM  tbmaeusuarios  WHERE IdEstado = 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
@@ -41,7 +41,7 @@ namespace Sandchips.DAL
         public static int actualizar(ModelUsuario update)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuario SET Usuario='{1}',Clave='{2}',Nombres='{3}',Apellidos='{4}', Correo='{5}', NumeroDocumento='{6}', Direccion,='{7}' Telefono='{8}', Nacimiento='{9}', IdTipoDocumento='{10}', IdGenero='{11}', IdEstado='{12}', IdTipoUsuarios='{13}' WHERE IdUsuario='{5}'",update.IdUsuario, update.Usuario, update.Clave, update.Nombre, update.Apellidos, update.Correo, update.NumeroDocumento, update.Direccion, update.Telefono, update.Nacimiento, update.IdTipoDocumento, update.IdGenero, 1, update.IdTipoUsuarios), Conexion.obtenerconexion());
+            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuarios SET Usuario='{1}',Clave='{2}',Nombres='{3}',Apellidos='{4}', Correo='{5}', NumeroDocumento='{6}', Direccion,='{7}' Telefono='{8}', Nacimiento='{9}', IdTipoDocumento='{10}', IdGenero='{11}', IdEstado='{12}', IdTipoUsuarios='{13}' WHERE IdUsuario='{5}'",update.IdUsuario, update.Usuario, update.Clave, update.Nombre, update.Apellidos, update.Correo, update.NumeroDocumento, update.Direccion, update.Telefono, update.Nacimiento, update.IdTipoDocumento, update.IdGenero, 1, update.IdTipoUsuarios), Conexion.obtenerconexion());
             retorno = consulta.ExecuteNonQuery();
             return retorno;
         }
@@ -50,7 +50,7 @@ namespace Sandchips.DAL
         public static int eliminar(int iduser)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaeusuario SET IdEstado=2 WHERE IdUsuario= '{0}'", iduser), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaeusuarios SET IdEstado=2 WHERE IdUsuario= '{0}'", iduser), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 
@@ -60,7 +60,7 @@ namespace Sandchips.DAL
             List<ModelUsuario> listabuscar = new List<ModelUsuario>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM tbmaeusuario WHERE IdEstado = 1 AND Usuario LIKE '%" + user + "%'"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM tbmaeusuarios WHERE IdEstado = 1 AND Usuario LIKE '%" + user + "%'"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
@@ -191,7 +191,7 @@ namespace Sandchips.DAL
             {
                 bool valid = false;
 
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdUsuario FROM tbmaeusuario WHERE Usuario = '" + model.Usuario + "' and Clave = '" + model.Clave + "' "), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdUsuario FROM tbmaeusuarios WHERE Usuario = '" + model.Usuario + "' and Clave = '" + model.Clave + "' "), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())

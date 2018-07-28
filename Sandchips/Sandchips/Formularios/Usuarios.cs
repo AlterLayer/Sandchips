@@ -242,7 +242,7 @@ namespace Sandchips.Formularios
                 model.IdTipoDocumento = Convert.ToInt32(cmbTipoDocumento.SelectedValue);
                 model.IdTipoUsuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue);
                 model.IdGenero = Convert.ToInt32(cmbGenero.SelectedValue);
-                int datos = DALUsuarios.agregarusuario(model);
+                int datos = DALUsuarios.actualizar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);

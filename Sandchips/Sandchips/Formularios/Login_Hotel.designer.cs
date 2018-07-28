@@ -298,6 +298,7 @@
             this.Name = "Login_Hotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel_Reservacion_y_Chequeo";
+            this.Enter += new System.EventHandler(this.Login_Hotel_Enter);
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
