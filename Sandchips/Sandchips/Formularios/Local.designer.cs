@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Local));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtNombreLocal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -74,7 +75,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtNombreLocal = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -260,6 +260,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Local";
             // 
+            // txtNombreLocal
+            // 
+            this.txtNombreLocal.Location = new System.Drawing.Point(579, 44);
+            this.txtNombreLocal.Name = "txtNombreLocal";
+            this.txtNombreLocal.Size = new System.Drawing.Size(175, 22);
+            this.txtNombreLocal.TabIndex = 30;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -351,15 +358,15 @@
             this.dgvLocal.AllowUserToDeleteRows = false;
             this.dgvLocal.AllowUserToResizeColumns = false;
             this.dgvLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocal.Location = new System.Drawing.Point(29, 328);
             this.dgvLocal.Name = "dgvLocal";
             this.dgvLocal.ReadOnly = true;
             this.dgvLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Teal;
-            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLocal.RowTemplate.Height = 24;
             this.dgvLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLocal.Size = new System.Drawing.Size(725, 254);
@@ -378,6 +385,7 @@
             this.txtIdLocal.Enabled = false;
             this.txtIdLocal.Location = new System.Drawing.Point(183, 49);
             this.txtIdLocal.Name = "txtIdLocal";
+            this.txtIdLocal.ReadOnly = true;
             this.txtIdLocal.Size = new System.Drawing.Size(175, 22);
             this.txtIdLocal.TabIndex = 19;
             // 
@@ -505,15 +513,15 @@
             this.dgvTipoLocal.AllowUserToDeleteRows = false;
             this.dgvTipoLocal.AllowUserToResizeColumns = false;
             this.dgvTipoLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTipoLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoLocal.Location = new System.Drawing.Point(25, 284);
             this.dgvTipoLocal.Name = "dgvTipoLocal";
             this.dgvTipoLocal.ReadOnly = true;
             this.dgvTipoLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
-            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTipoLocal.RowTemplate.Height = 24;
             this.dgvTipoLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTipoLocal.Size = new System.Drawing.Size(488, 252);
@@ -562,13 +570,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Detalle Local";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // txtNombreLocal
-            // 
-            this.txtNombreLocal.Location = new System.Drawing.Point(579, 44);
-            this.txtNombreLocal.Name = "txtNombreLocal";
-            this.txtNombreLocal.Size = new System.Drawing.Size(175, 22);
-            this.txtNombreLocal.TabIndex = 30;
             // 
             // Local
             // 
