@@ -61,6 +61,7 @@
     <Compile Include="DAL\DALHabitaciones.cs" />
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
+    <Compile Include="DAL\NoEspacios.cs" />
     <Compile Include="Formularios\Local.cs">
       <SubType>Form</SubType>
     </Compile>
