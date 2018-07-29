@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Local));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -69,8 +69,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBuscarT = new System.Windows.Forms.TextBox();
             this.dgvTipoLocal = new System.Windows.Forms.DataGridView();
-            this.txtTipo_Habitacion = new System.Windows.Forms.TextBox();
-            this.txtId_Tipo_Habitacion = new System.Windows.Forms.TextBox();
+            this.txtTipoLocal = new System.Windows.Forms.TextBox();
+            this.txtIdTipoLocal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -351,15 +351,15 @@
             this.dgvLocal.AllowUserToDeleteRows = false;
             this.dgvLocal.AllowUserToResizeColumns = false;
             this.dgvLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocal.Location = new System.Drawing.Point(29, 328);
             this.dgvLocal.Name = "dgvLocal";
             this.dgvLocal.ReadOnly = true;
             this.dgvLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Teal;
+            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvLocal.RowTemplate.Height = 24;
             this.dgvLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLocal.Size = new System.Drawing.Size(725, 254);
@@ -403,8 +403,8 @@
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.txtBuscarT);
             this.tabPage2.Controls.Add(this.dgvTipoLocal);
-            this.tabPage2.Controls.Add(this.txtTipo_Habitacion);
-            this.tabPage2.Controls.Add(this.txtId_Tipo_Habitacion);
+            this.tabPage2.Controls.Add(this.txtTipoLocal);
+            this.tabPage2.Controls.Add(this.txtIdTipoLocal);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
@@ -505,53 +505,53 @@
             this.dgvTipoLocal.AllowUserToDeleteRows = false;
             this.dgvTipoLocal.AllowUserToResizeColumns = false;
             this.dgvTipoLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTipoLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoLocal.Location = new System.Drawing.Point(25, 284);
             this.dgvTipoLocal.Name = "dgvTipoLocal";
             this.dgvTipoLocal.ReadOnly = true;
             this.dgvTipoLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
+            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTipoLocal.RowTemplate.Height = 24;
             this.dgvTipoLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTipoLocal.Size = new System.Drawing.Size(488, 252);
             this.dgvTipoLocal.TabIndex = 38;
             this.dgvTipoLocal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             // 
-            // txtTipo_Habitacion
+            // txtTipoLocal
             // 
-            this.txtTipo_Habitacion.Location = new System.Drawing.Point(180, 73);
-            this.txtTipo_Habitacion.Name = "txtTipo_Habitacion";
-            this.txtTipo_Habitacion.Size = new System.Drawing.Size(333, 22);
-            this.txtTipo_Habitacion.TabIndex = 37;
+            this.txtTipoLocal.Location = new System.Drawing.Point(180, 73);
+            this.txtTipoLocal.Name = "txtTipoLocal";
+            this.txtTipoLocal.Size = new System.Drawing.Size(333, 22);
+            this.txtTipoLocal.TabIndex = 37;
             // 
-            // txtId_Tipo_Habitacion
+            // txtIdTipoLocal
             // 
-            this.txtId_Tipo_Habitacion.Enabled = false;
-            this.txtId_Tipo_Habitacion.Location = new System.Drawing.Point(180, 30);
-            this.txtId_Tipo_Habitacion.Name = "txtId_Tipo_Habitacion";
-            this.txtId_Tipo_Habitacion.Size = new System.Drawing.Size(175, 22);
-            this.txtId_Tipo_Habitacion.TabIndex = 36;
+            this.txtIdTipoLocal.Enabled = false;
+            this.txtIdTipoLocal.Location = new System.Drawing.Point(180, 30);
+            this.txtIdTipoLocal.Name = "txtIdTipoLocal";
+            this.txtIdTipoLocal.Size = new System.Drawing.Size(175, 22);
+            this.txtIdTipoLocal.TabIndex = 36;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(23, 30);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 17);
+            this.label12.Size = new System.Drawing.Size(98, 17);
             this.label12.TabIndex = 30;
-            this.label12.Text = "Id Tipo de habitación *";
+            this.label12.Text = "Id Tipo Local *";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(23, 79);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(134, 17);
+            this.label14.Size = new System.Drawing.Size(83, 17);
             this.label14.TabIndex = 31;
-            this.label14.Text = "Tipo de habitación *";
+            this.label14.Text = "Tipo Local *";
             // 
             // tabPage3
             // 
@@ -642,8 +642,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtBuscarT;
         private System.Windows.Forms.DataGridView dgvTipoLocal;
-        private System.Windows.Forms.TextBox txtTipo_Habitacion;
-        private System.Windows.Forms.TextBox txtId_Tipo_Habitacion;
+        private System.Windows.Forms.TextBox txtTipoLocal;
+        private System.Windows.Forms.TextBox txtIdTipoLocal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox3;

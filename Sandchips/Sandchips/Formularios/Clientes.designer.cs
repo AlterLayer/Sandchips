@@ -100,7 +100,7 @@ namespace Sandchips.Formularios
             this.panel1.Controls.Add(this.txta);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(846, 552);
             this.panel1.TabIndex = 0;
@@ -120,7 +120,7 @@ namespace Sandchips.Formularios
             // mtbTelefono
             // 
             this.mtbTelefono.Location = new System.Drawing.Point(560, 124);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "9999-9999";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(224, 20);
@@ -206,7 +206,7 @@ namespace Sandchips.Formularios
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.ForeColor = System.Drawing.Color.Red;
             this.label14.Location = new System.Drawing.Point(223, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(142, 39);
@@ -217,7 +217,7 @@ namespace Sandchips.Formularios
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.ForeColor = System.Drawing.Color.Red;
             this.label13.Location = new System.Drawing.Point(28, 38);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(203, 39);

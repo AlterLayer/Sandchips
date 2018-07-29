@@ -21,7 +21,7 @@ namespace Sandchips.Formularios
         private void Local_Load_1(object sender, EventArgs e)
         {
             dgvLocal.DataSource = DALLocal.mostrartabla();
-            dgvTipoLocal.DataSource = DALTipoHabitaciones.mostrartabla();
+            dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();
             dgvTipoLocal.DataSource = DALTipoHabitaciones.mostrartabla();
             Conexion.obtenerconexion();
             cmbTipoLocal.DataSource = DALLocal.ObtenerTipo_Hab();
@@ -161,7 +161,7 @@ namespace Sandchips.Formularios
             txtIdLocal.Text = dgvLocal[0, pocision].Value.ToString();
             txtCodigoLocal.Text = dgvLocal[1, pocision].Value.ToString();
             txtNombreLocal.Text = dgvLocal[2, pocision].Value.ToString();
-            cmbTipoLocal.Text = dgvLocal[3, pocision].Value.ToString(); 
+            cmbTipoLocal.SelectedValue = Convert.ToInt32(dgvLocal[3, pocision].Value.ToString()); 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -184,21 +184,21 @@ namespace Sandchips.Formularios
         }
         #endregion
 
-        #region Tipo de Habitaciones
+        #region Tipo Local
 
         private void btnAgregarT_Click(object sender, EventArgs e)
         {
             //Validar contraseñas que sean iguales
-            if (ValidarHabT())
+            if (ValidarTipoLocal())
             {
-                ModelTipoHabitacion model = new ModelTipoHabitacion();
-                model.TipoHabitacion = txtTipo_Habitacion.Text;
-                int datos = DALTipoHabitaciones.agregar(model);
+                ModelTipoLocal model = new ModelTipoLocal();
+                model.TipoLocal = txtTipoLocal.Text;
+                int datos = DALTipoLocal.agregar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvTipoLocal.DataSource = DALTipoHabitaciones.mostrartabla();
-                    txtTipo_Habitacion.Clear(); 
+                    dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();
+                    txtTipoLocal.Clear(); 
                 }
                 else
                 {
@@ -213,17 +213,17 @@ namespace Sandchips.Formularios
 
         private void btnModificarT_Click(object sender, EventArgs e)
         {
-            if (ValidarHabT())
+            if (ValidarTipoLocal())
             {
-                ModelTipoHabitacion model = new ModelTipoHabitacion();
-                model.IdTipoHabitacion = Convert.ToInt32(txtId_Tipo_Habitacion.Text);
-                model.TipoHabitacion = txtTipo_Habitacion.Text;
-                int datos = DALTipoHabitaciones.modificar(model);
+                ModelTipoLocal model = new ModelTipoLocal();
+                model.IdTipoLocal = Convert.ToInt32(txtIdTipoLocal.Text);
+                model.TipoLocal = txtTipoLocal.Text;
+                int datos = DALTipoLocal.modificar(model);
                 if (datos > 0)
                 {
                     MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvTipoLocal.DataSource = DALTipoHabitaciones.mostrartabla();
-                    txtTipo_Habitacion.Clear();
+                    dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();
+                    txtTipoLocal.Clear();
                 }
                 else
                 {
@@ -238,14 +238,14 @@ namespace Sandchips.Formularios
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
-            DALTipoHabitaciones.eliminar(Convert.ToInt32(txtId_Tipo_Habitacion.Text));
+            DALTipoLocal.eliminar(Convert.ToInt32(txtIdTipoLocal.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvTipoLocal.DataSource = DALTipoHabitaciones.mostrartabla();
+            dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();
         }
 
         private void btnConsultarT_Click(object sender, EventArgs e)
         {
-            dgvTipoLocal.DataSource = DALTipoHabitaciones.mostrartabla();
+            dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();
         }
 
 
@@ -253,26 +253,26 @@ namespace Sandchips.Formularios
         {
             int pocision;
             pocision = dgvTipoLocal.CurrentRow.Index;
-            txtId_Tipo_Habitacion.Text = dgvTipoLocal[0, pocision].Value.ToString();
-            txtTipo_Habitacion.Text = dgvTipoLocal[1, pocision].Value.ToString(); 
+            txtIdTipoLocal.Text = dgvTipoLocal[0, pocision].Value.ToString();
+            txtTipoLocal.Text = dgvTipoLocal[1, pocision].Value.ToString(); 
         }
 
         private void btnBuscarT_Click(object sender, EventArgs e)
         {
-            dgvTipoLocal.DataSource = DALTipoHabitaciones.buscar(txtBuscarT.Text);
+            dgvTipoLocal.DataSource = DALTipoLocal.buscar(txtBuscarT.Text);
         }
 
-        public bool ValidarHabT()
+        public bool ValidarTipoLocal()
         {
             bool validar = false;
-            if (txtTipo_Habitacion.Text != "")
+            if (txtTipoLocal.Text != "")
             {
                 validar = true;
             }
             else
             {
                 validar = false;
-                MessageBox.Show("El campo tipo de habitación es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo tipo de local es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return validar;
             } 
             return validar;
