@@ -89,5 +89,12 @@ namespace Sandchips.Formularios
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form Form1 = new Local();
+            Form1.Show();
+            this.Hide();
+        }
     }
 }
