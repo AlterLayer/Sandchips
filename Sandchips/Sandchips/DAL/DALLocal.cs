@@ -30,7 +30,7 @@ namespace Sandchips.DAL
         public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT IdLocales, CodigoLocal, H.NombreLocal, E.Estado FROM tbmaelocales AS Ha, tbdettipohabitacion AS H, tbdetestado AS E WHERE H.NombreLocal = Ha.NombreLocal AND E.IdTipoLocal = Ha.IdTipoLocal";
+            instruccion = "SELECT * FROM tbmaelocales";
             MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
@@ -40,7 +40,7 @@ namespace Sandchips.DAL
         public static int eliminar(ModelLocal model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE tbmaelocales WHERE IdLocales='{0}'", model.IdLocales), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaelocales WHERE IdLocales='{0}'", model.IdLocales), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 

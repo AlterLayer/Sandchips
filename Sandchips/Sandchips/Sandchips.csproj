@@ -57,6 +57,7 @@
     <Compile Include="DAL\DALEmpresa.cs" />
     <Compile Include="DAL\DALLocal.cs" />
     <Compile Include="DAL\DALTipoEmpresa.cs" />
+    <Compile Include="DAL\DALTipoLocal.cs" />
     <Compile Include="DAL\DALTipoHabitaciones.cs" />
     <Compile Include="DAL\DALHabitaciones.cs" />
     <Compile Include="DAL\DALClientes.cs" />
