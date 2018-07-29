@@ -196,5 +196,30 @@ namespace Sandchips.Formularios
         {
             dgvClientes.DataSource = DALClientes.mostrartabla();
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
     }
 }

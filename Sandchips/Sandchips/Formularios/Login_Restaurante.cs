@@ -106,5 +106,15 @@ namespace Sandchips.Formularios
             //Devolvemos la cadena con el hash en mayúsculas
             return sb.ToString().ToUpper();
         }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void mtbcontraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
     }
 }
