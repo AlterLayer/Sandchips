@@ -306,12 +306,12 @@ namespace Sandchips.Formularios
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(173, 319);
+            this.label4.Location = new System.Drawing.Point(139, 319);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 40);
+            this.label4.Size = new System.Drawing.Size(169, 40);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Local";
+            this.label4.Text = "Restaurante";
             // 
             // pictureBox4
             // 

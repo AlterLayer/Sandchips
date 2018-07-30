@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
+    <Compile Include="DAL\DALRestaurante.cs" />
     <Compile Include="DAL\DALLocal.cs" />
     <Compile Include="DAL\DALTipoEmpresa.cs" />
     <Compile Include="DAL\DALTipoLocal.cs" />
@@ -62,6 +63,12 @@
     <Compile Include="DAL\DALHabitaciones.cs" />
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
+    <Compile Include="Formularios\Restaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Restaurante.designer.cs">
+      <DependentUpon>Restaurante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Local.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +154,7 @@
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelGenero.cs" />
+    <Compile Include="Models\ModelRestaurante.cs" />
     <Compile Include="Models\ModelTipoDocumento.cs" />
     <Compile Include="Models\ModelTipoLocal.cs" />
     <Compile Include="Models\ModelUsuario.cs" />
@@ -160,6 +168,9 @@
     <Compile Include="Models\ModelTipoUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Restaurante.resx">
+      <DependentUpon>Restaurante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Local.resx">
       <DependentUpon>Local.cs</DependentUpon>
     </EmbeddedResource>
