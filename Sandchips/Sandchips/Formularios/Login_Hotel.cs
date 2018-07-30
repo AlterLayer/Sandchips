@@ -59,6 +59,7 @@ namespace Sandchips.Formularios
         private string HassPassword(string cadena)
         {
             //Encriptar
+            //Inicializa una nueva instancia de la clase UTF8Encoding.
             UTF8Encoding enc = new UTF8Encoding();
             byte[] data = enc.GetBytes(cadena);
             byte[] result;
@@ -152,10 +153,6 @@ namespace Sandchips.Formularios
         {
 
         }
-
-        private void txtusuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+         
     }
 }
