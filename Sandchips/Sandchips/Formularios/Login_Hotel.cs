@@ -61,13 +61,15 @@ namespace Sandchips.Formularios
             //Encriptar
             //Inicializa una nueva instancia de la clase UTF8Encoding.
             UTF8Encoding enc = new UTF8Encoding();
+            //Codifica todos los caracteres de la cadena en secuencia de bytes
             byte[] data = enc.GetBytes(cadena);
             byte[] result;
 
             SHA1CryptoServiceProvider sha = new SHA1CryptoServiceProvider();
-
+            //Calcula el valor criptografico de la variable "sha"
             result = sha.ComputeHash(data);
 
+            //StringBuilder representa una cadena de caracteres
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < result.Length; i++)
             {
