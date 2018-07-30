@@ -298,22 +298,22 @@ namespace Sandchips.Formularios
 
         private void txtId_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+          
         }
 
         private void txtNumero_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtBuscar_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtTipo_Habitacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+           
         }
 
         private void txtBuscarT_TextChanged(object sender, EventArgs e)
@@ -323,7 +323,12 @@ namespace Sandchips.Formularios
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+           
+        }
+
+        private void txtId_hab_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

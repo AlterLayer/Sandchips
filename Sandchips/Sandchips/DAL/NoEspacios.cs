@@ -13,13 +13,13 @@ namespace Sandchips.DAL
         {
             try
             {
-                if (char.IsNumber(e.KeyChar))
+                if (char.IsControl(e.KeyChar))
                 {
                     e.Handled = false;
                 }
                 //Controla la tecla de borrar o cualquier tecla de control,
                 //Sí es false permite el uso, si es true le niega el uso
-                else if (char.IsControl(e.KeyChar))
+                else if (char.IsNumber(e.KeyChar))
                 {
                     e.Handled = false;
                 }

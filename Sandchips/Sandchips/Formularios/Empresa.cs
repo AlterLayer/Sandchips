@@ -331,37 +331,37 @@ namespace Sandchips.Formularios
 
         private void txtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtNRC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+         
         }
 
         private void txtNIT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtRegistroIVA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtRegistroAuditor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void cmbTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -371,22 +371,22 @@ namespace Sandchips.Formularios
 
         private void cmbTipoEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtBuscarE_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtTipoEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+           
         }
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
     }
 }
