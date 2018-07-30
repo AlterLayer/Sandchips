@@ -223,7 +223,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 115);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(624, 458);
@@ -251,9 +251,9 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(616, 432);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Local";
@@ -261,7 +261,7 @@
             // txtNombreLocal
             // 
             this.txtNombreLocal.Location = new System.Drawing.Point(434, 36);
-            this.txtNombreLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreLocal.Name = "txtNombreLocal";
             this.txtNombreLocal.Size = new System.Drawing.Size(132, 20);
             this.txtNombreLocal.TabIndex = 30;
@@ -282,7 +282,7 @@
             this.btnConsultar.BackColor = System.Drawing.Color.Teal;
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
             this.btnConsultar.Location = new System.Drawing.Point(262, 185);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(56, 19);
             this.btnConsultar.TabIndex = 28;
@@ -295,7 +295,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Teal;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(188, 185);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(56, 19);
             this.btnEliminar.TabIndex = 27;
@@ -308,7 +308,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.Teal;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(103, 185);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(56, 19);
             this.btnModificar.TabIndex = 26;
@@ -321,7 +321,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.Teal;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(22, 185);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(56, 19);
             this.btnAgregar.TabIndex = 25;
@@ -334,7 +334,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Teal;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(509, 236);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(56, 19);
             this.btnBuscar.TabIndex = 24;
@@ -355,7 +355,7 @@
             // txtBuscar_hab
             // 
             this.txtBuscar_hab.Location = new System.Drawing.Point(218, 236);
-            this.txtBuscar_hab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar_hab.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar_hab.Name = "txtBuscar_hab";
             this.txtBuscar_hab.Size = new System.Drawing.Size(254, 20);
             this.txtBuscar_hab.TabIndex = 22;
@@ -371,7 +371,7 @@
             this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocal.Location = new System.Drawing.Point(31, 260);
-            this.dgvLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvLocal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLocal.Name = "dgvLocal";
             this.dgvLocal.ReadOnly = true;
             this.dgvLocal.RowHeadersVisible = false;
@@ -386,7 +386,7 @@
             // txtCodigoLocal
             // 
             this.txtCodigoLocal.Location = new System.Drawing.Point(137, 75);
-            this.txtCodigoLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoLocal.Name = "txtCodigoLocal";
             this.txtCodigoLocal.Size = new System.Drawing.Size(132, 20);
             this.txtCodigoLocal.TabIndex = 20;
@@ -396,11 +396,12 @@
             // 
             this.txtIdLocal.Enabled = false;
             this.txtIdLocal.Location = new System.Drawing.Point(137, 40);
-            this.txtIdLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdLocal.Name = "txtIdLocal";
             this.txtIdLocal.ReadOnly = true;
             this.txtIdLocal.Size = new System.Drawing.Size(132, 20);
             this.txtIdLocal.TabIndex = 19;
+            this.txtIdLocal.TextChanged += new System.EventHandler(this.txtIdLocal_TextChanged);
             // 
             // cmbTipoLocal
             // 
@@ -408,7 +409,7 @@
             this.cmbTipoLocal.FormattingEnabled = true;
             this.cmbTipoLocal.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.cmbTipoLocal.Location = new System.Drawing.Point(434, 73);
-            this.cmbTipoLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoLocal.Name = "cmbTipoLocal";
             this.cmbTipoLocal.Size = new System.Drawing.Size(132, 21);
             this.cmbTipoLocal.TabIndex = 17;
@@ -430,10 +431,10 @@
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(616, 478);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(616, 432);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tipos Local";
             // 
@@ -452,7 +453,7 @@
             this.btnConsultarT.BackColor = System.Drawing.Color.Teal;
             this.btnConsultarT.ForeColor = System.Drawing.Color.White;
             this.btnConsultarT.Location = new System.Drawing.Point(284, 158);
-            this.btnConsultarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultarT.Name = "btnConsultarT";
             this.btnConsultarT.Size = new System.Drawing.Size(56, 19);
             this.btnConsultarT.TabIndex = 45;
@@ -465,7 +466,7 @@
             this.btnEliminarT.BackColor = System.Drawing.Color.Teal;
             this.btnEliminarT.ForeColor = System.Drawing.Color.White;
             this.btnEliminarT.Location = new System.Drawing.Point(184, 158);
-            this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarT.Name = "btnEliminarT";
             this.btnEliminarT.Size = new System.Drawing.Size(56, 19);
             this.btnEliminarT.TabIndex = 44;
@@ -478,7 +479,7 @@
             this.btnModificarT.BackColor = System.Drawing.Color.Teal;
             this.btnModificarT.ForeColor = System.Drawing.Color.White;
             this.btnModificarT.Location = new System.Drawing.Point(98, 158);
-            this.btnModificarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarT.Name = "btnModificarT";
             this.btnModificarT.Size = new System.Drawing.Size(56, 19);
             this.btnModificarT.TabIndex = 43;
@@ -491,7 +492,7 @@
             this.btnAgregarT.BackColor = System.Drawing.Color.Teal;
             this.btnAgregarT.ForeColor = System.Drawing.Color.White;
             this.btnAgregarT.Location = new System.Drawing.Point(20, 158);
-            this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarT.Name = "btnAgregarT";
             this.btnAgregarT.Size = new System.Drawing.Size(56, 19);
             this.btnAgregarT.TabIndex = 42;
@@ -504,7 +505,7 @@
             this.btnBuscarT.BackColor = System.Drawing.Color.Teal;
             this.btnBuscarT.ForeColor = System.Drawing.Color.White;
             this.btnBuscarT.Location = new System.Drawing.Point(328, 193);
-            this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarT.Name = "btnBuscarT";
             this.btnBuscarT.Size = new System.Drawing.Size(56, 19);
             this.btnBuscarT.TabIndex = 41;
@@ -525,7 +526,7 @@
             // txtBuscarT
             // 
             this.txtBuscarT.Location = new System.Drawing.Point(100, 193);
-            this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarT.Name = "txtBuscarT";
             this.txtBuscarT.Size = new System.Drawing.Size(210, 20);
             this.txtBuscarT.TabIndex = 39;
@@ -541,7 +542,7 @@
             this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTipoLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoLocal.Location = new System.Drawing.Point(19, 231);
-            this.dgvTipoLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoLocal.Name = "dgvTipoLocal";
             this.dgvTipoLocal.ReadOnly = true;
             this.dgvTipoLocal.RowHeadersVisible = false;
@@ -556,7 +557,7 @@
             // txtTipoLocal
             // 
             this.txtTipoLocal.Location = new System.Drawing.Point(135, 59);
-            this.txtTipoLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipoLocal.Name = "txtTipoLocal";
             this.txtTipoLocal.Size = new System.Drawing.Size(251, 20);
             this.txtTipoLocal.TabIndex = 37;
@@ -566,7 +567,7 @@
             // 
             this.txtIdTipoLocal.Enabled = false;
             this.txtIdTipoLocal.Location = new System.Drawing.Point(135, 24);
-            this.txtIdTipoLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdTipoLocal.Name = "txtIdTipoLocal";
             this.txtIdTipoLocal.ReadOnly = true;
             this.txtIdTipoLocal.Size = new System.Drawing.Size(132, 20);
@@ -595,10 +596,10 @@
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Size = new System.Drawing.Size(616, 478);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(616, 432);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Detalle Local";
             this.tabPage3.UseVisualStyleBackColor = true;

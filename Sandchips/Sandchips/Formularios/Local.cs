@@ -286,27 +286,32 @@ namespace Sandchips.Formularios
 
         private void txtCodigoLocal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+        
         }
 
         private void txtNombreLocal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtBuscar_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtTipoLocal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+            
         }
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NoEspacios.SoloEspacios(e);
+          
+        }
+
+        private void txtIdLocal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

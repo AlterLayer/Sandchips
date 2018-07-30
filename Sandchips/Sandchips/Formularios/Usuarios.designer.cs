@@ -30,7 +30,7 @@ namespace Sandchips.Formularios
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -187,7 +187,7 @@ namespace Sandchips.Formularios
             this.cmbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoUsuario.FormattingEnabled = true;
             this.cmbTipoUsuario.Location = new System.Drawing.Point(839, 144);
-            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(174, 21);
             this.cmbTipoUsuario.TabIndex = 109;
@@ -198,7 +198,7 @@ namespace Sandchips.Formularios
             this.dtpNacimiento.CustomFormat = "yyyy/mm/dd";
             this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNacimiento.Location = new System.Drawing.Point(839, 78);
-            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNacimiento.MaxDate = new System.DateTime(2018, 12, 31, 0, 0, 0, 0);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(151, 20);
@@ -207,7 +207,7 @@ namespace Sandchips.Formularios
             // mtbTelefono
             // 
             this.mtbTelefono.Location = new System.Drawing.Point(839, 44);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "9999-9999";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(174, 20);
@@ -267,7 +267,7 @@ namespace Sandchips.Formularios
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(839, 108);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(174, 21);
             this.cmbGenero.TabIndex = 97;
@@ -287,7 +287,7 @@ namespace Sandchips.Formularios
             // Correo
             // 
             this.Correo.Location = new System.Drawing.Point(503, 78);
-            this.Correo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Correo.Margin = new System.Windows.Forms.Padding(2);
             this.Correo.Name = "Correo";
             this.Correo.Size = new System.Drawing.Size(174, 20);
             this.Correo.TabIndex = 95;
@@ -296,7 +296,7 @@ namespace Sandchips.Formularios
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(503, 178);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(174, 53);
@@ -306,7 +306,7 @@ namespace Sandchips.Formularios
             // txtNumeroDocumento
             // 
             this.txtNumeroDocumento.Location = new System.Drawing.Point(503, 144);
-            this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(174, 20);
             this.txtNumeroDocumento.TabIndex = 93;
@@ -363,7 +363,7 @@ namespace Sandchips.Formularios
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(503, 44);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(174, 20);
             this.txtApellidos.TabIndex = 90;
@@ -372,7 +372,7 @@ namespace Sandchips.Formularios
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(162, 178);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(174, 20);
             this.txtNombre.TabIndex = 85;
@@ -417,7 +417,7 @@ namespace Sandchips.Formularios
             // 
             this.txtIdUsuario.Enabled = false;
             this.txtIdUsuario.Location = new System.Drawing.Point(162, 44);
-            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.ReadOnly = true;
             this.txtIdUsuario.Size = new System.Drawing.Size(76, 20);
@@ -441,7 +441,7 @@ namespace Sandchips.Formularios
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(16, 239);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(69, 31);
             this.btnGuardar.TabIndex = 78;
@@ -467,7 +467,7 @@ namespace Sandchips.Formularios
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(124, 239);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(69, 31);
             this.btnModificar.TabIndex = 79;
@@ -493,7 +493,7 @@ namespace Sandchips.Formularios
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(233, 239);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(69, 31);
             this.btnEliminar.TabIndex = 80;
@@ -507,7 +507,7 @@ namespace Sandchips.Formularios
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(350, 239);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(69, 31);
             this.btnCancelar.TabIndex = 81;
@@ -518,7 +518,7 @@ namespace Sandchips.Formularios
             // mtbconfirmcontrasena
             // 
             this.mtbconfirmcontrasena.Location = new System.Drawing.Point(162, 141);
-            this.mtbconfirmcontrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbconfirmcontrasena.Margin = new System.Windows.Forms.Padding(2);
             this.mtbconfirmcontrasena.Name = "mtbconfirmcontrasena";
             this.mtbconfirmcontrasena.PasswordChar = '*';
             this.mtbconfirmcontrasena.Size = new System.Drawing.Size(174, 20);
@@ -530,7 +530,7 @@ namespace Sandchips.Formularios
             this.cmbTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDocumento.FormattingEnabled = true;
             this.cmbTipoDocumento.Location = new System.Drawing.Point(503, 108);
-            this.cmbTipoDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoDocumento.Name = "cmbTipoDocumento";
             this.cmbTipoDocumento.Size = new System.Drawing.Size(174, 21);
             this.cmbTipoDocumento.TabIndex = 73;
@@ -538,7 +538,7 @@ namespace Sandchips.Formularios
             // mtbcontrasena
             // 
             this.mtbcontrasena.Location = new System.Drawing.Point(162, 110);
-            this.mtbcontrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbcontrasena.Margin = new System.Windows.Forms.Padding(2);
             this.mtbcontrasena.Name = "mtbcontrasena";
             this.mtbcontrasena.PasswordChar = '*';
             this.mtbcontrasena.Size = new System.Drawing.Size(174, 20);
@@ -548,10 +548,11 @@ namespace Sandchips.Formularios
             // txtusuario
             // 
             this.txtusuario.Location = new System.Drawing.Point(162, 78);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(174, 20);
             this.txtusuario.TabIndex = 75;
+            this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // dgvusuarios
@@ -561,16 +562,16 @@ namespace Sandchips.Formularios
             this.dgvusuarios.AllowUserToResizeColumns = false;
             this.dgvusuarios.AllowUserToResizeRows = false;
             this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvusuarios.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvusuarios.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvusuarios.Location = new System.Drawing.Point(16, 290);
-            this.dgvusuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvusuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvusuarios.Name = "dgvusuarios";
             this.dgvusuarios.ReadOnly = true;
             this.dgvusuarios.RowHeadersVisible = false;
@@ -587,7 +588,7 @@ namespace Sandchips.Formularios
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(874, 254);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(138, 28);
             this.btnBuscar.TabIndex = 50;
@@ -597,7 +598,7 @@ namespace Sandchips.Formularios
             // txtbuscar
             // 
             this.txtbuscar.Location = new System.Drawing.Point(614, 260);
-            this.txtbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(230, 20);
             this.txtbuscar.TabIndex = 51;

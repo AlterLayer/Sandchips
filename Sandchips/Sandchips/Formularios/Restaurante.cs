@@ -167,5 +167,10 @@ namespace Sandchips.Formularios
             txtNRC.Text = dgvRestaurante[2, pocision].Value.ToString();
             txtNombreRestaurante.Text = dgvRestaurante[1, pocision].Value.ToString();
         }
+
+        private void txtIdRestaurante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
