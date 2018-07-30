@@ -139,13 +139,17 @@ namespace Sandchips.Formularios
         }
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            NoEspacios.SoloEspacios(e);
+        { 
         }
 
         private void mtbcontraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
             NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -60,9 +60,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            pictureBox1.Location = new System.Drawing.Point(12, 58);
+            pictureBox1.Location = new System.Drawing.Point(16, 71);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(328, 472);
+            pictureBox1.Size = new System.Drawing.Size(437, 581);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -73,9 +74,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(119, 496);
+            this.button1.Location = new System.Drawing.Point(159, 610);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 23);
+            this.button1.Size = new System.Drawing.Size(140, 28);
             this.button1.TabIndex = 28;
             this.button1.Text = "Recuperar aqui";
             this.button1.UseVisualStyleBackColor = false;
@@ -86,9 +88,10 @@
             this.label6.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.label6.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(104, 478);
+            this.label6.Location = new System.Drawing.Point(139, 588);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 15);
+            this.label6.Size = new System.Drawing.Size(175, 21);
             this.label6.TabIndex = 27;
             this.label6.Text = "¿Olvidaste la contraseña?";
             // 
@@ -97,9 +100,10 @@
             this.btnacceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnacceder.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnacceder.ForeColor = System.Drawing.Color.White;
-            this.btnacceder.Location = new System.Drawing.Point(133, 336);
+            this.btnacceder.Location = new System.Drawing.Point(177, 414);
+            this.btnacceder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(75, 23);
+            this.btnacceder.Size = new System.Drawing.Size(100, 28);
             this.btnacceder.TabIndex = 26;
             this.btnacceder.Text = "Acceder";
             this.btnacceder.UseVisualStyleBackColor = true;
@@ -111,9 +115,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 272);
+            this.label5.Location = new System.Drawing.Point(37, 335);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 15);
+            this.label5.Size = new System.Drawing.Size(86, 21);
             this.label5.TabIndex = 25;
             this.label5.Text = "Contraseña:";
             // 
@@ -122,19 +127,22 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(28, 219);
+            this.label4.Location = new System.Drawing.Point(37, 270);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 15);
+            this.label4.Size = new System.Drawing.Size(141, 21);
             this.label4.TabIndex = 24;
             this.label4.Text = "Nombre de Usuario:";
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(27, 237);
+            this.txtusuario.Location = new System.Drawing.Point(36, 292);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusuario.Multiline = true;
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(291, 21);
+            this.txtusuario.Size = new System.Drawing.Size(387, 25);
             this.txtusuario.TabIndex = 1;
+            this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // label3
@@ -142,9 +150,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Aqua;
-            this.label3.Location = new System.Drawing.Point(462, 397);
+            this.label3.Location = new System.Drawing.Point(616, 489);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 54);
+            this.label3.Size = new System.Drawing.Size(175, 68);
             this.label3.TabIndex = 21;
             this.label3.Text = "Hotel";
             // 
@@ -154,9 +163,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label2.Location = new System.Drawing.Point(740, 208);
+            this.label2.Location = new System.Drawing.Point(987, 256);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 54);
+            this.label2.Size = new System.Drawing.Size(324, 68);
             this.label2.TabIndex = 20;
             this.label2.Text = "Sandchip\'s";
             // 
@@ -164,9 +174,10 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(766, 306);
+            this.pictureBox9.Location = new System.Drawing.Point(1021, 377);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(197, 204);
+            this.pictureBox9.Size = new System.Drawing.Size(263, 251);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 19;
             this.pictureBox9.TabStop = false;
@@ -175,9 +186,10 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(435, 143);
+            this.pictureBox7.Location = new System.Drawing.Point(580, 176);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(190, 182);
+            this.pictureBox7.Size = new System.Drawing.Size(253, 224);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 18;
             this.pictureBox7.TabStop = false;
@@ -187,9 +199,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(556, 55);
+            this.label1.Location = new System.Drawing.Point(741, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 57);
+            this.label1.Size = new System.Drawing.Size(410, 71);
             this.label1.TabIndex = 17;
             this.label1.Text = "Ingresa Usuario:";
             // 
@@ -202,8 +215,9 @@
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1035, 47);
+            this.panel2.Size = new System.Drawing.Size(1380, 58);
             this.panel2.TabIndex = 29;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -212,18 +226,20 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(465, 7);
+            this.label7.Location = new System.Drawing.Point(620, 9);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(217, 31);
+            this.label7.Size = new System.Drawing.Size(274, 38);
             this.label7.TabIndex = 21;
             this.label7.Text = "Sandchip\'s Hotel";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 9);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox3.Size = new System.Drawing.Size(39, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
@@ -231,9 +247,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1004, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(1339, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox2.Size = new System.Drawing.Size(27, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -241,28 +258,30 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(978, 7);
+            this.pictureBox5.Location = new System.Drawing.Point(1304, 9);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox5.Size = new System.Drawing.Size(27, 23);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
             // 
             // mtbcontraseña
             // 
-            this.mtbcontraseña.Location = new System.Drawing.Point(27, 305);
+            this.mtbcontraseña.Location = new System.Drawing.Point(36, 375);
+            this.mtbcontraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbcontraseña.Name = "mtbcontraseña";
             this.mtbcontraseña.PasswordChar = '*';
-            this.mtbcontraseña.Size = new System.Drawing.Size(291, 20);
+            this.mtbcontraseña.Size = new System.Drawing.Size(387, 22);
             this.mtbcontraseña.TabIndex = 2;
             this.mtbcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcontraseña_KeyPress);
             // 
             // Login_Hotel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1035, 539);
+            this.ClientSize = new System.Drawing.Size(1380, 663);
             this.Controls.Add(this.mtbcontraseña);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
@@ -278,6 +297,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login_Hotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel_Reservacion_y_Chequeo";
