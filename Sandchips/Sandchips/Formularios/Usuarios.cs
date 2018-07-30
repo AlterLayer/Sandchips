@@ -272,5 +272,55 @@ namespace Sandchips.Formularios
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvusuarios.DataSource = DALUsuarios.mostrartabla();
         }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void mtbcontrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void Correo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
     }
 }

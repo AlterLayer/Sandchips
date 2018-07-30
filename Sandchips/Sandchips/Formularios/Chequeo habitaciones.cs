@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Sandchips.DAL;
 
 namespace Sandchips.Formularios
 {
@@ -70,6 +71,26 @@ namespace Sandchips.Formularios
             Form Form1 = new Clientes();
             Form1.Show();
             this.Hide();
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void maskedTextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
+        }
+
+        private void maskedTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NoEspacios.SoloEspacios(e);
         }
     }
 }

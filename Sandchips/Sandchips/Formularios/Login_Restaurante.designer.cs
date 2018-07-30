@@ -100,6 +100,7 @@
             this.mtbcontraseña.PasswordChar = '*';
             this.mtbcontraseña.Size = new System.Drawing.Size(287, 20);
             this.mtbcontraseña.TabIndex = 17;
+            this.mtbcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcontraseña_KeyPress);
             // 
             // button1
             // 
@@ -165,6 +166,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(291, 21);
             this.txtusuario.TabIndex = 10;
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // label3
             // 
