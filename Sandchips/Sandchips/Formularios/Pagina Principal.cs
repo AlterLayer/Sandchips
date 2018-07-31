@@ -77,6 +77,13 @@ namespace Sandchips.Formularios
 
         private void inicio_Load(object sender, EventArgs e)
         {
+            panel1.Width = this.Width - 50;
+
+            ImagenHotel.Height = this.Height - 360;
+            ImagenHotel.Width = this.Width - 950;
+
+            ImagenRes.Height = this.Height - 360;
+            ImagenRes.Width = this.Width - 1050;
 
         }
 

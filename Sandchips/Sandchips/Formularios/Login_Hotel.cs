@@ -155,6 +155,22 @@ namespace Sandchips.Formularios
         {
 
         }
-         
+
+        private void btnacceder_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnacceder.BackColor = Color.White;
+            btnacceder.ForeColor = Color.MidnightBlue;
+        }
+
+        private void btnacceder_MouseLeave(object sender, EventArgs e)
+        {
+            btnacceder.BackColor = Color.MidnightBlue;
+            btnacceder.ForeColor = Color.White;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
