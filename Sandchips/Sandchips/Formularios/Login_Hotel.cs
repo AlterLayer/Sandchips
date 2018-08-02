@@ -97,7 +97,7 @@ namespace Sandchips.Formularios
                 if (datos)
                 {
                     MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Menu_Hotel hab = new Menu_Hotel();
+                    inicio hab = new inicio();
                     hab.Show();
                     this.Hide();
                 }

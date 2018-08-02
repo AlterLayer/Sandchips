@@ -30,7 +30,7 @@ namespace Sandchips.DAL
         public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT IdHabitacion, NumeroHabitacion, H.IdTipoHabitacion, E.Estado FROM tbmaehabitaciones AS Ha, tbdettipohabitacion AS H, tbdetestado AS E WHERE H.IdTipoHabitacion = Ha.IdTipoHabitacion AND E.IdEstado = Ha.IdEstado";
+            instruccion = "SELECT IdHabitaciones, NumeroHabitacion, H.IdTipoHabitacion, E.Estado FROM tbmaehabitaciones AS Ha, tbdettipohabitacion AS H, tbmaeestado AS E WHERE H.IdTipoHabitacion = Ha.IdTipoHabitacion AND E.IdEstado = Ha.IdEstado AND IdEstado = 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
@@ -41,7 +41,7 @@ namespace Sandchips.DAL
             List<ModelTipoHabitacion> listabuscar = new List<ModelTipoHabitacion>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoHabitacion, Tipo_Habitacion FROM tbdettipo_habitacion"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoHabitacion, TipoHabitacion FROM tbdettipohabitacion"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 listabuscar.Add(new ModelTipoHabitacion()
@@ -70,7 +70,7 @@ namespace Sandchips.DAL
             List<ModelEstado> listabuscar = new List<ModelEstado>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdEstado, Estado FROM tbdetestado"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdEstado, Estado FROM tbmaeestado"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 listabuscar.Add(new ModelEstado()
@@ -97,7 +97,7 @@ namespace Sandchips.DAL
         public static int eliminar(ModelHabitaciones model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE SET IdEstado='{1}' tbmaehabitaciones WHERE IdHabitacion='{0}'", model.IdHabitacion, model.IdEstado), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaehabitaciones SET IdEstado=2 WHERE IdHabitaciones='{0}'", model.IdHabitacion), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 

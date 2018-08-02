@@ -29,11 +29,11 @@ namespace Sandchips.Formularios
             dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
             Conexion.obtenerconexion();
             cmbTipo_hab.DataSource = DALHabitaciones.ObtenerTipo_Hab();
-            cmbTipo_hab.DisplayMember = "Tipo_Habitacion";
-            cmbTipo_hab.ValueMember = "Id_Tipo_Habitacion";
+            cmbTipo_hab.DisplayMember = "TipoHabitacion";
+            cmbTipo_hab.ValueMember = "IdTipoHabitacion";
             cmbEstado_hab.DataSource = DALHabitaciones.ObtenerEstado();
             cmbEstado_hab.DisplayMember = "Estado";
-            cmbEstado_hab.ValueMember = "Id_Estado";
+            cmbEstado_hab.ValueMember = "IdEstado";
             cmbTipo_hab.SelectedIndex = 0;
             cmbEstado_hab.SelectedIndex = 0;
 
@@ -150,6 +150,7 @@ namespace Sandchips.Formularios
                 {
                     MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvHabitaciones.DataSource = DALHabitaciones.mostrartabla();
+                    txtId_hab.Clear();
                     txtNumero_hab.Clear();
                     cmbTipo_hab.SelectedIndex = 0;
                     cmbEstado_hab.SelectedIndex = 0;
@@ -171,8 +172,11 @@ namespace Sandchips.Formularios
             pocision = dgvHabitaciones.CurrentRow.Index;
             txtId_hab.Text = dgvHabitaciones[0, pocision].Value.ToString();
             txtNumero_hab.Text = dgvHabitaciones[1, pocision].Value.ToString();
-            cmbTipo_hab.Text = dgvHabitaciones[2, pocision].Value.ToString();
+            cmbTipo_hab.SelectedValue = Convert.ToInt32(dgvHabitaciones[2, pocision].Value.ToString());
             cmbEstado_hab.Text = dgvHabitaciones[3, pocision].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -183,6 +187,10 @@ namespace Sandchips.Formularios
             DALHabitaciones.eliminar(model);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvHabitaciones.DataSource = DALHabitaciones.mostrartabla();
+            txtId_hab.Clear();
+            txtNumero_hab.Clear();
+            cmbTipo_hab.SelectedIndex = 0;
+            cmbEstado_hab.SelectedIndex = 0;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -329,6 +337,133 @@ namespace Sandchips.Formularios
         private void txtId_hab_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnAgregar.BackColor = Color.Black;
+            btnAgregar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.BackColor = Color.FromArgb(190, 239, 158);
+            btnAgregar.ForeColor = Color.Black;
+        }
+         
+
+        private void tabPage1_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void tabPage2_MouseMove(object sender, MouseEventArgs e)
+        { 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = true;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false; 
+        }
+
+        private void cmbTipo_hab_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void btnModificar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnModificar.BackColor = Color.Black;
+            btnModificar.ForeColor = Color.FromArgb(190, 239, 158);
+
+        }
+
+        private void btnModificar_MouseLeave(object sender, EventArgs e)
+        {
+            btnModificar.BackColor = Color.FromArgb(190, 239, 158);
+            btnModificar.ForeColor = Color.Black;
+        }
+
+        private void tabControl1_MouseClick(object sender, MouseEventArgs e)
+        {
+            dgvHabitaciones.DataSource = DALHabitaciones.mostrartabla();
+            dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
+            Conexion.obtenerconexion();
+            cmbTipo_hab.DataSource = DALHabitaciones.ObtenerTipo_Hab();
+            cmbTipo_hab.DisplayMember = "TipoHabitacion";
+            cmbTipo_hab.ValueMember = "IdTipoHabitacion";
+            cmbEstado_hab.DataSource = DALHabitaciones.ObtenerEstado();
+            cmbEstado_hab.DisplayMember = "Estado";
+            cmbEstado_hab.ValueMember = "IdEstado";
+            cmbTipo_hab.SelectedIndex = 0;
+            cmbEstado_hab.SelectedIndex = 0;
+        }
+        private void tabControl1_ChangeUICues(object sender, UICuesEventArgs e)
+        {
+
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {            
+            dgvHabitaciones.DataSource = DALHabitaciones.mostrartabla();
+            dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
+            Conexion.obtenerconexion();
+            cmbTipo_hab.DataSource = DALHabitaciones.ObtenerTipo_Hab();
+            cmbTipo_hab.DisplayMember = "TipoHabitacion";
+            cmbTipo_hab.ValueMember = "IdTipoHabitacion";
+            cmbEstado_hab.DataSource = DALHabitaciones.ObtenerEstado();
+            cmbEstado_hab.DisplayMember = "Estado";
+            cmbEstado_hab.ValueMember = "IdEstado";
+            cmbTipo_hab.SelectedIndex = 0;
+            cmbEstado_hab.SelectedIndex = 0;
+        }
+
+        private void btnEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEliminar.BackColor = Color.FromArgb(190, 239, 158);
+            btnEliminar.ForeColor = Color.Black;
+        }
+
+        private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnEliminar.BackColor = Color.Black;
+            btnEliminar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnConsultar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnConsultar.BackColor = Color.Black;
+            btnConsultar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnConsultar_MouseLeave(object sender, EventArgs e)
+        {
+            btnConsultar.BackColor = Color.FromArgb(190, 239, 158);
+            btnConsultar.ForeColor = Color.Black;
+        }
+
+        private void btnLimpiar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnLimpiar.BackColor = Color.Black;
+            btnLimpiar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnLimpiar_MouseLeave(object sender, EventArgs e)
+        {
+            btnLimpiar.BackColor = Color.FromArgb(190, 239, 158);
+            btnLimpiar.ForeColor = Color.Black;
+        }
+
+        private void btnBuscar_MouseLeave(object sender, EventArgs e)
+        {
+            btnBuscar.BackColor = Color.FromArgb(190, 239, 158);
+            btnBuscar.ForeColor = Color.Black;
+        }
+
+        private void btnBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnBuscar.BackColor = Color.Black;
+            btnBuscar.ForeColor = Color.FromArgb(190, 239, 158);
         }
     }
 }

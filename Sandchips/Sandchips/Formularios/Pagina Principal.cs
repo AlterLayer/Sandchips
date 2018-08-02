@@ -16,9 +16,6 @@ namespace Sandchips.Formularios
 
         public inicio()
         {
-            //
-            // Required for Windows Form Designer support
-            //
             InitializeComponent();
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -58,7 +55,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Form inicio = new Login_Hotel();
+            Form inicio = new Menu_Hotel();
             inicio.Show();
             this.Hide();
         }
