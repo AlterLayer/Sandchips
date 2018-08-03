@@ -123,7 +123,7 @@ namespace Sandchips.Formularios
             this.panel2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 586);
+            this.panel2.Size = new System.Drawing.Size(8, 624);
             this.panel2.TabIndex = 1;
             // 
             // label11
@@ -621,7 +621,7 @@ namespace Sandchips.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(1032, 640);
+            this.ClientSize = new System.Drawing.Size(1032, 678);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
