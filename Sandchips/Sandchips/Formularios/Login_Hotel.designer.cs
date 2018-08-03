@@ -40,21 +40,22 @@
             // txtusuario
             // 
             this.txtusuario.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 25.8F);
-            this.txtusuario.Location = new System.Drawing.Point(127, 538);
+            this.txtusuario.Location = new System.Drawing.Point(222, 274);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(388, 54);
+            this.txtusuario.Size = new System.Drawing.Size(292, 45);
             this.txtusuario.TabIndex = 1;
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress_1);
             // 
             // mtbcontraseña
             // 
             this.mtbcontraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.mtbcontraseña.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbcontraseña.Location = new System.Drawing.Point(111, 741);
-            this.mtbcontraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.mtbcontraseña.Location = new System.Drawing.Point(222, 397);
             this.mtbcontraseña.Name = "mtbcontraseña";
             this.mtbcontraseña.PasswordChar = '*';
-            this.mtbcontraseña.Size = new System.Drawing.Size(387, 54);
+            this.mtbcontraseña.Size = new System.Drawing.Size(291, 45);
             this.mtbcontraseña.TabIndex = 2;
             this.mtbcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcontraseña_KeyPress);
             // 
@@ -64,10 +65,9 @@
             this.btnacceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnacceder.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnacceder.ForeColor = System.Drawing.Color.White;
-            this.btnacceder.Location = new System.Drawing.Point(242, 588);
-            this.btnacceder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnacceder.Location = new System.Drawing.Point(182, 472);
             this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(187, 63);
+            this.btnacceder.Size = new System.Drawing.Size(140, 51);
             this.btnacceder.TabIndex = 3;
             this.btnacceder.Text = "Acceder";
             this.btnacceder.UseVisualStyleBackColor = true;
@@ -90,7 +90,8 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(822, 795);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1023, 640);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
@@ -101,23 +102,23 @@
             this.button1.BackgroundImage = global::Sandchips.Properties.Resources.pictureBox1_Image;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(744, 22);
+            this.button1.Location = new System.Drawing.Point(965, 18);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 44);
+            this.button1.Size = new System.Drawing.Size(50, 36);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login_Hotel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(822, 795);
+            this.ClientSize = new System.Drawing.Size(1023, 640);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login_Hotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel_Reservacion_y_Chequeo";

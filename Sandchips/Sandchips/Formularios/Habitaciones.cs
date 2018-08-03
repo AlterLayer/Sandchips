@@ -311,17 +311,34 @@ namespace Sandchips.Formularios
 
         private void txtNumero_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtBuscar_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtTipo_Habitacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtBuscarT_TextChanged(object sender, EventArgs e)
@@ -331,7 +348,14 @@ namespace Sandchips.Formularios
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtId_hab_TextChanged(object sender, EventArgs e)
@@ -464,6 +488,18 @@ namespace Sandchips.Formularios
         {
             btnBuscar.BackColor = Color.Black;
             btnBuscar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void txtNumero_hab_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

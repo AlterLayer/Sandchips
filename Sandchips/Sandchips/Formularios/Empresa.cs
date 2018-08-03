@@ -331,37 +331,70 @@ namespace Sandchips.Formularios
 
         private void txtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNRC_KeyPress(object sender, KeyPressEventArgs e)
         {
-         
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNIT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtRegistroIVA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtRegistroAuditor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void cmbTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -371,22 +404,42 @@ namespace Sandchips.Formularios
 
         private void cmbTipoEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtBuscarE_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtTipoEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

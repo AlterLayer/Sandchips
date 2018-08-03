@@ -275,57 +275,151 @@ namespace Sandchips.Formularios
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void mtbcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void Correo_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbTipoDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmbGenero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmbTipoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

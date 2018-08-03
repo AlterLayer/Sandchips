@@ -27,7 +27,7 @@ namespace Sandchips.Formularios
             try
             {
                 string Contra = HassPassword(mtbcontraseña.Text); 
-                 ModelUsuario model = new ModelUsuario();
+                ModelUsuario model = new ModelUsuario();
                 model.Usuario = txtusuario.Text;
                 model.Clave = HassPassword(mtbcontraseña.Text);
                 bool datos = DALUsuarios.IniciarSession(model);
@@ -125,7 +125,10 @@ namespace Sandchips.Formularios
 
         private void mtbcontraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
@@ -165,6 +168,14 @@ namespace Sandchips.Formularios
         {
             btnacceder.BackColor = Color.MidnightBlue;
             btnacceder.ForeColor = Color.White;
+        }
+
+        private void txtusuario_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            } 
         }
     }
 }
