@@ -68,7 +68,7 @@
             this.btnacceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnacceder.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnacceder.ForeColor = System.Drawing.Color.White;
-            this.btnacceder.Location = new System.Drawing.Point(269, 563);
+            this.btnacceder.Location = new System.Drawing.Point(269, 675);
             this.btnacceder.Margin = new System.Windows.Forms.Padding(4);
             this.btnacceder.Name = "btnacceder";
             this.btnacceder.Size = new System.Drawing.Size(187, 63);

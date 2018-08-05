@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Habitaciones));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -393,16 +393,16 @@
             this.dgvHabitaciones.AllowUserToDeleteRows = false;
             this.dgvHabitaciones.AllowUserToResizeColumns = false;
             this.dgvHabitaciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHabitaciones.Location = new System.Drawing.Point(22, 266);
             this.dgvHabitaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvHabitaciones.Name = "dgvHabitaciones";
             this.dgvHabitaciones.ReadOnly = true;
             this.dgvHabitaciones.RowHeadersVisible = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Teal;
-            this.dgvHabitaciones.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            this.dgvHabitaciones.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHabitaciones.RowTemplate.Height = 24;
             this.dgvHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHabitaciones.Size = new System.Drawing.Size(544, 206);
@@ -416,6 +416,7 @@
             this.txtNumero_hab.Name = "txtNumero_hab";
             this.txtNumero_hab.Size = new System.Drawing.Size(132, 20);
             this.txtNumero_hab.TabIndex = 20;
+            this.txtNumero_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_hab_KeyPress_1);
             // 
             // txtId_hab
             // 
@@ -582,16 +583,16 @@
             this.dgvTipoHabitacion.AllowUserToDeleteRows = false;
             this.dgvTipoHabitacion.AllowUserToResizeColumns = false;
             this.dgvTipoHabitacion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTipoHabitacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoHabitacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTipoHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoHabitacion.Location = new System.Drawing.Point(19, 231);
             this.dgvTipoHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvTipoHabitacion.Name = "dgvTipoHabitacion";
             this.dgvTipoHabitacion.ReadOnly = true;
             this.dgvTipoHabitacion.RowHeadersVisible = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Teal;
-            this.dgvTipoHabitacion.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            this.dgvTipoHabitacion.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTipoHabitacion.RowTemplate.Height = 24;
             this.dgvTipoHabitacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTipoHabitacion.Size = new System.Drawing.Size(567, 205);
@@ -641,7 +642,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
             this.ClientSize = new System.Drawing.Size(650, 592);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label5);

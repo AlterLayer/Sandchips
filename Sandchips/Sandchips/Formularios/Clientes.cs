@@ -199,32 +199,96 @@ namespace Sandchips.Formularios
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void cmbTipoDoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmbGenero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmbUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void label13_Click(object sender, EventArgs e)
