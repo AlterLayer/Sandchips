@@ -198,8 +198,12 @@ namespace Sandchips.Formularios
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {          
-            if (Char.IsNumber(e.KeyChar))
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -207,7 +211,11 @@ namespace Sandchips.Formularios
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -232,7 +240,11 @@ namespace Sandchips.Formularios
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -240,12 +252,16 @@ namespace Sandchips.Formularios
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            txtNombre.Text.TrimStart();
+            
         }
 
         private void cmbTipoDoc_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -253,7 +269,11 @@ namespace Sandchips.Formularios
 
         private void cmbGenero_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -261,35 +281,19 @@ namespace Sandchips.Formularios
 
         private void cmbUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtApellido_TextChanged(object sender, EventArgs e)
-        {
-            txtApellido.Text.TrimStart();
-        }
-
-        private void cmbTipoDoc_SelectedIndexChanged(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtDocumento_TextChanged(object sender, EventArgs e)
-        {
-            txtDocumento.Text.TrimStart();
-        }
-
-        private void mtbTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            txtBuscar.Text.TrimStart();
         }
     }
 }

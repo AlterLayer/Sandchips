@@ -30,7 +30,7 @@ namespace Sandchips.DAL
         public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT IdHabitaciones, NumeroHabitacion, H.IdTipoHabitacion, E.Estado FROM tbmaehabitaciones AS Ha, tbdettipohabitacion AS H, tbmaeestado AS E WHERE H.IdTipoHabitacion = Ha.IdTipoHabitacion AND E.IdEstado = Ha.IdEstado AND IdEstado = 1";
+            instruccion = "SELECT IdHabitaciones, NumeroHabitacion, H.IdTipoHabitacion, E.Estado FROM tbmaehabitaciones AS Ha, tbdettipohabitacion AS H, tbmaeestado AS E WHERE H.IdTipoHabitacion = Ha.IdTipoHabitacion AND E.IdEstado = Ha.IdEstado AND Ha.IdEstado = 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);

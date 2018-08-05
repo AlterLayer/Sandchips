@@ -90,7 +90,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -231,7 +231,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.tabPage1.BackColor = System.Drawing.Color.Teal;
             this.tabPage1.Controls.Add(this.btnLimpiar);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btnConsultar);

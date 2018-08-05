@@ -79,9 +79,8 @@ namespace Sandchips.Formularios
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1545, 66);
+            this.panel1.Size = new System.Drawing.Size(1033, 54);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -91,19 +90,19 @@ namespace Sandchips.Formularios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F);
-            this.label1.Location = new System.Drawing.Point(661, 15);
+            this.label1.Location = new System.Drawing.Point(348, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(423, 40);
+            this.label1.Size = new System.Drawing.Size(338, 32);
             this.label1.TabIndex = 22;
             this.label1.Text = "Sandchips Hotel And Restaurant";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 15);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(10, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(29, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
@@ -113,10 +112,9 @@ namespace Sandchips.Formularios
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1481, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(984, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -125,10 +123,9 @@ namespace Sandchips.Formularios
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(55, 28);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox14.Location = new System.Drawing.Point(41, 23);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(305, 290);
+            this.pictureBox14.Size = new System.Drawing.Size(229, 236);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 3;
             this.pictureBox14.TabStop = false;
@@ -142,19 +139,18 @@ namespace Sandchips.Formularios
             this.panel6.Controls.Add(this.pictureBox12);
             this.panel6.Controls.Add(this.label22);
             this.panel6.Controls.Add(this.pictureBox13);
-            this.panel6.Location = new System.Drawing.Point(13, 74);
-            this.panel6.Margin = new System.Windows.Forms.Padding(40, 4, 4, 1000);
+            this.panel6.Location = new System.Drawing.Point(6, 77);
+            this.panel6.Margin = new System.Windows.Forms.Padding(30, 3, 3, 812);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(413, 382);
+            this.panel6.Size = new System.Drawing.Size(310, 310);
             this.panel6.TabIndex = 10;
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(55, 18);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Location = new System.Drawing.Point(41, 15);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(305, 290);
+            this.pictureBox12.Size = new System.Drawing.Size(229, 236);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
@@ -164,21 +160,19 @@ namespace Sandchips.Formularios
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(132, 320);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(99, 260);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(116, 40);
+            this.label22.Size = new System.Drawing.Size(92, 32);
             this.label22.TabIndex = 3;
             this.label22.Text = "Clientes";
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(55, 18);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Location = new System.Drawing.Point(41, 15);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(305, 290);
+            this.pictureBox13.Size = new System.Drawing.Size(229, 236);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 2;
             this.pictureBox13.TabStop = false;
@@ -190,10 +184,9 @@ namespace Sandchips.Formularios
             this.panel7.BackColor = System.Drawing.Color.Brown;
             this.panel7.Controls.Add(this.label25);
             this.panel7.Controls.Add(this.pictureBox15);
-            this.panel7.Location = new System.Drawing.Point(434, 74);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Location = new System.Drawing.Point(321, 77);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(402, 381);
+            this.panel7.Size = new System.Drawing.Size(302, 310);
             this.panel7.TabIndex = 11;
             // 
             // label25
@@ -201,20 +194,18 @@ namespace Sandchips.Formularios
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(157, 319);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(118, 259);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(130, 40);
+            this.label25.Size = new System.Drawing.Size(103, 32);
             this.label25.TabIndex = 6;
             this.label25.Text = "Usuarios";
             // 
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(64, 17);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox15.Location = new System.Drawing.Point(48, 14);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(305, 290);
+            this.pictureBox15.Size = new System.Drawing.Size(229, 236);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 4;
             this.pictureBox15.TabStop = false;
@@ -224,34 +215,31 @@ namespace Sandchips.Formularios
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel8.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel8.BackColor = System.Drawing.Color.SandyBrown;
             this.panel8.Controls.Add(this.label23);
             this.panel8.Controls.Add(this.pictureBox11);
-            this.panel8.Location = new System.Drawing.Point(434, 481);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Location = new System.Drawing.Point(322, 395);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(402, 388);
+            this.panel8.Size = new System.Drawing.Size(302, 315);
             this.panel8.TabIndex = 13;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(135, 330);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(101, 268);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(180, 40);
+            this.label23.Size = new System.Drawing.Size(143, 32);
             this.label23.TabIndex = 4;
             this.label23.Text = "Habitaciones";
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(64, 28);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(48, 23);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(305, 290);
+            this.pictureBox11.Size = new System.Drawing.Size(229, 236);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 0;
             this.pictureBox11.TabStop = false;
@@ -261,13 +249,12 @@ namespace Sandchips.Formularios
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel9.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel9.BackColor = System.Drawing.Color.Brown;
             this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.pictureBox14);
-            this.panel9.Location = new System.Drawing.Point(13, 481);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Location = new System.Drawing.Point(6, 395);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(413, 388);
+            this.panel9.Size = new System.Drawing.Size(310, 315);
             this.panel9.TabIndex = 12;
             // 
             // label24
@@ -275,10 +262,9 @@ namespace Sandchips.Formularios
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(147, 330);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(110, 268);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(126, 40);
+            this.label24.Size = new System.Drawing.Size(102, 32);
             this.label24.TabIndex = 5;
             this.label24.Text = "Empresa";
             // 
@@ -286,11 +272,10 @@ namespace Sandchips.Formularios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(132, 322);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(99, 262);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 40);
+            this.label3.Size = new System.Drawing.Size(158, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Reservaciones";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -299,23 +284,21 @@ namespace Sandchips.Formularios
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel2.BackColor = System.Drawing.Color.SandyBrown;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(844, 73);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(629, 77);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(397, 382);
+            this.panel2.Size = new System.Drawing.Size(298, 310);
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 284);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 231);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -325,13 +308,12 @@ namespace Sandchips.Formularios
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel3.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel3.BackColor = System.Drawing.Color.Brown;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(844, 481);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(629, 395);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 388);
+            this.panel3.Size = new System.Drawing.Size(298, 315);
             this.panel3.TabIndex = 15;
             // 
             // label4
@@ -339,20 +321,18 @@ namespace Sandchips.Formularios
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(177, 330);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(133, 268);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 40);
+            this.label4.Size = new System.Drawing.Size(65, 32);
             this.label4.TabIndex = 4;
             this.label4.Text = "Local";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(61, 20);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(46, 16);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(299, 284);
+            this.pictureBox4.Size = new System.Drawing.Size(224, 231);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -360,11 +340,11 @@ namespace Sandchips.Formularios
             // 
             // Menu_Hotel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1545, 1082);
+            this.ClientSize = new System.Drawing.Size(1033, 734);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
@@ -373,7 +353,6 @@ namespace Sandchips.Formularios
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu_Hotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chequeo_habitaciones";
