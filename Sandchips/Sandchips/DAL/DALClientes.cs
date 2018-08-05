@@ -24,7 +24,7 @@ namespace Sandchips.DAL
         {
             //tipo entero
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeclientes SET Nombre='{1}', Apellidos='{2}', Documento='{3}', Telefono='{4}', IdGenero='{5}', IdEstado='{6}', IdUsuario='{7}', IdTipoDocumento='{8}' WHERE IdClientes='{0}'", update.IdClientes, update.Nombre, update.Apellidos, update.Telefono, update.IdGenero, 1, update.IdUsuario, update.IdTipoDocumento), Conexion.obtenerconexion());
+            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE FROM tbmaeclientes WHERE Nombre='{1}', Apellidos='{2}', Documento='{3}', Telefono='{4}', IdGenero='{5}', IdEstado='{6}', IdUsuario='{7}', IdTipoDocumento='{8}' 'IdClientes='{0}'", update.IdClientes, update.Nombre, update.Apellidos, update.Telefono, update.IdGenero, 1, update.IdUsuario, update.IdTipoDocumento), Conexion.obtenerconexion());
             retorno = consulta.ExecuteNonQuery();
             return retorno;
         }
@@ -40,7 +40,7 @@ namespace Sandchips.DAL
         public static int eliminar(ModelClientes model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE SET IdEstado = 2 tbmaeclientes WHERE IdClientes='{0}'", model.IdClientes), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM  tbmaeclientes WHERE IdClientes='{0}'", model.IdClientes), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 

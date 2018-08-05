@@ -283,7 +283,7 @@ namespace Sandchips.Formularios
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(104, 330);
+            this.label24.Location = new System.Drawing.Point(132, 330);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(126, 40);
