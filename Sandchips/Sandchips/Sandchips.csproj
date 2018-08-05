@@ -237,7 +237,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\personal-de-servicio-del-hotel-y-restaurante-hombre-personaje-dibujos-animados-110196299.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-graphic-design-hotel-drawing-travel-creative-travel-5a9ca211a50040.5214186215202145456759.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\205747.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -29,14 +29,11 @@ namespace Sandchips.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
@@ -61,16 +58,22 @@ namespace Sandchips.Formularios
             this.txtT = new System.Windows.Forms.Label();
             this.txta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.mtbTelefono);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -99,6 +102,8 @@ namespace Sandchips.Formularios
             this.panel1.Controls.Add(this.txtT);
             this.panel1.Controls.Add(this.txta);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -106,20 +111,9 @@ namespace Sandchips.Formularios
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(808, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 19);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 109;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // mtbTelefono
             // 
-            this.mtbTelefono.Location = new System.Drawing.Point(560, 124);
+            this.mtbTelefono.Location = new System.Drawing.Point(501, 125);
             this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "9999-9999";
             this.mtbTelefono.Name = "mtbTelefono";
@@ -127,35 +121,13 @@ namespace Sandchips.Formularios
             this.mtbTelefono.TabIndex = 108;
             this.mtbTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbTelefono_KeyPress);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 94;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(967, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 93;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // cmbUsuario
             // 
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbUsuario.Location = new System.Drawing.Point(560, 197);
+            this.cmbUsuario.Location = new System.Drawing.Point(501, 198);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(224, 21);
             this.cmbUsuario.TabIndex = 91;
@@ -167,7 +139,7 @@ namespace Sandchips.Formularios
             "Seleccione una opción",
             "Masculino",
             "Femenino"});
-            this.cmbGenero.Location = new System.Drawing.Point(559, 162);
+            this.cmbGenero.Location = new System.Drawing.Point(500, 163);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(224, 21);
             this.cmbGenero.TabIndex = 90;
@@ -208,7 +180,7 @@ namespace Sandchips.Formularios
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(223, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(142, 39);
@@ -219,13 +191,14 @@ namespace Sandchips.Formularios
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(28, 38);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(203, 39);
             this.label13.TabIndex = 85;
             this.label13.Text = "Registro de";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txtBuscar
             // 
@@ -313,7 +286,7 @@ namespace Sandchips.Formularios
             this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(34, 279);
+            this.dgvClientes.Location = new System.Drawing.Point(215, 279);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -323,13 +296,13 @@ namespace Sandchips.Formularios
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.ShowCellErrors = false;
             this.dgvClientes.ShowRowErrors = false;
-            this.dgvClientes.Size = new System.Drawing.Size(748, 228);
+            this.dgvClientes.Size = new System.Drawing.Size(613, 228);
             this.dgvClientes.TabIndex = 78;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick_1);
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(560, 93);
+            this.txtDocumento.Location = new System.Drawing.Point(501, 94);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(224, 20);
             this.txtDocumento.TabIndex = 73;
@@ -356,7 +329,7 @@ namespace Sandchips.Formularios
             // 
             this.txtMu.AutoSize = true;
             this.txtMu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtMu.Location = new System.Drawing.Point(469, 203);
+            this.txtMu.Location = new System.Drawing.Point(410, 204);
             this.txtMu.Name = "txtMu";
             this.txtMu.Size = new System.Drawing.Size(50, 13);
             this.txtMu.TabIndex = 70;
@@ -366,7 +339,7 @@ namespace Sandchips.Formularios
             // 
             this.txtTe.AutoSize = true;
             this.txtTe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTe.Location = new System.Drawing.Point(466, 134);
+            this.txtTe.Location = new System.Drawing.Point(407, 135);
             this.txtTe.Name = "txtTe";
             this.txtTe.Size = new System.Drawing.Size(56, 13);
             this.txtTe.TabIndex = 69;
@@ -376,7 +349,7 @@ namespace Sandchips.Formularios
             // 
             this.txtC.AutoSize = true;
             this.txtC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtC.Location = new System.Drawing.Point(467, 99);
+            this.txtC.Location = new System.Drawing.Point(408, 100);
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(69, 13);
             this.txtC.TabIndex = 65;
@@ -386,7 +359,7 @@ namespace Sandchips.Formularios
             // 
             this.txtG.AutoSize = true;
             this.txtG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtG.Location = new System.Drawing.Point(468, 168);
+            this.txtG.Location = new System.Drawing.Point(409, 169);
             this.txtG.Name = "txtG";
             this.txtG.Size = new System.Drawing.Size(49, 13);
             this.txtG.TabIndex = 64;
@@ -423,6 +396,56 @@ namespace Sandchips.Formularios
             this.label1.TabIndex = 61;
             this.label1.Text = "Nombre *";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(-2, 471);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(859, 76);
+            this.panel2.TabIndex = 110;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(808, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 109;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(8, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 94;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(967, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 93;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Sandchips.Properties.Resources._205747;
+            this.pictureBox4.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(504, 517);
+            this.pictureBox4.TabIndex = 111;
+            this.pictureBox4.TabStop = false;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,10 +460,11 @@ namespace Sandchips.Formularios
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,6 +500,8 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
