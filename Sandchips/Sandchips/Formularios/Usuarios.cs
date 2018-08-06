@@ -447,5 +447,29 @@ namespace Sandchips.Formularios
             btnGuardar.BackColor = Color.Black;
             btnGuardar.ForeColor = Color.FromArgb(190, 239, 158);
         }
+
+        private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnEliminar.BackColor = Color.Black;
+            btnEliminar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEliminar.BackColor = Color.FromArgb(190, 239, 158);
+            btnEliminar.ForeColor = Color.Black;
+        }
+
+        private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnCancelar.BackColor = Color.Black;
+            btnCancelar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.FromArgb(190, 239, 158);
+            btnCancelar.ForeColor = Color.Black;
+        }
     }
 }

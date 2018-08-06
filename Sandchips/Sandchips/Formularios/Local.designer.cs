@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Local));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -270,73 +270,83 @@
             // 
             // btnConsultarT
             // 
-            this.btnConsultarT.BackColor = System.Drawing.Color.Teal;
-            this.btnConsultarT.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarT.Location = new System.Drawing.Point(284, 158);
+            this.btnConsultarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnConsultarT.ForeColor = System.Drawing.Color.Black;
+            this.btnConsultarT.Location = new System.Drawing.Point(272, 151);
             this.btnConsultarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultarT.Name = "btnConsultarT";
-            this.btnConsultarT.Size = new System.Drawing.Size(56, 19);
+            this.btnConsultarT.Size = new System.Drawing.Size(56, 26);
             this.btnConsultarT.TabIndex = 45;
             this.btnConsultarT.Text = "Consultar";
             this.btnConsultarT.UseVisualStyleBackColor = false;
             this.btnConsultarT.Click += new System.EventHandler(this.btnConsultarT_Click);
+            this.btnConsultarT.MouseLeave += new System.EventHandler(this.btnConsultarT_MouseLeave);
+            this.btnConsultarT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnConsultarT_MouseMove);
             // 
             // btnEliminarT
             // 
-            this.btnEliminarT.BackColor = System.Drawing.Color.Teal;
-            this.btnEliminarT.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarT.Location = new System.Drawing.Point(184, 158);
+            this.btnEliminarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnEliminarT.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarT.Location = new System.Drawing.Point(184, 151);
             this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarT.Name = "btnEliminarT";
-            this.btnEliminarT.Size = new System.Drawing.Size(56, 19);
+            this.btnEliminarT.Size = new System.Drawing.Size(56, 26);
             this.btnEliminarT.TabIndex = 44;
             this.btnEliminarT.Text = "Eliminar";
             this.btnEliminarT.UseVisualStyleBackColor = false;
             this.btnEliminarT.Click += new System.EventHandler(this.btnEliminarT_Click);
+            this.btnEliminarT.MouseLeave += new System.EventHandler(this.btnEliminarT_MouseLeave);
+            this.btnEliminarT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEliminarT_MouseMove);
             // 
             // btnModificarT
             // 
-            this.btnModificarT.BackColor = System.Drawing.Color.Teal;
-            this.btnModificarT.ForeColor = System.Drawing.Color.White;
-            this.btnModificarT.Location = new System.Drawing.Point(98, 158);
+            this.btnModificarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnModificarT.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarT.Location = new System.Drawing.Point(98, 151);
             this.btnModificarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarT.Name = "btnModificarT";
-            this.btnModificarT.Size = new System.Drawing.Size(56, 19);
+            this.btnModificarT.Size = new System.Drawing.Size(56, 26);
             this.btnModificarT.TabIndex = 43;
             this.btnModificarT.Text = "Modificar";
             this.btnModificarT.UseVisualStyleBackColor = false;
             this.btnModificarT.Click += new System.EventHandler(this.btnModificarT_Click);
+            this.btnModificarT.MouseLeave += new System.EventHandler(this.btnModificarT_MouseLeave);
+            this.btnModificarT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnModificarT_MouseMove);
             // 
             // btnAgregarT
             // 
-            this.btnAgregarT.BackColor = System.Drawing.Color.Teal;
-            this.btnAgregarT.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarT.Location = new System.Drawing.Point(20, 158);
+            this.btnAgregarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnAgregarT.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarT.Location = new System.Drawing.Point(20, 151);
             this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarT.Name = "btnAgregarT";
-            this.btnAgregarT.Size = new System.Drawing.Size(56, 19);
+            this.btnAgregarT.Size = new System.Drawing.Size(56, 26);
             this.btnAgregarT.TabIndex = 42;
             this.btnAgregarT.Text = "Agregar";
             this.btnAgregarT.UseVisualStyleBackColor = false;
             this.btnAgregarT.Click += new System.EventHandler(this.btnAgregarT_Click);
+            this.btnAgregarT.MouseLeave += new System.EventHandler(this.btnAgregarT_MouseLeave);
+            this.btnAgregarT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnAgregarT_MouseMove);
             // 
             // btnBuscarT
             // 
-            this.btnBuscarT.BackColor = System.Drawing.Color.Teal;
-            this.btnBuscarT.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarT.Location = new System.Drawing.Point(328, 193);
+            this.btnBuscarT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnBuscarT.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarT.Location = new System.Drawing.Point(544, 180);
             this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarT.Name = "btnBuscarT";
-            this.btnBuscarT.Size = new System.Drawing.Size(56, 19);
+            this.btnBuscarT.Size = new System.Drawing.Size(56, 31);
             this.btnBuscarT.TabIndex = 41;
             this.btnBuscarT.Text = "Buscar";
             this.btnBuscarT.UseVisualStyleBackColor = false;
             this.btnBuscarT.Click += new System.EventHandler(this.btnBuscarT_Click);
+            this.btnBuscarT.MouseLeave += new System.EventHandler(this.btnBuscarT_MouseLeave);
+            this.btnBuscarT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBuscarT_MouseMove);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 193);
+            this.label10.Location = new System.Drawing.Point(248, 193);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 13);
@@ -345,7 +355,7 @@
             // 
             // txtBuscarT
             // 
-            this.txtBuscarT.Location = new System.Drawing.Point(100, 193);
+            this.txtBuscarT.Location = new System.Drawing.Point(330, 186);
             this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarT.Name = "txtBuscarT";
             this.txtBuscarT.Size = new System.Drawing.Size(210, 20);
@@ -358,19 +368,19 @@
             this.dgvTipoLocal.AllowUserToDeleteRows = false;
             this.dgvTipoLocal.AllowUserToResizeColumns = false;
             this.dgvTipoLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.dgvTipoLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoLocal.Location = new System.Drawing.Point(18, 216);
             this.dgvTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoLocal.Name = "dgvTipoLocal";
             this.dgvTipoLocal.ReadOnly = true;
             this.dgvTipoLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Teal;
+            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle42;
             this.dgvTipoLocal.RowTemplate.Height = 24;
             this.dgvTipoLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipoLocal.Size = new System.Drawing.Size(366, 205);
+            this.dgvTipoLocal.Size = new System.Drawing.Size(390, 205);
             this.dgvTipoLocal.TabIndex = 38;
             this.dgvTipoLocal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             // 
@@ -572,16 +582,16 @@
             this.dgvLocal.AllowUserToDeleteRows = false;
             this.dgvLocal.AllowUserToResizeColumns = false;
             this.dgvLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocal.Location = new System.Drawing.Point(31, 260);
             this.dgvLocal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLocal.Name = "dgvLocal";
             this.dgvLocal.ReadOnly = true;
             this.dgvLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.Teal;
+            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle44;
             this.dgvLocal.RowTemplate.Height = 24;
             this.dgvLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLocal.Size = new System.Drawing.Size(544, 168);
