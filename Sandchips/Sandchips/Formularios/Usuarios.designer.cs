@@ -30,7 +30,7 @@ namespace Sandchips.Formularios
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@ namespace Sandchips.Formularios
             this.label18 = new System.Windows.Forms.Label();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.Correo = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -149,7 +149,7 @@ namespace Sandchips.Formularios
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.cmbGenero);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.Correo);
+            this.panel3.Controls.Add(this.txtCorreo);
             this.panel3.Controls.Add(this.txtDireccion);
             this.panel3.Controls.Add(this.txtNumeroDocumento);
             this.panel3.Controls.Add(this.label1);
@@ -211,7 +211,7 @@ namespace Sandchips.Formularios
             this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "9999-9999";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(174, 20);
+            this.mtbTelefono.Size = new System.Drawing.Size(66, 20);
             this.mtbTelefono.TabIndex = 107;
             this.mtbTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbTelefono_KeyPress);
             // 
@@ -286,14 +286,15 @@ namespace Sandchips.Formularios
             this.label13.TabIndex = 96;
             this.label13.Text = "Dirección";
             // 
-            // Correo
+            // txtCorreo
             // 
-            this.Correo.Location = new System.Drawing.Point(460, 77);
-            this.Correo.Margin = new System.Windows.Forms.Padding(2);
-            this.Correo.Name = "Correo";
-            this.Correo.Size = new System.Drawing.Size(174, 20);
-            this.Correo.TabIndex = 95;
-            this.Correo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Correo_KeyPress);
+            this.txtCorreo.Location = new System.Drawing.Point(503, 78);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(174, 20);
+            this.txtCorreo.TabIndex = 95;
+            this.txtCorreo.TextChanged += new System.EventHandler(this.Correo_TextChanged);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Correo_KeyPress);
             // 
             // txtDireccion
             // 
@@ -303,6 +304,7 @@ namespace Sandchips.Formularios
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(174, 53);
             this.txtDireccion.TabIndex = 94;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // txtNumeroDocumento
@@ -312,6 +314,7 @@ namespace Sandchips.Formularios
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(174, 20);
             this.txtNumeroDocumento.TabIndex = 93;
+            this.txtNumeroDocumento.TextChanged += new System.EventHandler(this.txtNumeroDocumento_TextChanged);
             this.txtNumeroDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDocumento_KeyPress);
             // 
             // label1
@@ -369,6 +372,7 @@ namespace Sandchips.Formularios
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(174, 20);
             this.txtApellidos.TabIndex = 90;
+            this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
             // txtNombre
@@ -378,6 +382,7 @@ namespace Sandchips.Formularios
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(174, 20);
             this.txtNombre.TabIndex = 85;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label7
@@ -529,6 +534,7 @@ namespace Sandchips.Formularios
             this.mtbconfirmcontrasena.PasswordChar = '*';
             this.mtbconfirmcontrasena.Size = new System.Drawing.Size(174, 20);
             this.mtbconfirmcontrasena.TabIndex = 77;
+            this.mtbconfirmcontrasena.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbconfirmcontrasena_MaskInputRejected);
             this.mtbconfirmcontrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbconfirmcontrasena_KeyPress);
             // 
             // cmbTipoDocumento
@@ -550,6 +556,7 @@ namespace Sandchips.Formularios
             this.mtbcontrasena.PasswordChar = '*';
             this.mtbcontrasena.Size = new System.Drawing.Size(174, 20);
             this.mtbcontrasena.TabIndex = 76;
+            this.mtbcontrasena.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbcontrasena_MaskInputRejected);
             this.mtbcontrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcontrasena_KeyPress);
             // 
             // txtusuario
@@ -569,14 +576,14 @@ namespace Sandchips.Formularios
             this.dgvusuarios.AllowUserToResizeColumns = false;
             this.dgvusuarios.AllowUserToResizeRows = false;
             this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvusuarios.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvusuarios.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvusuarios.Location = new System.Drawing.Point(16, 290);
             this.dgvusuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvusuarios.Name = "dgvusuarios";
@@ -677,7 +684,7 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.MaskedTextBox mtbcontrasena;
         private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.TextBox Correo;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.Label label1;

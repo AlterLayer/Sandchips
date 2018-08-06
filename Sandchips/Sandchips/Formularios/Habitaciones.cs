@@ -319,11 +319,7 @@ namespace Sandchips.Formularios
 
         private void txtBuscar_hab_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -331,11 +327,7 @@ namespace Sandchips.Formularios
 
         private void txtTipo_Habitacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+           if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -343,16 +335,12 @@ namespace Sandchips.Formularios
 
         private void txtBuscarT_TextChanged(object sender, EventArgs e)
         {
-
+            txtBuscarT.Text.TrimStart();
         }
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -492,14 +480,41 @@ namespace Sandchips.Formularios
 
         private void txtNumero_hab_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
+           if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (Char.IsLetter(e.KeyChar))
+        }
+
+        private void cmbTipo_hab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void cmbEstado_hab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNumero_hab_TextChanged(object sender, EventArgs e)
+        {
+            txtNumero_hab.Text.TrimStart();
+        }
+
+        private void txtBuscar_hab_TextChanged(object sender, EventArgs e)
+        {
+            txtBuscar_hab.Text.TrimStart();
+        }
+
+        private void txtTipo_Habitacion_TextChanged(object sender, EventArgs e)
+        {
+            txtTipo_Habitacion.Text.TrimStart();
         }
     }
 }

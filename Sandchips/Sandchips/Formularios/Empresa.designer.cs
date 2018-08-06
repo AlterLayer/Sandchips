@@ -191,6 +191,7 @@ namespace Sandchips.Formularios
             this.txtBuscarE.Name = "txtBuscarE";
             this.txtBuscarE.Size = new System.Drawing.Size(221, 20);
             this.txtBuscarE.TabIndex = 24;
+            this.txtBuscarE.TextChanged += new System.EventHandler(this.txtBuscarE_TextChanged);
             this.txtBuscarE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarE_KeyPress);
             // 
             // label17
@@ -211,6 +212,7 @@ namespace Sandchips.Formularios
             this.txtRegistroAuditor.Name = "txtRegistroAuditor";
             this.txtRegistroAuditor.Size = new System.Drawing.Size(164, 20);
             this.txtRegistroAuditor.TabIndex = 22;
+            this.txtRegistroAuditor.TextChanged += new System.EventHandler(this.txtRegistroAuditor_TextChanged);
             this.txtRegistroAuditor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroAuditor_KeyPress);
             // 
             // label16
@@ -231,6 +233,7 @@ namespace Sandchips.Formularios
             this.txtRegistroIVA.Name = "txtRegistroIVA";
             this.txtRegistroIVA.Size = new System.Drawing.Size(180, 20);
             this.txtRegistroIVA.TabIndex = 20;
+            this.txtRegistroIVA.TextChanged += new System.EventHandler(this.txtRegistroIVA_TextChanged);
             this.txtRegistroIVA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroIVA_KeyPress);
             // 
             // label15
@@ -251,6 +254,7 @@ namespace Sandchips.Formularios
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(180, 20);
             this.txtCorreo.TabIndex = 18;
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // label14
@@ -272,6 +276,7 @@ namespace Sandchips.Formularios
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(180, 60);
             this.txtDescripcion.TabIndex = 16;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // label13
@@ -292,6 +297,7 @@ namespace Sandchips.Formularios
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(182, 20);
             this.txtNIT.TabIndex = 14;
+            this.txtNIT.TextChanged += new System.EventHandler(this.txtNIT_TextChanged);
             this.txtNIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNIT_KeyPress);
             // 
             // label11
@@ -312,6 +318,7 @@ namespace Sandchips.Formularios
             this.txtNRC.Name = "txtNRC";
             this.txtNRC.Size = new System.Drawing.Size(182, 20);
             this.txtNRC.TabIndex = 12;
+            this.txtNRC.TextChanged += new System.EventHandler(this.txtNRC_TextChanged);
             this.txtNRC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNRC_KeyPress);
             // 
             // label8

@@ -390,6 +390,7 @@
             this.txtBuscar_hab.Name = "txtBuscar_hab";
             this.txtBuscar_hab.Size = new System.Drawing.Size(254, 20);
             this.txtBuscar_hab.TabIndex = 22;
+            this.txtBuscar_hab.TextChanged += new System.EventHandler(this.txtBuscar_hab_TextChanged);
             this.txtBuscar_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_hab_KeyPress);
             // 
             // dgvHabitaciones
@@ -421,6 +422,7 @@
             this.txtNumero_hab.Name = "txtNumero_hab";
             this.txtNumero_hab.Size = new System.Drawing.Size(132, 20);
             this.txtNumero_hab.TabIndex = 20;
+            this.txtNumero_hab.TextChanged += new System.EventHandler(this.txtNumero_hab_TextChanged);
             this.txtNumero_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_hab_KeyPress_1);
             // 
             // txtId_hab
@@ -444,6 +446,7 @@
             this.cmbEstado_hab.Size = new System.Drawing.Size(132, 21);
             this.cmbEstado_hab.TabIndex = 18;
             this.cmbEstado_hab.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cmbEstado_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEstado_hab_KeyPress);
             // 
             // cmbTipo_hab
             // 
@@ -455,6 +458,7 @@
             this.cmbTipo_hab.Name = "cmbTipo_hab";
             this.cmbTipo_hab.Size = new System.Drawing.Size(132, 21);
             this.cmbTipo_hab.TabIndex = 17;
+            this.cmbTipo_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipo_hab_KeyPress);
             this.cmbTipo_hab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbTipo_hab_MouseClick);
             // 
             // pictureBox6
@@ -610,7 +614,7 @@
             this.dgvTipoHabitacion.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTipoHabitacion.RowTemplate.Height = 24;
             this.dgvTipoHabitacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipoHabitacion.Size = new System.Drawing.Size(567, 205);
+            this.dgvTipoHabitacion.Size = new System.Drawing.Size(567, 236);
             this.dgvTipoHabitacion.TabIndex = 38;
             this.dgvTipoHabitacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             // 
@@ -621,6 +625,7 @@
             this.txtTipo_Habitacion.Name = "txtTipo_Habitacion";
             this.txtTipo_Habitacion.Size = new System.Drawing.Size(251, 20);
             this.txtTipo_Habitacion.TabIndex = 37;
+            this.txtTipo_Habitacion.TextChanged += new System.EventHandler(this.txtTipo_Habitacion_TextChanged);
             this.txtTipo_Habitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipo_Habitacion_KeyPress);
             // 
             // txtId_Tipo_Habitacion

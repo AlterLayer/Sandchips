@@ -163,7 +163,7 @@ namespace Sandchips.Formularios
             mtbconfirmcontrasena.Text = dgvusuarios[2, pocision].Value.ToString();
             txtNombre.Text = dgvusuarios[3, pocision].Value.ToString();
             txtApellidos.Text = dgvusuarios[4, pocision].Value.ToString();
-            Correo.Text = dgvusuarios[5, pocision].Value.ToString();
+            txtCorreo.Text = dgvusuarios[5, pocision].Value.ToString();
             txtNumeroDocumento.Text = dgvusuarios[6, pocision].Value.ToString();
             txtDireccion.Text = dgvusuarios[7, pocision].Value.ToString();
             mtbTelefono.Text = dgvusuarios[8, pocision].Value.ToString();
@@ -189,7 +189,7 @@ namespace Sandchips.Formularios
                 model.Clave = HassPassword(mtbcontrasena.Text);
                 model.Nombre = txtNombre.Text;
                 model.Apellidos = txtApellidos.Text;
-                model.Correo = Correo.Text;
+                model.Correo = txtCorreo.Text;
                 model.NumeroDocumento = txtNumeroDocumento.Text;
                 model.Direccion = txtDireccion.Text;
                 model.Telefono = mtbTelefono.Text; 
@@ -233,7 +233,7 @@ namespace Sandchips.Formularios
                 model.Clave = HassPassword(mtbcontrasena.Text);
                 model.Nombre = txtNombre.Text;
                 model.Apellidos = txtApellidos.Text;
-                model.Correo = Correo.Text;
+                model.Correo = txtCorreo.Text;
                 model.NumeroDocumento = txtNumeroDocumento.Text;
                 model.Direccion = txtDireccion.Text;
                 model.Telefono = mtbTelefono.Text;
@@ -275,11 +275,7 @@ namespace Sandchips.Formularios
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -287,11 +283,7 @@ namespace Sandchips.Formularios
 
         private void mtbcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -299,11 +291,7 @@ namespace Sandchips.Formularios
 
         private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -311,11 +299,7 @@ namespace Sandchips.Formularios
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -323,11 +307,7 @@ namespace Sandchips.Formularios
 
         private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -335,19 +315,12 @@ namespace Sandchips.Formularios
 
         private void Correo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -355,10 +328,7 @@ namespace Sandchips.Formularios
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -375,15 +345,12 @@ namespace Sandchips.Formularios
 
         private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
         {
-
+            txtusuario.Text.TrimStart();
         }
 
         private void cmbTipoDocumento_KeyPress(object sender, KeyPressEventArgs e)
@@ -420,6 +387,41 @@ namespace Sandchips.Formularios
             {
                 e.Handled = true;
             }
+        }
+
+        private void mtbcontrasena_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            mtbcontrasena.Text.TrimStart();
+        }
+
+        private void mtbconfirmcontrasena_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            mtbconfirmcontrasena.Text.TrimStart();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtNombre.Text.TrimStart();
+        }
+
+        private void txtApellidos_TextChanged(object sender, EventArgs e)
+        {
+            txtApellidos.Text.TrimStart();
+        }
+
+        private void Correo_TextChanged(object sender, EventArgs e)
+        {
+            txtCorreo.Text.TrimStart();
+        }
+
+        private void txtNumeroDocumento_TextChanged(object sender, EventArgs e)
+        {
+            txtNumeroDocumento.Text.TrimStart();
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            txtDireccion.Text.TrimStart();
         }
 
         private void btnModificar_MouseLeave(object sender, EventArgs e)
