@@ -246,6 +246,27 @@
   <ItemGroup>
     <None Include="Resources\205747.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d4ca2287173febfa5fbcd285a4fb18e5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llavee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-habitación-azul-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58b0763d87d6b866a0653b2a4ce86147.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1857b82f9817d3d.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

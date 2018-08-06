@@ -63,9 +63,59 @@ namespace Sandchips.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1857b82f9817d3d {
+            get {
+                object obj = ResourceManager.GetObject("1857b82f9817d3d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _205747 {
             get {
                 object obj = ResourceManager.GetObject("205747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _58b0763d87d6b866a0653b2a4ce86147 {
+            get {
+                object obj = ResourceManager.GetObject("58b0763d87d6b866a0653b2a4ce86147", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d4ca2287173febfa5fbcd285a4fb18e5 {
+            get {
+                object obj = ResourceManager.GetObject("d4ca2287173febfa5fbcd285a4fb18e5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hotel {
+            get {
+                object obj = ResourceManager.GetObject("hotel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hotel1 {
+            get {
+                object obj = ResourceManager.GetObject("hotel1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -77,6 +127,26 @@ namespace Sandchips.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-graphic-design-hotel-drawing-travel-creative-travel-5a9ca211a50040.521418" +
                         "6215202145456759", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap llavee {
+            get {
+                object obj = ResourceManager.GetObject("llavee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_habitación_azul_2 {
+            get {
+                object obj = ResourceManager.GetObject("logo-habitación-azul-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

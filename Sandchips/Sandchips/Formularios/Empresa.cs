@@ -441,5 +441,17 @@ namespace Sandchips.Formularios
                 e.Handled = true;
             }
         }
+
+        private void btnAgregar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnAgregar.BackColor = Color.Black;
+            btnAgregar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.BackColor = Color.FromArgb(190, 239, 158);
+            btnAgregar.ForeColor = Color.Black;
+        }
     }
 }
