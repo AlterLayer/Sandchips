@@ -193,7 +193,7 @@ namespace Sandchips.DAL
 
                 MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdUsuario FROM tbmaeusuarios WHERE Usuario = '" + model.Usuario + "' and Clave = '" + model.Clave + "' and IdEstado = 1 "), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
-                MySqlDataReader reader = comando.ExecuteReader(); 
+                MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     valid = true;
