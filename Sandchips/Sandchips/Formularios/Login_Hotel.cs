@@ -24,28 +24,31 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string Contra = HassPassword(mtbcontraseña.Text); 
-                 ModelUsuario model = new ModelUsuario();
-                model.Usuario = txtusuario.Text;
-                model.Clave = HassPassword(mtbcontraseña.Text);
-                bool datos = DALUsuarios.IniciarSession(model);
-                if (datos)
-                { 
-                    MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    inicio hab = new inicio();
-                    hab.Show();
-                    this.Hide();
-                }
-                else
+            if(txtusuario.Text.Trim() == ""|| mtbcontraseña.Text.Trim() == ""){
+
+                try
                 {
-                    MessageBox.Show("Haz introducido el usurio o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string Contra = HassPassword(mtbcontraseña.Text);
+                    ModelUsuario model = new ModelUsuario();
+                    model.Usuario = txtusuario.Text;
+                    model.Clave = HassPassword(mtbcontraseña.Text);
+                    bool datos = DALUsuarios.IniciarSession(model);
+                    if (datos)
+                    {
+                        MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        inicio hab = new inicio();
+                        hab.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Haz introducido el usurio o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception " + ex);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception " + ex);
+                }
             }
         }
 

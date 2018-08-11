@@ -275,18 +275,12 @@ namespace Sandchips.Formularios
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void mtbcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
