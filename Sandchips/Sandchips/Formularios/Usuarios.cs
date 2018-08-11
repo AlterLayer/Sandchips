@@ -265,26 +265,17 @@ namespace Sandchips.Formularios
                 //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
             }
         }
-        void eliminar()
-        {
-            ModelUsuario usuario = new ModelUsuario();
-            int datos = DALUsuarios.eliminar(Convert.ToInt32(txtIdUsuario.Text));
-        }
+
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-
-            //DALUsuarios.eliminar(Convert.ToInt32(txtIdUsuario.Text));
-            eliminar();
+            DALUsuarios.eliminar(Convert.ToInt32(txtIdUsuario.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvusuarios.DataSource = DALUsuarios.mostrartabla();
         }
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void mtbcontrasena_KeyPress(object sender, KeyPressEventArgs e)
@@ -294,7 +285,10 @@ namespace Sandchips.Formularios
 
         private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -472,7 +466,7 @@ namespace Sandchips.Formularios
             btnCancelar.ForeColor = Color.Black;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
