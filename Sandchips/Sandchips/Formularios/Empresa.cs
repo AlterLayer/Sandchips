@@ -135,7 +135,9 @@ namespace Sandchips.Formularios
             {
                 ModelEmpresa model = new ModelEmpresa();
                 model.Empresa = txtEmpresa.Text;
-                model.NRC = txtNRC.Text;
+                var vnrc1 = txtNRC.Text.TrimStart();
+                var vnrc2 = vnrc1.TrimEnd();
+                model.NRC = vnrc2;
                 model.NIT = txtNIT.Text;
                 model.Direccion = txtDescripcion.Text;
                 model.Correo = txtCorreo.Text;
@@ -407,8 +409,9 @@ namespace Sandchips.Formularios
         }
 
         private void txtNRC_TextChanged(object sender, EventArgs e)
-        {
+       {
             txtNRC.Text.TrimStart();
+            txtNRC.Text.TrimEnd();
         }
 
         private void txtNIT_TextChanged(object sender, EventArgs e)
