@@ -373,5 +373,10 @@ namespace Sandchips.Formularios
             btnBuscarT.BackColor = Color.FromArgb(190, 239, 158);
             btnBuscarT.ForeColor = Color.Black;
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
