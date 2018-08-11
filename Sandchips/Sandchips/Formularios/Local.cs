@@ -313,5 +313,65 @@ namespace Sandchips.Formularios
         {
 
         }
+
+        private void btnAgregarT_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnAgregarT.BackColor = Color.Black;
+            btnAgregarT.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnAgregarT_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregarT.BackColor = Color.FromArgb(190, 239, 158);
+            btnAgregarT.ForeColor = Color.Black;
+        }
+
+        private void btnModificarT_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnModificarT.BackColor = Color.Black;
+            btnModificarT.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnModificarT_MouseLeave(object sender, EventArgs e)
+        {
+            btnModificarT.BackColor = Color.FromArgb(190, 239, 158);
+            btnModificarT.ForeColor = Color.Black;
+        }
+
+        private void btnEliminarT_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnEliminarT.BackColor = Color.Black;
+            btnEliminarT.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnEliminarT_MouseLeave(object sender, EventArgs e)
+        {
+            btnEliminarT.BackColor = Color.FromArgb(190, 239, 158);
+            btnEliminarT.ForeColor = Color.Black;
+        }
+
+        private void btnConsultarT_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnConsultarT.BackColor = Color.Black;
+            btnConsultarT.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnConsultarT_MouseLeave(object sender, EventArgs e)
+        {
+            btnConsultarT.BackColor = Color.FromArgb(190, 239, 158);
+            btnConsultarT.ForeColor = Color.Black;
+        }
+
+        private void btnBuscarT_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnBuscarT.BackColor = Color.Black;
+            btnBuscarT.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnBuscarT_MouseLeave(object sender, EventArgs e)
+        {
+            btnBuscarT.BackColor = Color.FromArgb(190, 239, 158);
+            btnBuscarT.ForeColor = Color.Black;
+        }
     }
 }
