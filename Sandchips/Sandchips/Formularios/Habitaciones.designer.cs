@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Habitaciones));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -61,6 +61,7 @@
             this.txtId_hab = new System.Windows.Forms.TextBox();
             this.cmbEstado_hab = new System.Windows.Forms.ComboBox();
             this.cmbTipo_hab = new System.Windows.Forms.ComboBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.btnConsultarT = new System.Windows.Forms.Button();
@@ -75,6 +76,7 @@
             this.txtId_Tipo_Habitacion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -84,13 +86,15 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoHabitacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -222,7 +226,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 59);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(608, 514);
@@ -250,11 +254,12 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(600, 488);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Habitaciones";
@@ -266,7 +271,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Location = new System.Drawing.Point(368, 185);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(79, 30);
             this.btnLimpiar.TabIndex = 30;
@@ -292,7 +297,7 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.Black;
             this.btnConsultar.Location = new System.Drawing.Point(284, 185);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(79, 30);
             this.btnConsultar.TabIndex = 28;
@@ -309,7 +314,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(200, 185);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(79, 30);
             this.btnEliminar.TabIndex = 27;
@@ -326,7 +331,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.Location = new System.Drawing.Point(117, 185);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(79, 30);
             this.btnModificar.TabIndex = 26;
@@ -342,7 +347,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(30, 185);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(79, 30);
             this.btnAgregar.TabIndex = 25;
@@ -358,7 +363,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Location = new System.Drawing.Point(503, 224);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 31);
             this.btnBuscar.TabIndex = 24;
@@ -381,10 +386,11 @@
             // txtBuscar_hab
             // 
             this.txtBuscar_hab.Location = new System.Drawing.Point(218, 236);
-            this.txtBuscar_hab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar_hab.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar_hab.Name = "txtBuscar_hab";
             this.txtBuscar_hab.Size = new System.Drawing.Size(254, 20);
             this.txtBuscar_hab.TabIndex = 22;
+            this.txtBuscar_hab.TextChanged += new System.EventHandler(this.txtBuscar_hab_TextChanged);
             this.txtBuscar_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_hab_KeyPress);
             // 
             // dgvHabitaciones
@@ -393,16 +399,16 @@
             this.dgvHabitaciones.AllowUserToDeleteRows = false;
             this.dgvHabitaciones.AllowUserToResizeColumns = false;
             this.dgvHabitaciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHabitaciones.Location = new System.Drawing.Point(22, 266);
-            this.dgvHabitaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvHabitaciones.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHabitaciones.Name = "dgvHabitaciones";
             this.dgvHabitaciones.ReadOnly = true;
             this.dgvHabitaciones.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            this.dgvHabitaciones.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Teal;
+            this.dgvHabitaciones.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvHabitaciones.RowTemplate.Height = 24;
             this.dgvHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHabitaciones.Size = new System.Drawing.Size(544, 206);
@@ -412,17 +418,18 @@
             // txtNumero_hab
             // 
             this.txtNumero_hab.Location = new System.Drawing.Point(137, 75);
-            this.txtNumero_hab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero_hab.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero_hab.Name = "txtNumero_hab";
             this.txtNumero_hab.Size = new System.Drawing.Size(132, 20);
             this.txtNumero_hab.TabIndex = 20;
+            this.txtNumero_hab.TextChanged += new System.EventHandler(this.txtNumero_hab_TextChanged);
             this.txtNumero_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_hab_KeyPress_1);
             // 
             // txtId_hab
             // 
             this.txtId_hab.Enabled = false;
             this.txtId_hab.Location = new System.Drawing.Point(137, 40);
-            this.txtId_hab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId_hab.Margin = new System.Windows.Forms.Padding(2);
             this.txtId_hab.Name = "txtId_hab";
             this.txtId_hab.ReadOnly = true;
             this.txtId_hab.Size = new System.Drawing.Size(132, 20);
@@ -434,11 +441,12 @@
             this.cmbEstado_hab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado_hab.FormattingEnabled = true;
             this.cmbEstado_hab.Location = new System.Drawing.Point(434, 74);
-            this.cmbEstado_hab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEstado_hab.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEstado_hab.Name = "cmbEstado_hab";
             this.cmbEstado_hab.Size = new System.Drawing.Size(132, 21);
             this.cmbEstado_hab.TabIndex = 18;
             this.cmbEstado_hab.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cmbEstado_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEstado_hab_KeyPress);
             // 
             // cmbTipo_hab
             // 
@@ -446,11 +454,21 @@
             this.cmbTipo_hab.FormattingEnabled = true;
             this.cmbTipo_hab.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.cmbTipo_hab.Location = new System.Drawing.Point(434, 40);
-            this.cmbTipo_hab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipo_hab.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipo_hab.Name = "cmbTipo_hab";
             this.cmbTipo_hab.Size = new System.Drawing.Size(132, 21);
             this.cmbTipo_hab.TabIndex = 17;
+            this.cmbTipo_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipo_hab_KeyPress);
             this.cmbTipo_hab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbTipo_hab_MouseClick);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Sandchips.Properties.Resources._58b0763d87d6b866a0653b2a4ce86147;
+            this.pictureBox6.Location = new System.Drawing.Point(-26, 100);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(642, 262);
+            this.pictureBox6.TabIndex = 31;
+            this.pictureBox6.TabStop = false;
             // 
             // tabPage2
             // 
@@ -468,10 +486,11 @@
             this.tabPage2.Controls.Add(this.txtId_Tipo_Habitacion);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.pictureBox7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(600, 488);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tipos de Habitaciones";
@@ -493,7 +512,7 @@
             this.btnConsultarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarT.ForeColor = System.Drawing.Color.Black;
             this.btnConsultarT.Location = new System.Drawing.Point(292, 145);
-            this.btnConsultarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultarT.Name = "btnConsultarT";
             this.btnConsultarT.Size = new System.Drawing.Size(78, 32);
             this.btnConsultarT.TabIndex = 45;
@@ -507,7 +526,7 @@
             this.btnEliminarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarT.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarT.Location = new System.Drawing.Point(201, 145);
-            this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarT.Name = "btnEliminarT";
             this.btnEliminarT.Size = new System.Drawing.Size(78, 32);
             this.btnEliminarT.TabIndex = 44;
@@ -521,7 +540,7 @@
             this.btnModificarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarT.ForeColor = System.Drawing.Color.Black;
             this.btnModificarT.Location = new System.Drawing.Point(110, 145);
-            this.btnModificarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarT.Name = "btnModificarT";
             this.btnModificarT.Size = new System.Drawing.Size(78, 32);
             this.btnModificarT.TabIndex = 43;
@@ -535,7 +554,7 @@
             this.btnAgregarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarT.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarT.Location = new System.Drawing.Point(20, 145);
-            this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarT.Name = "btnAgregarT";
             this.btnAgregarT.Size = new System.Drawing.Size(78, 32);
             this.btnAgregarT.TabIndex = 42;
@@ -549,7 +568,7 @@
             this.btnBuscarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarT.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarT.Location = new System.Drawing.Point(326, 185);
-            this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarT.Name = "btnBuscarT";
             this.btnBuscarT.Size = new System.Drawing.Size(74, 34);
             this.btnBuscarT.TabIndex = 41;
@@ -570,7 +589,7 @@
             // txtBuscarT
             // 
             this.txtBuscarT.Location = new System.Drawing.Point(100, 193);
-            this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarT.Name = "txtBuscarT";
             this.txtBuscarT.Size = new System.Drawing.Size(210, 20);
             this.txtBuscarT.TabIndex = 39;
@@ -583,36 +602,37 @@
             this.dgvTipoHabitacion.AllowUserToDeleteRows = false;
             this.dgvTipoHabitacion.AllowUserToResizeColumns = false;
             this.dgvTipoHabitacion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTipoHabitacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoHabitacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTipoHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoHabitacion.Location = new System.Drawing.Point(19, 231);
-            this.dgvTipoHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoHabitacion.Name = "dgvTipoHabitacion";
             this.dgvTipoHabitacion.ReadOnly = true;
             this.dgvTipoHabitacion.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            this.dgvTipoHabitacion.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
+            this.dgvTipoHabitacion.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTipoHabitacion.RowTemplate.Height = 24;
             this.dgvTipoHabitacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipoHabitacion.Size = new System.Drawing.Size(567, 205);
+            this.dgvTipoHabitacion.Size = new System.Drawing.Size(567, 236);
             this.dgvTipoHabitacion.TabIndex = 38;
             this.dgvTipoHabitacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             // 
             // txtTipo_Habitacion
             // 
             this.txtTipo_Habitacion.Location = new System.Drawing.Point(135, 59);
-            this.txtTipo_Habitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTipo_Habitacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipo_Habitacion.Name = "txtTipo_Habitacion";
             this.txtTipo_Habitacion.Size = new System.Drawing.Size(251, 20);
             this.txtTipo_Habitacion.TabIndex = 37;
+            this.txtTipo_Habitacion.TextChanged += new System.EventHandler(this.txtTipo_Habitacion_TextChanged);
             this.txtTipo_Habitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipo_Habitacion_KeyPress);
             // 
             // txtId_Tipo_Habitacion
             // 
             this.txtId_Tipo_Habitacion.Enabled = false;
             this.txtId_Tipo_Habitacion.Location = new System.Drawing.Point(135, 24);
-            this.txtId_Tipo_Habitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId_Tipo_Habitacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtId_Tipo_Habitacion.Name = "txtId_Tipo_Habitacion";
             this.txtId_Tipo_Habitacion.ReadOnly = true;
             this.txtId_Tipo_Habitacion.Size = new System.Drawing.Size(132, 20);
@@ -637,6 +657,15 @@
             this.label14.Size = new System.Drawing.Size(102, 13);
             this.label14.TabIndex = 31;
             this.label14.Text = "Tipo de habitación *";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Sandchips.Properties.Resources._1857b82f9817d3d;
+            this.pictureBox7.Location = new System.Drawing.Point(17, 24);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(569, 456);
+            this.pictureBox7.TabIndex = 47;
+            this.pictureBox7.TabStop = false;
             // 
             // Habitaciones
             // 
@@ -664,9 +693,11 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoHabitacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,5 +747,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

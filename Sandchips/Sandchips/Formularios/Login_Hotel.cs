@@ -40,7 +40,7 @@ namespace Sandchips.Formularios
                 }
                 else
                 {
-                    MessageBox.Show("Haz introducido el nombre o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Haz introducido el usurio o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

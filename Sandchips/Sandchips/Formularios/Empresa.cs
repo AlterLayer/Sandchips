@@ -326,24 +326,17 @@ namespace Sandchips.Formularios
 
         private void txtEmpresa_TextChanged(object sender, EventArgs e)
         {
-
+            txtEmpresa.Text.TrimStart();
         }
 
         private void txtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void txtNRC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -351,11 +344,7 @@ namespace Sandchips.Formularios
 
         private void txtNIT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -363,27 +352,17 @@ namespace Sandchips.Formularios
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void txtRegistroIVA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -391,10 +370,7 @@ namespace Sandchips.Formularios
 
         private void txtRegistroAuditor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void cmbTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -412,19 +388,11 @@ namespace Sandchips.Formularios
 
         private void txtBuscarE_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
 
         private void txtTipoEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+           if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -432,14 +400,57 @@ namespace Sandchips.Formularios
 
         private void txtBuscarT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+        }
+
+        private void txtNRC_TextChanged(object sender, EventArgs e)
+        {
+            txtNRC.Text.TrimStart();
+        }
+
+        private void txtNIT_TextChanged(object sender, EventArgs e)
+        {
+            txtNIT.Text.TrimStart();
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            txtDescripcion.Text.TrimStart();
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            txtCorreo.Text.TrimStart();
+        }
+
+        private void txtRegistroIVA_TextChanged(object sender, EventArgs e)
+        {
+            txtRegistroIVA.Text.TrimStart();
+        }
+
+        private void txtRegistroAuditor_TextChanged(object sender, EventArgs e)
+        {
+            txtRegistroAuditor.Text.TrimStart();
+        }
+
+        private void txtBuscarE_TextChanged(object sender, EventArgs e)
+        {
+            txtBuscarE.Text.TrimStart();
+        }
+
+        private void btnAgregar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnAgregar.BackColor = Color.Black;
+            btnAgregar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.BackColor = Color.FromArgb(190, 239, 158);
+            btnAgregar.ForeColor = Color.Black;
         }
     }
 }

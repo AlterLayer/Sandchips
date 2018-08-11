@@ -199,11 +199,7 @@ namespace Sandchips.Formularios
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+           if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -211,11 +207,7 @@ namespace Sandchips.Formularios
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -223,10 +215,7 @@ namespace Sandchips.Formularios
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -240,11 +229,7 @@ namespace Sandchips.Formularios
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -252,7 +237,7 @@ namespace Sandchips.Formularios
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            
+            txtNombre.Text.TrimStart();
         }
 
         private void cmbTipoDoc_KeyPress(object sender, KeyPressEventArgs e)
@@ -289,6 +274,92 @@ namespace Sandchips.Formularios
             {
                 e.Handled = true;
             }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            txtApellido.Text.TrimStart();
+        }
+
+        private void txtDocumento_TextChanged(object sender, EventArgs e)
+        {
+            txtDocumento.Text.TrimStart();
+        }
+
+        private void mtbTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            mtbTelefono.Text.TrimStart();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            txtBuscar.Text.TrimStart();
+        }
+
+        private void btnGuardar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnGuardar.BackColor = Color.Black;
+            btnGuardar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            btnGuardar.ForeColor = Color.Black;
+            btnGuardar.BackColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnActualizar.BackColor = Color.Black;
+            btnActualizar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnActualizar_MouseLeave(object sender, EventArgs e)
+        {
+            btnActualizar.ForeColor = Color.Black;
+            btnActualizar.BackColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnEliminar.BackColor = Color.Black;
+            btnEliminar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEliminar.ForeColor = Color.Black;
+            btnEliminar.BackColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnMostrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnMostrar.BackColor = Color.Black;
+            btnMostrar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnMostrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnMostrar.ForeColor = Color.Black;
+            btnMostrar.BackColor = Color.FromArgb(190, 239, 158);
+
+        }
+
+        private void btnBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnBuscar.BackColor = Color.Black;
+            btnBuscar.ForeColor = Color.FromArgb(190, 239, 158);
+        }
+
+        private void btnBuscar_MouseLeave(object sender, EventArgs e)
+        {
+            btnBuscar.BackColor = Color.FromArgb(190, 239, 158);
+            btnBuscar.ForeColor = Color.Black;
         }
     }
 }
