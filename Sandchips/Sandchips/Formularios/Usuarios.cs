@@ -465,5 +465,10 @@ namespace Sandchips.Formularios
             btnCancelar.BackColor = Color.FromArgb(190, 239, 158);
             btnCancelar.ForeColor = Color.Black;
         }
+
+        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
