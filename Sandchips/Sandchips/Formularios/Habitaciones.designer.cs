@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -226,10 +227,12 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(608, 514);
             this.tabControl1.TabIndex = 17;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.tabPage1.Controls.Add(this.btnLimpiar);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btnConsultar);
             this.tabPage1.Controls.Add(this.btnEliminar);
@@ -255,6 +258,23 @@
             this.tabPage1.Size = new System.Drawing.Size(600, 488);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Habitaciones";
+            this.tabPage1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabPage1_MouseMove);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Location = new System.Drawing.Point(368, 185);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(79, 30);
+            this.btnLimpiar.TabIndex = 30;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.MouseLeave += new System.EventHandler(this.btnLimpiar_MouseLeave);
+            this.btnLimpiar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnLimpiar_MouseMove);
             // 
             // label8
             // 
@@ -279,10 +299,13 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            this.btnConsultar.MouseLeave += new System.EventHandler(this.btnConsultar_MouseLeave);
+            this.btnConsultar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnConsultar_MouseMove);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(200, 185);
@@ -293,10 +316,13 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
+            this.btnEliminar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEliminar_MouseMove);
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnModificar.Enabled = false;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.Location = new System.Drawing.Point(117, 185);
@@ -307,6 +333,8 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificar.MouseLeave += new System.EventHandler(this.btnModificar_MouseLeave);
+            this.btnModificar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnModificar_MouseMove);
             // 
             // btnAgregar
             // 
@@ -321,6 +349,8 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.button2_Click);
+            this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
+            this.btnAgregar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnAgregar_MouseMove);
             // 
             // btnBuscar
             // 
@@ -335,6 +365,8 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscar.MouseLeave += new System.EventHandler(this.btnBuscar_MouseLeave);
+            this.btnBuscar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBuscar_MouseMove);
             // 
             // label7
             // 
@@ -384,7 +416,7 @@
             this.txtNumero_hab.Name = "txtNumero_hab";
             this.txtNumero_hab.Size = new System.Drawing.Size(132, 20);
             this.txtNumero_hab.TabIndex = 20;
-            this.txtNumero_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_hab_KeyPress);
+            this.txtNumero_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_hab_KeyPress_1);
             // 
             // txtId_hab
             // 
@@ -396,7 +428,6 @@
             this.txtId_hab.Size = new System.Drawing.Size(132, 20);
             this.txtId_hab.TabIndex = 19;
             this.txtId_hab.TextChanged += new System.EventHandler(this.txtId_hab_TextChanged);
-            this.txtId_hab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_hab_KeyPress);
             // 
             // cmbEstado_hab
             // 
@@ -419,6 +450,7 @@
             this.cmbTipo_hab.Name = "cmbTipo_hab";
             this.cmbTipo_hab.Size = new System.Drawing.Size(132, 21);
             this.cmbTipo_hab.TabIndex = 17;
+            this.cmbTipo_hab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbTipo_hab_MouseClick);
             // 
             // tabPage2
             // 
@@ -443,6 +475,7 @@
             this.tabPage2.Size = new System.Drawing.Size(600, 488);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tipos de Habitaciones";
+            this.tabPage2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabPage2_MouseMove);
             // 
             // label9
             // 
@@ -682,5 +715,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

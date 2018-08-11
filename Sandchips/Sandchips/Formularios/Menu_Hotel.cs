@@ -121,5 +121,13 @@ namespace Sandchips.Formularios
         {
 
         }
+
+        private void pictureBox11_Click_1(object sender, EventArgs e)
+        {
+
+            Form Chequeo_habitaciones = new Habitaciones();
+            Chequeo_habitaciones.Show();
+            this.Hide();
+        }
     }
 }
