@@ -285,10 +285,7 @@ namespace Sandchips.Formularios
 
         private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
