@@ -98,7 +98,7 @@ namespace Sandchips.DAL
             List<ModelTipoDocumento> listabuscar = new List<ModelTipoDocumento>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoDocumento, Documento FROM tbdettipodocumento"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoDocumento, Documento FROM tbdettipodocumento ORDER BY IdTipoDocumento ASC"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 listabuscar.Add(new ModelTipoDocumento()

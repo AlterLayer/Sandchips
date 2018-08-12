@@ -361,5 +361,10 @@ namespace Sandchips.Formularios
             btnBuscar.BackColor = Color.FromArgb(190, 239, 158);
             btnBuscar.ForeColor = Color.Black;
         }
+
+        private void cmbTipoDoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
