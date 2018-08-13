@@ -92,7 +92,7 @@ namespace Sandchips.DAL
 
         }
 
-        //Obtiene las personas de la base de datos
+        //Obtiene las personas de la base de datos ok
         public static List<ModelTipoDocumento> ObtenerTipoDocumento()
         {
             List<ModelTipoDocumento> listabuscar = new List<ModelTipoDocumento>();
