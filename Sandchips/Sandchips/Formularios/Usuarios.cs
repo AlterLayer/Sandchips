@@ -268,6 +268,10 @@ namespace Sandchips.Formularios
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             DALUsuarios.eliminar(Convert.ToInt32(txtIdUsuario.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvusuarios.DataSource = DALUsuarios.mostrartabla();
