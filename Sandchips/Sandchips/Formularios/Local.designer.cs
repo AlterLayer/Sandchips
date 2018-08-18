@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Local));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -58,7 +59,6 @@
             this.txtIdTipoLocal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtNombreLocal = new System.Windows.Forms.TextBox();
@@ -84,7 +84,6 @@
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoLocal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -101,15 +100,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.OrangeRed;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 54);
+            this.panel1.Size = new System.Drawing.Size(902, 66);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(616, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(821, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +121,8 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(772, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(1029, 15);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(20, 19);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +133,8 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 14);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +145,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(954, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1272, 15);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 19);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +156,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(928, 12);
+            this.pictureBox5.Location = new System.Drawing.Point(1237, 15);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(20, 19);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +226,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(9, 93);
+            this.tabControl1.Location = new System.Drawing.Point(20, 128);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -244,12 +249,11 @@
             this.tabPage2.Controls.Add(this.txtIdTipoLocal);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.pictureBox7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(616, 432);
+            this.tabPage2.Size = new System.Drawing.Size(824, 535);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tipos Local";
             // 
@@ -259,7 +263,7 @@
             this.label9.Location = new System.Drawing.Point(12, 85);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
+            this.label9.Size = new System.Drawing.Size(150, 17);
             this.label9.TabIndex = 46;
             this.label9.Text = "(*) Campos requeridos";
             // 
@@ -267,10 +271,10 @@
             // 
             this.btnConsultarT.BackColor = System.Drawing.Color.Teal;
             this.btnConsultarT.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarT.Location = new System.Drawing.Point(213, 128);
+            this.btnConsultarT.Location = new System.Drawing.Point(284, 158);
             this.btnConsultarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultarT.Name = "btnConsultarT";
-            this.btnConsultarT.Size = new System.Drawing.Size(62, 25);
+            this.btnConsultarT.Size = new System.Drawing.Size(56, 19);
             this.btnConsultarT.TabIndex = 45;
             this.btnConsultarT.Text = "Consultar";
             this.btnConsultarT.UseVisualStyleBackColor = false;
@@ -282,10 +286,10 @@
             // 
             this.btnEliminarT.BackColor = System.Drawing.Color.Teal;
             this.btnEliminarT.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarT.Location = new System.Drawing.Point(138, 128);
+            this.btnEliminarT.Location = new System.Drawing.Point(184, 158);
             this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarT.Name = "btnEliminarT";
-            this.btnEliminarT.Size = new System.Drawing.Size(63, 25);
+            this.btnEliminarT.Size = new System.Drawing.Size(56, 19);
             this.btnEliminarT.TabIndex = 44;
             this.btnEliminarT.Text = "Eliminar";
             this.btnEliminarT.UseVisualStyleBackColor = false;
@@ -297,10 +301,10 @@
             // 
             this.btnModificarT.BackColor = System.Drawing.Color.Teal;
             this.btnModificarT.ForeColor = System.Drawing.Color.White;
-            this.btnModificarT.Location = new System.Drawing.Point(74, 128);
+            this.btnModificarT.Location = new System.Drawing.Point(98, 158);
             this.btnModificarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarT.Name = "btnModificarT";
-            this.btnModificarT.Size = new System.Drawing.Size(60, 25);
+            this.btnModificarT.Size = new System.Drawing.Size(56, 19);
             this.btnModificarT.TabIndex = 43;
             this.btnModificarT.Text = "Modificar";
             this.btnModificarT.UseVisualStyleBackColor = false;
@@ -312,10 +316,10 @@
             // 
             this.btnAgregarT.BackColor = System.Drawing.Color.Teal;
             this.btnAgregarT.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarT.Location = new System.Drawing.Point(15, 128);
+            this.btnAgregarT.Location = new System.Drawing.Point(20, 158);
             this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarT.Name = "btnAgregarT";
-            this.btnAgregarT.Size = new System.Drawing.Size(55, 27);
+            this.btnAgregarT.Size = new System.Drawing.Size(56, 19);
             this.btnAgregarT.TabIndex = 42;
             this.btnAgregarT.Text = "Agregar";
             this.btnAgregarT.UseVisualStyleBackColor = false;
@@ -327,10 +331,10 @@
             // 
             this.btnBuscarT.BackColor = System.Drawing.Color.Teal;
             this.btnBuscarT.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarT.Location = new System.Drawing.Point(246, 157);
+            this.btnBuscarT.Location = new System.Drawing.Point(328, 193);
             this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarT.Name = "btnBuscarT";
-            this.btnBuscarT.Size = new System.Drawing.Size(51, 20);
+            this.btnBuscarT.Size = new System.Drawing.Size(56, 19);
             this.btnBuscarT.TabIndex = 41;
             this.btnBuscarT.Text = "Buscar";
             this.btnBuscarT.UseVisualStyleBackColor = false;
@@ -341,19 +345,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 157);
+            this.label10.Location = new System.Drawing.Point(17, 193);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.Size = new System.Drawing.Size(104, 17);
             this.label10.TabIndex = 40;
             this.label10.Text = "Buscar por tipo";
             // 
             // txtBuscarT
             // 
-            this.txtBuscarT.Location = new System.Drawing.Point(75, 157);
+            this.txtBuscarT.Location = new System.Drawing.Point(100, 193);
             this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarT.Name = "txtBuscarT";
-            this.txtBuscarT.Size = new System.Drawing.Size(158, 20);
+            this.txtBuscarT.Size = new System.Drawing.Size(210, 22);
             this.txtBuscarT.TabIndex = 39;
             this.txtBuscarT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarT_KeyPress);
             // 
@@ -363,38 +367,39 @@
             this.dgvTipoLocal.AllowUserToDeleteRows = false;
             this.dgvTipoLocal.AllowUserToResizeColumns = false;
             this.dgvTipoLocal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
-            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTipoLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoLocal.Location = new System.Drawing.Point(14, 188);
+            this.dgvTipoLocal.Location = new System.Drawing.Point(19, 231);
             this.dgvTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoLocal.Name = "dgvTipoLocal";
             this.dgvTipoLocal.ReadOnly = true;
             this.dgvTipoLocal.RowHeadersVisible = false;
-            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Teal;
+            this.dgvTipoLocal.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvTipoLocal.RowTemplate.Height = 24;
             this.dgvTipoLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipoLocal.Size = new System.Drawing.Size(274, 167);
+            this.dgvTipoLocal.Size = new System.Drawing.Size(366, 205);
             this.dgvTipoLocal.TabIndex = 38;
             this.dgvTipoLocal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             // 
             // txtTipoLocal
             // 
-            this.txtTipoLocal.Location = new System.Drawing.Point(101, 48);
+            this.txtTipoLocal.Location = new System.Drawing.Point(135, 59);
             this.txtTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipoLocal.Name = "txtTipoLocal";
-            this.txtTipoLocal.Size = new System.Drawing.Size(189, 20);
+            this.txtTipoLocal.Size = new System.Drawing.Size(251, 22);
             this.txtTipoLocal.TabIndex = 37;
             this.txtTipoLocal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoLocal_KeyPress);
             // 
             // txtIdTipoLocal
             // 
             this.txtIdTipoLocal.Enabled = false;
-            this.txtIdTipoLocal.Location = new System.Drawing.Point(101, 20);
+            this.txtIdTipoLocal.Location = new System.Drawing.Point(135, 24);
             this.txtIdTipoLocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdTipoLocal.Name = "txtIdTipoLocal";
             this.txtIdTipoLocal.ReadOnly = true;
-            this.txtIdTipoLocal.Size = new System.Drawing.Size(100, 20);
+            this.txtIdTipoLocal.Size = new System.Drawing.Size(132, 22);
             this.txtIdTipoLocal.TabIndex = 36;
             // 
             // label12
@@ -403,7 +408,7 @@
             this.label12.Location = new System.Drawing.Point(13, 20);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 13);
+            this.label12.Size = new System.Drawing.Size(98, 17);
             this.label12.TabIndex = 30;
             this.label12.Text = "Id Tipo Local *";
             // 
@@ -413,30 +418,21 @@
             this.label14.Location = new System.Drawing.Point(13, 52);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 13);
+            this.label14.Size = new System.Drawing.Size(83, 17);
             this.label14.TabIndex = 31;
             this.label14.Text = "Tipo Local *";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Sandchips.Properties.Resources.hotel1;
-            this.pictureBox7.Location = new System.Drawing.Point(75, -60);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(418, 411);
-            this.pictureBox7.TabIndex = 47;
-            this.pictureBox7.TabStop = false;
-            // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(616, 432);
+            this.tabPage3.Size = new System.Drawing.Size(824, 535);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Detalle Local";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage1
             // 
@@ -577,15 +573,15 @@
             this.dgvLocal.AllowUserToDeleteRows = false;
             this.dgvLocal.AllowUserToResizeColumns = false;
             this.dgvLocal.AllowUserToResizeRows = false;
-            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLocal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocal.Location = new System.Drawing.Point(41, 320);
             this.dgvLocal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLocal.Name = "dgvLocal";
             this.dgvLocal.ReadOnly = true;
             this.dgvLocal.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Teal;
+            this.dgvLocal.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvLocal.RowTemplate.Height = 24;
             this.dgvLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLocal.Size = new System.Drawing.Size(725, 207);
@@ -636,13 +632,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(650, 481);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(902, 714);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Local";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos_de_habitaciones";
@@ -657,7 +653,6 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoLocal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).EndInit();
@@ -712,6 +707,5 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtNombreLocal;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

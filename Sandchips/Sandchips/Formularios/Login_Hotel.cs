@@ -24,8 +24,8 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click(object sender, EventArgs e)
         {
-            if(txtusuario.Text.Trim() == ""|| mtbcontraseña.Text.Trim() == ""){
-                MessageBox.Show("Hay campos vacios", "Verifique");
+            if(txtusuario.Text.Trim() != ""|| mtbcontraseña.Text.Trim() != "")
+                {
 
                 try
                 {
@@ -50,6 +50,11 @@ namespace Sandchips.Formularios
                 {
                     MessageBox.Show("Exception " + ex);
                 }
+            }
+            else
+            {
+
+                MessageBox.Show("Hay campos vacios", "Verifique");
             }
         }
 
