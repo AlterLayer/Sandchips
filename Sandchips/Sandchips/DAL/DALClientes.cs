@@ -48,7 +48,7 @@ namespace Sandchips.DAL
             return retorno;
         }//fin del try - Catch
         public static DataTable mostrartabla()
-        { 
+        {
             string instruccion;
             DataTable Consulta = new DataTable();
             try
@@ -70,11 +70,20 @@ namespace Sandchips.DAL
         public static int eliminar(ModelClientes model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeclientes WHERE IdClientes='{0}'", model.IdClientes), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
-            return retorno;
+            try           
+            {
 
+                MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeclientes WHERE IdClientes='{0}'", model.IdClientes), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al tratar de eliminar una registro. " + ex);
+            }
+            return retorno;
         }
+
         public static List<ModelClientes> buscar(string user)
         {
             List<ModelClientes> listabuscar = new List<ModelClientes>();

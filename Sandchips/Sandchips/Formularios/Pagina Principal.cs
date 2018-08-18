@@ -74,19 +74,26 @@ namespace Sandchips.Formularios
 
         private void inicio_Load(object sender, EventArgs e)
         {
-            panel1.Width = this.Width - 50;
+            /*panel1.Width = this.Width - 50;
 
             ImagenHotel.Height = this.Height - 360;
             ImagenHotel.Width = this.Width - 950;
 
             ImagenRes.Height = this.Height - 360;
             ImagenRes.Width = this.Width - 1050;
-
+            */
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form Pagina_Principal = new Menu_Hotel();
+            Pagina_Principal.Show();
+            this.Hide();
         }
     }
 }

@@ -90,12 +90,13 @@ namespace Sandchips.Formularios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F);
-            this.label1.Location = new System.Drawing.Point(348, 12);
+            this.label1.Location = new System.Drawing.Point(391, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(338, 32);
+            this.label1.Size = new System.Drawing.Size(175, 32);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Sandchips Hotel And Restaurant";
+            this.label1.Text = "Sandchips Hotel";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox3
             // 
