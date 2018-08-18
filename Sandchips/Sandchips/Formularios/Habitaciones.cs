@@ -382,9 +382,10 @@ namespace Sandchips.Formularios
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            btnAgregar.Enabled = true;
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false; 
+            txtNumero_hab.Text = "";
+            cmbTipo_hab.Text = "";
+            cmbEstado_hab.Text = "";
+            txtId_hab.Text = "";
         }
 
         private void cmbTipo_hab_MouseClick(object sender, MouseEventArgs e)

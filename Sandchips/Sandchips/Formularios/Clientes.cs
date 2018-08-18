@@ -168,6 +168,7 @@ namespace Sandchips.Formularios
             DALClientes.eliminar(eliminar);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             dgvClientes.DataSource = DALClientes.mostrartabla();
+
         }
 
         //MOSTRAR DATOS CLIENTE
@@ -370,6 +371,11 @@ namespace Sandchips.Formularios
         private void cmbTipoDoc_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

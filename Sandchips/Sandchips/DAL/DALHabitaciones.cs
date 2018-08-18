@@ -97,7 +97,7 @@ namespace Sandchips.DAL
         public static int eliminar(ModelHabitaciones model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaehabitaciones SET IdEstado=2 WHERE IdHabitaciones='{0}'", model.IdHabitacion), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaehabitaciones WHERE IdHabitaciones='{0}'", model.IdHabitacion), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 

@@ -26,6 +26,8 @@ namespace Sandchips.Formularios
             cmbTipoEmpresa.DataSource = DALEmpresa.ObtenerTipoEmpresa();
             cmbTipoEmpresa.DisplayMember = "TipoEmpresa";
             cmbTipoEmpresa.ValueMember = "IdTipoEmpresa";
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -227,6 +229,10 @@ namespace Sandchips.Formularios
             cmbTipoEmpresa.Text = dgvEmpresas[6, pocision].Value.ToString();
             txtRegistroIVA.Text = dgvEmpresas[7, pocision].Value.ToString();
             txtRegistroAuditor.Text = dgvEmpresas[8, pocision].Value.ToString();
+            btnEliminar.Enabled = true;
+            btnModificar.Enabled = true;
+            btnAgregar.Enabled = false;
+
         }
 
         //CONSUTLAR EMPRESAS
@@ -462,6 +468,11 @@ namespace Sandchips.Formularios
         {
             btnAgregar.BackColor = Color.FromArgb(190, 239, 158);
             btnAgregar.ForeColor = Color.Black;
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
