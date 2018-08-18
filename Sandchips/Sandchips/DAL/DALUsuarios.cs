@@ -30,7 +30,7 @@ namespace Sandchips.DAL
 
             //Guardamos en una variable tipo string la consulta a realizar a la base 
             //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
-            instruccion = "SELECT * FROM  tbmaeusuarios  WHERE IdEstado = 1";
+            instruccion = "SELECT* FROM  tbmaeusuarios  WHERE IdEstado = 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
@@ -50,7 +50,7 @@ namespace Sandchips.DAL
         public static int eliminar(int iduser)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaeusuarios SET IdEstado=2 WHERE IdUsuario= '{0}'", iduser), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeusuarios WHERE IdUsuario = '{0}'", iduser), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 
@@ -92,13 +92,13 @@ namespace Sandchips.DAL
 
         }
 
-        //Obtiene las personas de la base de datos
+        //Obtiene las personas de la base de datos ok
         public static List<ModelTipoDocumento> ObtenerTipoDocumento()
         {
             List<ModelTipoDocumento> listabuscar = new List<ModelTipoDocumento>();
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoDocumento, Documento FROM tbdettipodocumento"), Conexion.obtenerconexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdTipoDocumento, Documento FROM tbdettipodocumento ORDER BY IdTipoDocumento ASC"), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
                 MySqlDataReader reader = comando.ExecuteReader();
                 listabuscar.Add(new ModelTipoDocumento()

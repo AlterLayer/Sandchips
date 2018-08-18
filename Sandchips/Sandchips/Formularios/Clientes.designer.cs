@@ -30,8 +30,8 @@ namespace Sandchips.Formularios
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
@@ -105,18 +105,19 @@ namespace Sandchips.Formularios
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(846, 552);
+            this.panel1.Size = new System.Drawing.Size(1128, 679);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(808, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1077, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 109;
             this.pictureBox1.TabStop = false;
@@ -124,11 +125,11 @@ namespace Sandchips.Formularios
             // 
             // mtbTelefono
             // 
-            this.mtbTelefono.Location = new System.Drawing.Point(501, 125);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.mtbTelefono.Location = new System.Drawing.Point(668, 154);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbTelefono.Mask = "9999-9999";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(224, 20);
+            this.mtbTelefono.Size = new System.Drawing.Size(297, 22);
             this.mtbTelefono.TabIndex = 108;
             this.mtbTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbTelefono_MaskInputRejected);
             this.mtbTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbTelefono_KeyPress);
@@ -136,9 +137,10 @@ namespace Sandchips.Formularios
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox3.Size = new System.Drawing.Size(39, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 94;
             this.pictureBox3.TabStop = false;
@@ -147,9 +149,10 @@ namespace Sandchips.Formularios
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(967, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(1289, 14);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox2.Size = new System.Drawing.Size(27, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 93;
             this.pictureBox2.TabStop = false;
@@ -161,9 +164,10 @@ namespace Sandchips.Formularios
             this.cmbUsuario.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbUsuario.Location = new System.Drawing.Point(501, 198);
+            this.cmbUsuario.Location = new System.Drawing.Point(668, 244);
+            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(224, 21);
+            this.cmbUsuario.Size = new System.Drawing.Size(297, 24);
             this.cmbUsuario.TabIndex = 91;
             this.cmbUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbUsuario_KeyPress);
             // 
@@ -174,9 +178,10 @@ namespace Sandchips.Formularios
             "Seleccione una opción",
             "Masculino",
             "Femenino"});
-            this.cmbGenero.Location = new System.Drawing.Point(500, 163);
+            this.cmbGenero.Location = new System.Drawing.Point(667, 201);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(224, 21);
+            this.cmbGenero.Size = new System.Drawing.Size(297, 24);
             this.cmbGenero.TabIndex = 90;
             this.cmbGenero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGenero_KeyPress);
             // 
@@ -188,28 +193,32 @@ namespace Sandchips.Formularios
             "Cédula",
             "DUI",
             "Otro"});
-            this.cmbTipoDoc.Location = new System.Drawing.Point(157, 197);
+            this.cmbTipoDoc.Location = new System.Drawing.Point(209, 242);
+            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.Size = new System.Drawing.Size(239, 21);
+            this.cmbTipoDoc.Size = new System.Drawing.Size(317, 24);
             this.cmbTipoDoc.TabIndex = 89;
+            this.cmbTipoDoc.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDoc_SelectedIndexChanged);
             this.cmbTipoDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipoDoc_KeyPress);
             // 
             // txtIdClientes
             // 
             this.txtIdClientes.Enabled = false;
-            this.txtIdClientes.Location = new System.Drawing.Point(157, 98);
+            this.txtIdClientes.Location = new System.Drawing.Point(209, 121);
+            this.txtIdClientes.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdClientes.Name = "txtIdClientes";
             this.txtIdClientes.ReadOnly = true;
-            this.txtIdClientes.Size = new System.Drawing.Size(100, 20);
+            this.txtIdClientes.Size = new System.Drawing.Size(132, 22);
             this.txtIdClientes.TabIndex = 88;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(35, 98);
+            this.label2.Location = new System.Drawing.Point(47, 121);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 87;
             this.label2.Text = "Id Clientes";
             // 
@@ -218,9 +227,10 @@ namespace Sandchips.Formularios
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(223, 38);
+            this.label14.Location = new System.Drawing.Point(297, 47);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(142, 39);
+            this.label14.Size = new System.Drawing.Size(177, 49);
             this.label14.TabIndex = 86;
             this.label14.Text = "clientes";
             // 
@@ -229,9 +239,10 @@ namespace Sandchips.Formularios
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(28, 38);
+            this.label13.Location = new System.Drawing.Point(37, 47);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(203, 39);
+            this.label13.Size = new System.Drawing.Size(254, 49);
             this.label13.TabIndex = 85;
             this.label13.Text = "Registro de";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -239,9 +250,10 @@ namespace Sandchips.Formularios
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(392, 244);
+            this.txtBuscar.Location = new System.Drawing.Point(523, 300);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(289, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(384, 22);
             this.txtBuscar.TabIndex = 84;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
@@ -251,9 +263,10 @@ namespace Sandchips.Formularios
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(727, 236);
+            this.btnBuscar.Location = new System.Drawing.Point(969, 290);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(56, 26);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 32);
             this.btnBuscar.TabIndex = 83;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -266,9 +279,10 @@ namespace Sandchips.Formularios
             this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMostrar.ForeColor = System.Drawing.Color.Black;
-            this.btnMostrar.Location = new System.Drawing.Point(301, 236);
+            this.btnMostrar.Location = new System.Drawing.Point(401, 290);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(63, 26);
+            this.btnMostrar.Size = new System.Drawing.Size(84, 32);
             this.btnMostrar.TabIndex = 82;
             this.btnMostrar.Text = "Consultar";
             this.btnMostrar.UseVisualStyleBackColor = false;
@@ -282,9 +296,10 @@ namespace Sandchips.Formularios
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(215, 236);
+            this.btnEliminar.Location = new System.Drawing.Point(287, 290);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(52, 26);
+            this.btnEliminar.Size = new System.Drawing.Size(69, 32);
             this.btnEliminar.TabIndex = 81;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -298,9 +313,10 @@ namespace Sandchips.Formularios
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.ForeColor = System.Drawing.Color.Black;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnActualizar.Location = new System.Drawing.Point(127, 236);
+            this.btnActualizar.Location = new System.Drawing.Point(169, 290);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(59, 26);
+            this.btnActualizar.Size = new System.Drawing.Size(79, 32);
             this.btnActualizar.TabIndex = 80;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -313,9 +329,10 @@ namespace Sandchips.Formularios
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(37, 236);
+            this.btnGuardar.Location = new System.Drawing.Point(49, 290);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(52, 26);
+            this.btnGuardar.Size = new System.Drawing.Size(69, 32);
             this.btnGuardar.TabIndex = 79;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -330,47 +347,52 @@ namespace Sandchips.Formularios
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AllowUserToResizeColumns = false;
             this.dgvClientes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Teal;
-            this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(215, 279);
+            this.dgvClientes.Location = new System.Drawing.Point(287, 343);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvClientes.RowHeadersVisible = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.ShowCellErrors = false;
             this.dgvClientes.ShowRowErrors = false;
-            this.dgvClientes.Size = new System.Drawing.Size(613, 228);
+            this.dgvClientes.Size = new System.Drawing.Size(817, 281);
             this.dgvClientes.TabIndex = 78;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick_1);
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(501, 94);
+            this.txtDocumento.Location = new System.Drawing.Point(668, 116);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(224, 20);
+            this.txtDocumento.Size = new System.Drawing.Size(297, 22);
             this.txtDocumento.TabIndex = 73;
             this.txtDocumento.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
             this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(157, 162);
+            this.txtApellido.Location = new System.Drawing.Point(209, 199);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(239, 20);
+            this.txtApellido.Size = new System.Drawing.Size(317, 22);
             this.txtApellido.TabIndex = 72;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(157, 130);
+            this.txtNombre.Location = new System.Drawing.Point(209, 160);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(239, 20);
+            this.txtNombre.Size = new System.Drawing.Size(317, 22);
             this.txtNombre.TabIndex = 71;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
@@ -379,9 +401,10 @@ namespace Sandchips.Formularios
             // 
             this.txtMu.AutoSize = true;
             this.txtMu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtMu.Location = new System.Drawing.Point(410, 204);
+            this.txtMu.Location = new System.Drawing.Point(547, 251);
+            this.txtMu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtMu.Name = "txtMu";
-            this.txtMu.Size = new System.Drawing.Size(50, 13);
+            this.txtMu.Size = new System.Drawing.Size(66, 17);
             this.txtMu.TabIndex = 70;
             this.txtMu.Text = "Usuario *";
             // 
@@ -389,9 +412,10 @@ namespace Sandchips.Formularios
             // 
             this.txtTe.AutoSize = true;
             this.txtTe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTe.Location = new System.Drawing.Point(407, 135);
+            this.txtTe.Location = new System.Drawing.Point(543, 166);
+            this.txtTe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtTe.Name = "txtTe";
-            this.txtTe.Size = new System.Drawing.Size(56, 13);
+            this.txtTe.Size = new System.Drawing.Size(73, 17);
             this.txtTe.TabIndex = 69;
             this.txtTe.Text = "Telefono *";
             // 
@@ -399,9 +423,10 @@ namespace Sandchips.Formularios
             // 
             this.txtC.AutoSize = true;
             this.txtC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtC.Location = new System.Drawing.Point(408, 100);
+            this.txtC.Location = new System.Drawing.Point(544, 123);
+            this.txtC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(69, 13);
+            this.txtC.Size = new System.Drawing.Size(89, 17);
             this.txtC.TabIndex = 65;
             this.txtC.Text = "Documento *";
             // 
@@ -409,9 +434,10 @@ namespace Sandchips.Formularios
             // 
             this.txtG.AutoSize = true;
             this.txtG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtG.Location = new System.Drawing.Point(409, 169);
+            this.txtG.Location = new System.Drawing.Point(545, 208);
+            this.txtG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtG.Name = "txtG";
-            this.txtG.Size = new System.Drawing.Size(49, 13);
+            this.txtG.Size = new System.Drawing.Size(65, 17);
             this.txtG.TabIndex = 64;
             this.txtG.Text = "Género *";
             // 
@@ -419,9 +445,10 @@ namespace Sandchips.Formularios
             // 
             this.txtT.AutoSize = true;
             this.txtT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtT.Location = new System.Drawing.Point(34, 198);
+            this.txtT.Location = new System.Drawing.Point(45, 244);
+            this.txtT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtT.Name = "txtT";
-            this.txtT.Size = new System.Drawing.Size(108, 13);
+            this.txtT.Size = new System.Drawing.Size(141, 17);
             this.txtT.TabIndex = 63;
             this.txtT.Text = "Tipo de Documento *";
             // 
@@ -430,9 +457,10 @@ namespace Sandchips.Formularios
             this.txta.AutoSize = true;
             this.txta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txta.Location = new System.Drawing.Point(34, 162);
+            this.txta.Location = new System.Drawing.Point(45, 199);
+            this.txta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txta.Name = "txta";
-            this.txta.Size = new System.Drawing.Size(56, 13);
+            this.txta.Size = new System.Drawing.Size(74, 17);
             this.txta.TabIndex = 62;
             this.txta.Text = "Apellidos *";
             // 
@@ -440,37 +468,41 @@ namespace Sandchips.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(35, 130);
+            this.label1.Location = new System.Drawing.Point(47, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 61;
             this.label1.Text = "Nombre *";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Sandchips.Properties.Resources._205747;
-            this.pictureBox4.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(504, 517);
+            this.pictureBox4.Size = new System.Drawing.Size(672, 636);
             this.pictureBox4.TabIndex = 111;
             this.pictureBox4.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(-2, 471);
+            this.panel2.Location = new System.Drawing.Point(-3, 580);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(859, 76);
+            this.panel2.Size = new System.Drawing.Size(1145, 94);
             this.panel2.TabIndex = 110;
             // 
             // Clientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(850, 552);
+            this.ClientSize = new System.Drawing.Size(1133, 679);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personas";

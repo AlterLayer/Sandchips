@@ -26,6 +26,8 @@ namespace Sandchips.Formularios
             cmbTipoEmpresa.DataSource = DALEmpresa.ObtenerTipoEmpresa();
             cmbTipoEmpresa.DisplayMember = "TipoEmpresa";
             cmbTipoEmpresa.ValueMember = "IdTipoEmpresa";
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -135,7 +137,9 @@ namespace Sandchips.Formularios
             {
                 ModelEmpresa model = new ModelEmpresa();
                 model.Empresa = txtEmpresa.Text;
-                model.NRC = txtNRC.Text;
+                var vnrc1 = txtNRC.Text.TrimStart();
+                var vnrc2 = vnrc1.TrimEnd();
+                model.NRC = vnrc2;
                 model.NIT = txtNIT.Text;
                 model.Direccion = txtDescripcion.Text;
                 model.Correo = txtCorreo.Text;
@@ -200,6 +204,10 @@ namespace Sandchips.Formularios
         //ELIMINAR EMPRESA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             ModelEmpresa model = new ModelEmpresa();
             model.IdEmpresa = Convert.ToInt32(txtIdEmpresa.Text);
             DALEmpresa.eliminar(model);
@@ -221,6 +229,10 @@ namespace Sandchips.Formularios
             cmbTipoEmpresa.Text = dgvEmpresas[6, pocision].Value.ToString();
             txtRegistroIVA.Text = dgvEmpresas[7, pocision].Value.ToString();
             txtRegistroAuditor.Text = dgvEmpresas[8, pocision].Value.ToString();
+            btnEliminar.Enabled = true;
+            btnModificar.Enabled = true;
+            btnAgregar.Enabled = false;
+
         }
 
         //CONSUTLAR EMPRESAS
@@ -292,7 +304,11 @@ namespace Sandchips.Formularios
 
         //ELMINAR TIPO EMPRESA
         private void btnEliminarT_Click(object sender, EventArgs e)
-        { 
+        {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             int id = Convert.ToInt32(txtIdEmpresa.Text);
             int respuesta = DALTipoEmpresa.eliminar(id);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -407,8 +423,9 @@ namespace Sandchips.Formularios
         }
 
         private void txtNRC_TextChanged(object sender, EventArgs e)
-        {
+       {
             txtNRC.Text.TrimStart();
+            txtNRC.Text.TrimEnd();
         }
 
         private void txtNIT_TextChanged(object sender, EventArgs e)
@@ -451,6 +468,11 @@ namespace Sandchips.Formularios
         {
             btnAgregar.BackColor = Color.FromArgb(190, 239, 158);
             btnAgregar.ForeColor = Color.Black;
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

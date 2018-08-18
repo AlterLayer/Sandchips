@@ -181,6 +181,10 @@ namespace Sandchips.Formularios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             ModelHabitaciones model = new ModelHabitaciones();
             model.IdHabitacion = Convert.ToInt32(txtId_hab.Text); 
             model.IdEstado = Convert.ToInt32(cmbEstado_hab.SelectedValue.ToString());
@@ -258,6 +262,10 @@ namespace Sandchips.Formularios
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             DALTipoHabitaciones.eliminar(Convert.ToInt32(txtId_Tipo_Habitacion.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
@@ -374,9 +382,10 @@ namespace Sandchips.Formularios
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            btnAgregar.Enabled = true;
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false; 
+            txtNumero_hab.Text = "";
+            cmbTipo_hab.Text = "";
+            cmbEstado_hab.Text = "";
+            txtId_hab.Text = "";
         }
 
         private void cmbTipo_hab_MouseClick(object sender, MouseEventArgs e)
