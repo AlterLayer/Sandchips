@@ -29,15 +29,16 @@ namespace Sandchips.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pEmpresas = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnlimpiar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.txtBuscarE = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@ namespace Sandchips.Formularios
             this.txtIdEmpresa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnlimpiarcampos = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscarT = new System.Windows.Forms.TextBox();
             this.txtTipoEmpresa = new System.Windows.Forms.TextBox();
@@ -94,7 +96,7 @@ namespace Sandchips.Formularios
             this.pEmpresas.Controls.Add(this.pictureBox6);
             this.pEmpresas.Controls.Add(this.tabControl2);
             this.pEmpresas.Location = new System.Drawing.Point(2, 2);
-            this.pEmpresas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pEmpresas.Margin = new System.Windows.Forms.Padding(2);
             this.pEmpresas.Name = "pEmpresas";
             this.pEmpresas.Size = new System.Drawing.Size(1034, 618);
             this.pEmpresas.TabIndex = 0;
@@ -104,7 +106,7 @@ namespace Sandchips.Formularios
             // 
             this.pictureBox7.Image = global::Sandchips.Properties.Resources.pictureBox1_Image;
             this.pictureBox7.Location = new System.Drawing.Point(989, 8);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(28, 26);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +118,7 @@ namespace Sandchips.Formularios
             // 
             this.pictureBox6.Image = global::Sandchips.Properties.Resources.pictureBox3_Image;
             this.pictureBox6.Location = new System.Drawing.Point(13, 8);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(34, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +131,7 @@ namespace Sandchips.Formularios
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Location = new System.Drawing.Point(8, 46);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1016, 561);
@@ -138,6 +140,7 @@ namespace Sandchips.Formularios
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.tabPage3.Controls.Add(this.btnlimpiar);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.txtBuscarE);
             this.tabPage3.Controls.Add(this.label17);
@@ -166,12 +169,27 @@ namespace Sandchips.Formularios
             this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.ForeColor = System.Drawing.Color.White;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(1008, 535);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Empresa";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnlimpiar.Location = new System.Drawing.Point(761, 143);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(106, 27);
+            this.btnlimpiar.TabIndex = 26;
+            this.btnlimpiar.Text = "Limpiar campos";
+            this.btnlimpiar.UseVisualStyleBackColor = false;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // label18
             // 
@@ -187,7 +205,7 @@ namespace Sandchips.Formularios
             // txtBuscarE
             // 
             this.txtBuscarE.Location = new System.Drawing.Point(633, 251);
-            this.txtBuscarE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarE.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarE.Name = "txtBuscarE";
             this.txtBuscarE.Size = new System.Drawing.Size(221, 20);
             this.txtBuscarE.TabIndex = 24;
@@ -208,7 +226,7 @@ namespace Sandchips.Formularios
             // txtRegistroAuditor
             // 
             this.txtRegistroAuditor.Location = new System.Drawing.Point(788, 40);
-            this.txtRegistroAuditor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRegistroAuditor.Margin = new System.Windows.Forms.Padding(2);
             this.txtRegistroAuditor.Name = "txtRegistroAuditor";
             this.txtRegistroAuditor.Size = new System.Drawing.Size(164, 20);
             this.txtRegistroAuditor.TabIndex = 22;
@@ -229,7 +247,7 @@ namespace Sandchips.Formularios
             // txtRegistroIVA
             // 
             this.txtRegistroIVA.Location = new System.Drawing.Point(456, 153);
-            this.txtRegistroIVA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRegistroIVA.Margin = new System.Windows.Forms.Padding(2);
             this.txtRegistroIVA.Name = "txtRegistroIVA";
             this.txtRegistroIVA.Size = new System.Drawing.Size(180, 20);
             this.txtRegistroIVA.TabIndex = 20;
@@ -250,7 +268,7 @@ namespace Sandchips.Formularios
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(456, 117);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(180, 20);
             this.txtCorreo.TabIndex = 18;
@@ -271,7 +289,7 @@ namespace Sandchips.Formularios
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(456, 40);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(180, 60);
@@ -293,7 +311,7 @@ namespace Sandchips.Formularios
             // txtNIT
             // 
             this.txtNIT.Location = new System.Drawing.Point(151, 154);
-            this.txtNIT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNIT.Margin = new System.Windows.Forms.Padding(2);
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(182, 20);
             this.txtNIT.TabIndex = 14;
@@ -314,7 +332,7 @@ namespace Sandchips.Formularios
             // txtNRC
             // 
             this.txtNRC.Location = new System.Drawing.Point(151, 117);
-            this.txtNRC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNRC.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRC.Name = "txtNRC";
             this.txtNRC.Size = new System.Drawing.Size(182, 20);
             this.txtNRC.TabIndex = 12;
@@ -335,7 +353,7 @@ namespace Sandchips.Formularios
             // txtEmpresa
             // 
             this.txtEmpresa.Location = new System.Drawing.Point(151, 81);
-            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(182, 20);
             this.txtEmpresa.TabIndex = 10;
@@ -359,7 +377,7 @@ namespace Sandchips.Formularios
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Location = new System.Drawing.Point(873, 242);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(69, 27);
             this.btnBuscar.TabIndex = 8;
@@ -373,7 +391,7 @@ namespace Sandchips.Formularios
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.Black;
             this.btnConsultar.Location = new System.Drawing.Point(367, 243);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(69, 27);
             this.btnConsultar.TabIndex = 7;
@@ -387,7 +405,7 @@ namespace Sandchips.Formularios
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(258, 242);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(69, 27);
             this.btnEliminar.TabIndex = 6;
@@ -401,7 +419,7 @@ namespace Sandchips.Formularios
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.Location = new System.Drawing.Point(146, 243);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(69, 27);
             this.btnModificar.TabIndex = 5;
@@ -415,22 +433,22 @@ namespace Sandchips.Formularios
             this.dgvEmpresas.AllowUserToDeleteRows = false;
             this.dgvEmpresas.AllowUserToResizeColumns = false;
             this.dgvEmpresas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpresas.Location = new System.Drawing.Point(37, 284);
-            this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmpresas.MultiSelect = false;
             this.dgvEmpresas.Name = "dgvEmpresas";
             this.dgvEmpresas.ReadOnly = true;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpresas.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpresas.RowHeadersVisible = false;
             this.dgvEmpresas.RowTemplate.Height = 24;
             this.dgvEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -444,7 +462,7 @@ namespace Sandchips.Formularios
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(38, 243);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 27);
             this.btnAgregar.TabIndex = 3;
@@ -456,9 +474,10 @@ namespace Sandchips.Formularios
             // 
             // cmbTipoEmpresa
             // 
+            this.cmbTipoEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoEmpresa.FormattingEnabled = true;
             this.cmbTipoEmpresa.Location = new System.Drawing.Point(788, 78);
-            this.cmbTipoEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoEmpresa.Name = "cmbTipoEmpresa";
             this.cmbTipoEmpresa.Size = new System.Drawing.Size(164, 21);
             this.cmbTipoEmpresa.TabIndex = 2;
@@ -468,7 +487,7 @@ namespace Sandchips.Formularios
             // txtIdEmpresa
             // 
             this.txtIdEmpresa.Location = new System.Drawing.Point(151, 40);
-            this.txtIdEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdEmpresa.Multiline = true;
             this.txtIdEmpresa.Name = "txtIdEmpresa";
             this.txtIdEmpresa.ReadOnly = true;
@@ -490,6 +509,7 @@ namespace Sandchips.Formularios
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.tabPage4.Controls.Add(this.btnlimpiarcampos);
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.txtBuscarT);
             this.tabPage4.Controls.Add(this.txtTipoEmpresa);
@@ -503,12 +523,26 @@ namespace Sandchips.Formularios
             this.tabPage4.Controls.Add(this.txtIdTipoEmpresaT);
             this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(1008, 535);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Tipos Empresa";
+            // 
+            // btnlimpiarcampos
+            // 
+            this.btnlimpiarcampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnlimpiarcampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiarcampos.ForeColor = System.Drawing.Color.Black;
+            this.btnlimpiarcampos.Location = new System.Drawing.Point(681, 26);
+            this.btnlimpiarcampos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlimpiarcampos.Name = "btnlimpiarcampos";
+            this.btnlimpiarcampos.Size = new System.Drawing.Size(105, 26);
+            this.btnlimpiarcampos.TabIndex = 52;
+            this.btnlimpiarcampos.Text = "Limpiar campos";
+            this.btnlimpiarcampos.UseVisualStyleBackColor = false;
+            this.btnlimpiarcampos.Click += new System.EventHandler(this.btnlimpiarcampos_Click);
             // 
             // label2
             // 
@@ -525,7 +559,7 @@ namespace Sandchips.Formularios
             // txtBuscarT
             // 
             this.txtBuscarT.Location = new System.Drawing.Point(645, 138);
-            this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarT.Name = "txtBuscarT";
             this.txtBuscarT.Size = new System.Drawing.Size(221, 20);
             this.txtBuscarT.TabIndex = 50;
@@ -534,7 +568,7 @@ namespace Sandchips.Formularios
             // txtTipoEmpresa
             // 
             this.txtTipoEmpresa.Location = new System.Drawing.Point(376, 35);
-            this.txtTipoEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTipoEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipoEmpresa.Name = "txtTipoEmpresa";
             this.txtTipoEmpresa.Size = new System.Drawing.Size(182, 20);
             this.txtTipoEmpresa.TabIndex = 36;
@@ -558,7 +592,7 @@ namespace Sandchips.Formularios
             this.btnBuscarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarT.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarT.Location = new System.Drawing.Point(894, 131);
-            this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarT.Name = "btnBuscarT";
             this.btnBuscarT.Size = new System.Drawing.Size(70, 26);
             this.btnBuscarT.TabIndex = 34;
@@ -572,7 +606,7 @@ namespace Sandchips.Formularios
             this.btnConsultatT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultatT.ForeColor = System.Drawing.Color.Black;
             this.btnConsultatT.Location = new System.Drawing.Point(369, 131);
-            this.btnConsultatT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultatT.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultatT.Name = "btnConsultatT";
             this.btnConsultatT.Size = new System.Drawing.Size(70, 26);
             this.btnConsultatT.TabIndex = 33;
@@ -586,7 +620,7 @@ namespace Sandchips.Formularios
             this.btnEliminarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarT.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarT.Location = new System.Drawing.Point(264, 131);
-            this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarT.Name = "btnEliminarT";
             this.btnEliminarT.Size = new System.Drawing.Size(70, 26);
             this.btnEliminarT.TabIndex = 32;
@@ -600,7 +634,7 @@ namespace Sandchips.Formularios
             this.btnModificarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarT.ForeColor = System.Drawing.Color.Black;
             this.btnModificarT.Location = new System.Drawing.Point(161, 131);
-            this.btnModificarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarT.Name = "btnModificarT";
             this.btnModificarT.Size = new System.Drawing.Size(70, 26);
             this.btnModificarT.TabIndex = 31;
@@ -614,22 +648,22 @@ namespace Sandchips.Formularios
             this.dgvTipoEmpresa.AllowUserToDeleteRows = false;
             this.dgvTipoEmpresa.AllowUserToResizeColumns = false;
             this.dgvTipoEmpresa.AllowUserToResizeRows = false;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTipoEmpresa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvTipoEmpresa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTipoEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoEmpresa.Location = new System.Drawing.Point(49, 178);
-            this.dgvTipoEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoEmpresa.MultiSelect = false;
             this.dgvTipoEmpresa.Name = "dgvTipoEmpresa";
             this.dgvTipoEmpresa.ReadOnly = true;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTipoEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTipoEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTipoEmpresa.RowHeadersVisible = false;
             this.dgvTipoEmpresa.RowTemplate.Height = 24;
             this.dgvTipoEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -643,7 +677,7 @@ namespace Sandchips.Formularios
             this.btnAgregarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarT.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarT.Location = new System.Drawing.Point(53, 131);
-            this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarT.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarT.Name = "btnAgregarT";
             this.btnAgregarT.Size = new System.Drawing.Size(70, 26);
             this.btnAgregarT.TabIndex = 29;
@@ -654,7 +688,7 @@ namespace Sandchips.Formularios
             // txtIdTipoEmpresaT
             // 
             this.txtIdTipoEmpresaT.Location = new System.Drawing.Point(163, 35);
-            this.txtIdTipoEmpresaT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdTipoEmpresaT.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdTipoEmpresaT.Multiline = true;
             this.txtIdTipoEmpresaT.Name = "txtIdTipoEmpresaT";
             this.txtIdTipoEmpresaT.ReadOnly = true;
@@ -680,7 +714,7 @@ namespace Sandchips.Formularios
             this.ClientSize = new System.Drawing.Size(1034, 619);
             this.Controls.Add(this.pEmpresas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Empresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Empresa_Load);
@@ -744,5 +778,7 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.Button btnAgregarT;
         private System.Windows.Forms.TextBox txtIdTipoEmpresaT;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btnlimpiarcampos;
     }
 }

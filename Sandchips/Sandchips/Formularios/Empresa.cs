@@ -26,6 +26,10 @@ namespace Sandchips.Formularios
             cmbTipoEmpresa.DataSource = DALEmpresa.ObtenerTipoEmpresa();
             cmbTipoEmpresa.DisplayMember = "TipoEmpresa";
             cmbTipoEmpresa.ValueMember = "IdTipoEmpresa";
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnModificarT.Enabled = false;
+            btnEliminarT.Enabled = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -227,6 +231,9 @@ namespace Sandchips.Formularios
             cmbTipoEmpresa.Text = dgvEmpresas[6, pocision].Value.ToString();
             txtRegistroIVA.Text = dgvEmpresas[7, pocision].Value.ToString();
             txtRegistroAuditor.Text = dgvEmpresas[8, pocision].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         //CONSUTLAR EMPRESAS
@@ -316,12 +323,16 @@ namespace Sandchips.Formularios
             dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
         }
 
+        //Mostrar datos tipo empresa
         private void dgvTipoEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int pocision;
             pocision = dgvTipoEmpresa.CurrentRow.Index;
             txtIdTipoEmpresaT.Text = dgvTipoEmpresa[0, pocision].Value.ToString();
             txtTipoEmpresa.Text = dgvTipoEmpresa[1, pocision].Value.ToString();
+            btnEliminarT.Enabled = true;
+            btnModificarT.Enabled = true;
+            btnAgregarT.Enabled = false;
         }
 
         private void btnBuscarT_Click(object sender, EventArgs e)
@@ -462,6 +473,37 @@ namespace Sandchips.Formularios
         {
             btnAgregar.BackColor = Color.FromArgb(190, 239, 158);
             btnAgregar.ForeColor = Color.Black;
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            txtEmpresa.Text = "";
+            txtIdEmpresa.Text = "";
+            txtNRC.Text = "";
+            txtNIT.Text = "";
+            txtDescripcion.Text = "";
+            txtCorreo.Text = "";
+            txtRegistroIVA.Text = "";
+            txtRegistroAuditor.Text = "";
+            cmbTipoEmpresa.SelectedIndex = 0;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnAgregar.Enabled = true;
+
+        }
+
+        private void btnlimpiarcampos_Click(object sender, EventArgs e)
+        {
+            txtIdTipoEmpresaT.Text = "";
+            txtTipoEmpresa.Text = "";
+            btnAgregar.Enabled = true;
+            btnModificarT.Enabled = false;
+            btnEliminarT.Enabled = false;
         }
     }
 }

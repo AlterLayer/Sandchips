@@ -41,6 +41,9 @@ namespace Sandchips.Formularios
             cmbTipoDoc.SelectedIndex = 0;
             cmbGenero.SelectedIndex = 0;
             cmbUsuario.SelectedIndex = 0;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
+            
         }
 
 
@@ -68,8 +71,8 @@ namespace Sandchips.Formularios
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
-            Form Chequeo_habitaciones = new Menu_Restaurante();
-            Chequeo_habitaciones.Show();
+            Form Menu_H = new Menu_Hotel();
+            Menu_H.Show();
             this.Hide();
         }
 
@@ -183,6 +186,9 @@ namespace Sandchips.Formularios
             cmbGenero.SelectedValue = Convert.ToInt32(dgvClientes[5, pocision].Value.ToString());
             cmbUsuario.SelectedValue = Convert.ToInt32(dgvClientes[7, pocision].Value.ToString());
             cmbTipoDoc.SelectedValue = Convert.ToInt32(dgvClientes[8, pocision].Value.ToString());
+            btnEliminar.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnGuardar.Enabled = false;
         }
 
         //BUSCAR CLIENTE
@@ -370,6 +376,26 @@ namespace Sandchips.Formularios
         private void cmbTipoDoc_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            txtApellido.Text = "";
+            txtNombre.Text = "";
+            cmbGenero.SelectedIndex = 0;
+            cmbTipoDoc.SelectedIndex = 0;
+            mtbTelefono.Text = "";
+            cmbUsuario.SelectedIndex = 0;
+            txtIdClientes.Text = "";
+            txtDocumento.Text = "";
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = true;
         }
     }
 }

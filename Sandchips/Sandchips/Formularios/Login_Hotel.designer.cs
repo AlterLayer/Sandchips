@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Hotel));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtusuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnacceder = new System.Windows.Forms.Button();
             this.mtbcontraseña = new System.Windows.Forms.MaskedTextBox();
+            this.btnacceder = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtusuario = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,14 +53,38 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // txtusuario
+            // mtbcontraseña
             // 
-            this.txtusuario.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(556, 392);
-            this.txtusuario.Multiline = true;
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(271, 29);
-            this.txtusuario.TabIndex = 1;
+            this.mtbcontraseña.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbcontraseña.Location = new System.Drawing.Point(556, 519);
+            this.mtbcontraseña.Name = "mtbcontraseña";
+            this.mtbcontraseña.PasswordChar = '*';
+            this.mtbcontraseña.Size = new System.Drawing.Size(271, 28);
+            this.mtbcontraseña.TabIndex = 2;
+            // 
+            // btnacceder
+            // 
+            this.btnacceder.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnacceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnacceder.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnacceder.Location = new System.Drawing.Point(652, 629);
+            this.btnacceder.Name = "btnacceder";
+            this.btnacceder.Size = new System.Drawing.Size(75, 27);
+            this.btnacceder.TabIndex = 3;
+            this.btnacceder.Text = "Acceder";
+            this.btnacceder.UseVisualStyleBackColor = false;
+            this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(634, 492);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Contraseña:";
             // 
             // label1
             // 
@@ -74,37 +98,14 @@
             this.label1.Text = "Usuario:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // txtusuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(634, 492);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Contraseña:";
-            // 
-            // btnacceder
-            // 
-            this.btnacceder.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btnacceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnacceder.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnacceder.Location = new System.Drawing.Point(652, 629);
-            this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(75, 27);
-            this.btnacceder.TabIndex = 3;
-            this.btnacceder.Text = "Acceder";
-            this.btnacceder.UseVisualStyleBackColor = false;
-            this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click_1);
-            // 
-            // mtbcontraseña
-            // 
-            this.mtbcontraseña.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbcontraseña.Location = new System.Drawing.Point(556, 519);
-            this.mtbcontraseña.Name = "mtbcontraseña";
-            this.mtbcontraseña.Size = new System.Drawing.Size(271, 28);
-            this.mtbcontraseña.TabIndex = 4;
+            this.txtusuario.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.Location = new System.Drawing.Point(556, 392);
+            this.txtusuario.Multiline = true;
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(271, 29);
+            this.txtusuario.TabIndex = 1;
             // 
             // Login_Hotel
             // 
