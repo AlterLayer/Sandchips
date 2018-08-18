@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Sandchips.Models;
 using Sandchips;
+using System.Windows.Forms;
 
 namespace Sandchips.DAL
 {
@@ -15,34 +16,60 @@ namespace Sandchips.DAL
         public static int agregar(ModelTipoEmpresa Modelo)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbdettipoempresa(TipoEmpresa)VALUES('{0}')", Modelo.TipoEmpresa), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbdettipoempresa(TipoEmpresa)VALUES('{0}')", Modelo.TipoEmpresa), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
         }
-
         public static int modificar(ModelTipoEmpresa Modelo)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbdettipoempresa SET TipoEmpresa='{1}' WHERE IdTipoEmpresa='{0}'", Modelo.IdTipoEmpresa, Modelo.TipoEmpresa), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbdettipoempresa SET TipoEmpresa='{1}' WHERE IdTipoEmpresa='{0}'", Modelo.IdTipoEmpresa, Modelo.TipoEmpresa), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
         }
         public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT * FROM tbdettipoempresa";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+                instruccion = "SELECT * FROM tbdettipoempresa";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return Consulta;
-        } 
+        }
         public static int eliminar(int id)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbdettipoempresa WHERE IdTipoEmpresa='{0}'", id), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbdettipoempresa WHERE IdTipoEmpresa='{0}'", id), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
-
         }
         public static List<ModelTipoEmpresa> buscar(string Tipo)
         {

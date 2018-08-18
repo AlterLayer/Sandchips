@@ -17,43 +17,64 @@ namespace Sandchips.DAL
         //Agregar Usuario
         public static int agregarusuario(ModelUsuario add)
         {
-            int retorno; 
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeusuarios(Usuario,Clave,Nombres,Apellidos, Correo, NumeroDocumento, Direccion, Telefono, Nacimiento, IdTipoDocumento, IdGenero, IdEstado, IdTipoUsuarios)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.Usuario, add.Clave, add.Nombre, add.Apellidos, add.Correo, add.NumeroDocumento, add.Direccion, add.Telefono, add.Nacimiento, add.IdTipoDocumento, add.IdGenero, 1, add.IdTipoUsuarios), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
-            return retorno;
-        }
+            int retorno = 0;
+            try
 
-        //Mostrasr usuarios
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeusuarios(Usuario,Clave,Nombres,Apellidos, Correo, NumeroDocumento, Direccion, Telefono, Nacimiento, IdTipoDocumento, IdGenero, IdEstado, IdTipoUsuarios)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.Usuario, add.Clave, add.Nombre, add.Apellidos, add.Correo, add.NumeroDocumento, add.Direccion, add.Telefono, add.Nacimiento, add.IdTipoDocumento, add.IdGenero, 1, add.IdTipoUsuarios), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros." + ex);
+            }
+            return retorno;
+        }//Mostrasr usuarios
         public static DataTable mostrartabla()
         {
             string instruccion;
-
-            //Guardamos en una variable tipo string la consulta a realizar a la base 
-            //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
-            instruccion = "SELECT* FROM  tbmaeusuarios  WHERE IdEstado = 1";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+                instruccion = "SELECT* FROM  tbmaeusuarios  WHERE IdEstado = 1";
+                //Guardamos en una variable tipo string la consulta a realizar a la base 
+                //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
+            }
             return Consulta;
-        }
-
-        //Modificar Usuario
+        }//Modificar Usuario
         public static int actualizar(ModelUsuario update)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuarios SET Usuario='{1}',Clave='{2}',Nombres='{3}',Apellidos='{4}', Correo='{5}', NumeroDocumento='{6}', Direccion,='{7}' Telefono='{8}', Nacimiento='{9}', IdTipoDocumento='{10}', IdGenero='{11}', IdEstado='{12}', IdTipoUsuarios='{13}' WHERE IdUsuario='{5}'",update.IdUsuario, update.Usuario, update.Clave, update.Nombre, update.Apellidos, update.Correo, update.NumeroDocumento, update.Direccion, update.Telefono, update.Nacimiento, update.IdTipoDocumento, update.IdGenero, 1, update.IdTipoUsuarios), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuarios SET Usuario='{1}',Clave='{2}',Nombres='{3}',Apellidos='{4}', Correo='{5}', NumeroDocumento='{6}', Direccion,='{7}' Telefono='{8}', Nacimiento='{9}', IdTipoDocumento='{10}', IdGenero='{11}', IdEstado='{12}', IdTipoUsuarios='{13}' WHERE IdUsuario='{5}'", update.IdUsuario, update.Usuario, update.Clave, update.Nombre, update.Apellidos, update.Correo, update.NumeroDocumento, update.Direccion, update.Telefono, update.Nacimiento, update.IdTipoDocumento, update.IdGenero, 1, update.IdTipoUsuarios), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
+            }
             return retorno;
-        }
-
-        //Eliminar Usuario
+        }//Eliminar Usuario
         public static int eliminar(int iduser)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeusuarios WHERE IdUsuario = '{0}'", iduser), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeusuarios WHERE IdUsuario = '{0}'", iduser), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ErrorBlinkStyle al ingresar registros. " + ex);
+            }
             return retorno;
-
         }
         public static List<ModelUsuario> buscar(string user)
         {
@@ -111,7 +132,7 @@ namespace Sandchips.DAL
                     listabuscar.Add(new ModelTipoDocumento()
                     {
                         IdTipoDocumento = reader.GetInt32(0),
-                        Documento   = reader.GetString(1)
+                        Documento = reader.GetString(1)
                     });
                 }
             }

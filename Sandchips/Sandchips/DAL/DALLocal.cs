@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Sandchips.Models;
 using Sandchips;
+using System.Windows.Forms;
 
 namespace Sandchips.DAL
 {
@@ -15,37 +16,61 @@ namespace Sandchips.DAL
         public static int agregar(ModelLocal Modelo)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaelocales(CodigoLocal,NombreLocal,IdTipoLocal)VALUES('{0}','{1}','{2}')", Modelo.CodigoLocal, Modelo.NombreLocal, Modelo.IdTipoLocal), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaelocales(CodigoLocal,NombreLocal,IdTipoLocal)VALUES('{0}','{1}','{2}')", Modelo.CodigoLocal, Modelo.NombreLocal, Modelo.IdTipoLocal), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
         }
-
         public static int modificar(ModelLocal Modelo)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaelocales SET CodigoLocal='{1}', NombreLocal='{2}', IdTipoLocal='{3}' WHERE IdLocales='{0}'", Modelo.IdLocales ,Modelo.CodigoLocal, Modelo.NombreLocal, Modelo.IdTipoLocal), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaelocales SET CodigoLocal='{1}', NombreLocal='{2}', IdTipoLocal='{3}' WHERE IdLocales='{0}'", Modelo.IdLocales, Modelo.CodigoLocal, Modelo.NombreLocal, Modelo.IdTipoLocal), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
         }
         public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT * FROM tbmaelocales";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+                instruccion = "SELECT * FROM tbmaelocales";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return Consulta;
         }
-
         public static int eliminar(ModelLocal model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaelocales WHERE IdLocales='{0}'", model.IdLocales), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaelocales WHERE IdLocales='{0}'", model.IdLocales), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
-
         }
-
         public static List<ModelTipoLocal> ObtenerTipo_Hab()
         {
             List<ModelTipoLocal> listabuscar = new List<ModelTipoLocal>();
