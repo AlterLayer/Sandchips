@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sandchips</RootNamespace>
     <AssemblyName>Sandchips</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -266,6 +267,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1857b82f9817d3d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrra programa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %282%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

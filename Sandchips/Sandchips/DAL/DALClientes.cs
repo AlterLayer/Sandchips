@@ -18,39 +18,59 @@ namespace Sandchips.DAL
             int retorno = 0;
             try
             {
-                
+
                 MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeclientes(Nombre,Apellidos,Documento,Telefono,IdGenero,IdEstado,IdUsuario, IdTipoDocumento)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", Modelo.Nombre, Modelo.Apellidos, Modelo.Documento, Modelo.Telefono, Modelo.IdGenero, 1, Modelo.IdUsuario, Modelo.IdTipoDocumento), Conexion.obtenerconexion());
                 retorno = comando.ExecuteNonQuery();
-                
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR al intentar insertar registros " + ex );
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
             }
             return retorno;
-        }
+        }//fin de try - catch
 
         public static int actualizar(ModelClientes update)
         {
-            //tipo entero
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE FROM tbmaeclientes WHERE Nombre='{1}', Apellidos='{2}', Documento='{3}', Telefono='{4}', IdGenero='{5}', IdEstado='{6}', IdUsuario='{7}', IdTipoDocumento='{8}' 'IdClientes='{0}'", update.IdClientes, update.Nombre, update.Apellidos, update.Telefono, update.IdGenero, 1, update.IdUsuario, update.IdTipoDocumento), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                //tipo entero
+
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE FROM tbmaeclientes WHERE Nombre='{1}', Apellidos='{2}', Documento='{3}', Telefono='{4}', IdGenero='{5}', IdEstado='{6}', IdUsuario='{7}', IdTipoDocumento='{8}' 'IdClientes='{0}'", update.IdClientes, update.Nombre, update.Apellidos, update.Telefono, update.IdGenero, 1, update.IdUsuario, update.IdTipoDocumento), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al intentar actualizar un dato. " + ex);
+            }
             return retorno;
-        }
+        }//fin del try - Catch
         public static DataTable mostrartabla()
-        {
+        { 
             string instruccion;
-            instruccion = "SELECT*FROM  tbmaeclientes WHERE IdEstado = 1";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+
+                instruccion = "SELECT*FROM  tbmaeclientes WHERE IdEstado = 1";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al intentar consultar un dato. " + ex);
+            }
             return Consulta;
         }
+
+
         public static int eliminar(ModelClientes model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE tbmaeclientes SET IdEstado = 2 WHERE IdClientes='{0}'", model.IdClientes), Conexion.obtenerconexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaeclientes WHERE IdClientes='{0}'", model.IdClientes), Conexion.obtenerconexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
 

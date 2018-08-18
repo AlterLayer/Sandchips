@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Sandchips.Models;
 using Sandchips;
+using System.Windows.Forms;
 
 namespace Sandchips.DAL
 {
@@ -15,36 +16,60 @@ namespace Sandchips.DAL
         public static int agregar(ModelTipoLocal Modelo)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbdettipolocal(TipoLocal)VALUES('{0}')", Modelo.TipoLocal), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbdettipolocal(TipoLocal)VALUES('{0}')", Modelo.TipoLocal), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
+            }
             return retorno;
-        }
-
-        public static int modificar(ModelTipoLocal Modelo)
+        } public static int modificar(ModelTipoLocal Modelo)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbdettipolocal SET TipoLocal='{1}' WHERE IdTipoLocal='{0}'", Modelo.IdTipoLocal, Modelo.TipoLocal), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbdettipolocal SET TipoLocal='{1}' WHERE IdTipoLocal='{0}'", Modelo.IdTipoLocal, Modelo.TipoLocal), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
+            }
             return retorno;
-        }
-        public static DataTable mostrartabla()
+        } public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT * FROM tbdettipolocal";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+                instruccion = "SELECT * FROM tbdettipolocal";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
+            }
             return Consulta;
-        } 
+        }
         public static int eliminar(int id)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbdettipolocal WHERE IdTipoLocal='{0}'", id), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
-            return retorno;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbdettipolocal WHERE IdTipoLocal='{0}'", id), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar regitros. " + ex);
+            }
+        return retorno;
 
-        }
-        public static List<ModelTipoLocal> buscar(string Tipo)
+        } public static List<ModelTipoLocal> buscar(string Tipo)
         {
             List<ModelTipoLocal> listabuscar = new List<ModelTipoLocal>();
             try
