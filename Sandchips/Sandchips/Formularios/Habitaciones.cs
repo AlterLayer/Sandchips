@@ -36,6 +36,10 @@ namespace Sandchips.Formularios
             cmbEstado_hab.ValueMember = "IdEstado";
             cmbTipo_hab.SelectedIndex = 0;
             cmbEstado_hab.SelectedIndex = 0;
+            btnEliminarT.Enabled = false;
+            btnModificarT.Enabled = false;
+            btnModificarT.Enabled = false;
+            btnEliminarT.Enabled = false;
 
         }
 
@@ -282,7 +286,10 @@ namespace Sandchips.Formularios
             int pocision;
             pocision = dgvTipoHabitacion.CurrentRow.Index;
             txtId_Tipo_Habitacion.Text = dgvTipoHabitacion[0, pocision].Value.ToString();
-            txtTipo_Habitacion.Text = dgvTipoHabitacion[1, pocision].Value.ToString(); 
+            txtTipo_Habitacion.Text = dgvTipoHabitacion[1, pocision].Value.ToString();
+            btnModificarT.Enabled = true;
+            btnEliminarT.Enabled = true;
+            btnAgregarT.Enabled = false;
         }
 
         private void btnBuscarT_Click(object sender, EventArgs e)
@@ -382,10 +389,13 @@ namespace Sandchips.Formularios
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtNumero_hab.Text = "";
-            cmbTipo_hab.Text = "";
-            cmbEstado_hab.Text = "";
             txtId_hab.Text = "";
+            txtNumero_hab.Text = "";
+            cmbEstado_hab.SelectedIndex = 0;
+            cmbTipo_hab.SelectedIndex = 0;
+            btnAgregar.Enabled = true;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false; 
         }
 
         private void cmbTipo_hab_MouseClick(object sender, MouseEventArgs e)
@@ -524,6 +534,15 @@ namespace Sandchips.Formularios
         private void txtTipo_Habitacion_TextChanged(object sender, EventArgs e)
         {
             txtTipo_Habitacion.Text.TrimStart();
+        }
+
+        private void btnlimpiarr_Click(object sender, EventArgs e)
+        {
+            txtId_Tipo_Habitacion.Text = "";
+            txtTipo_Habitacion.Text = "";
+            btnAgregarT.Enabled = true;
+            btnModificarT.Enabled = false;
+            btnEliminarT.Enabled = false;
         }
     }
 }
