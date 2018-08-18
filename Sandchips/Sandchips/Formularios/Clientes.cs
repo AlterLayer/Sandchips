@@ -157,12 +157,13 @@ namespace Sandchips.Formularios
         //ELIMINAR CLIENTE
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            ModelClientes eliminar = new ModelClientes();
-            eliminar.IdClientes = Convert.ToInt32(txtIdClientes.Text);
-            eliminar.IdEstado = Convert.ToInt32(cmbTipoDoc.SelectedIndex.ToString());
-            DALClientes.eliminar(eliminar);
+            ModelClientes model = new ModelClientes();
+            model.IdClientes = Convert.ToInt32(txtIdClientes.Text);
+            model.IdEstado = Convert.ToInt32(cmbTipoDoc.SelectedIndex.ToString());
+            DALClientes.eliminar(model);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             dgvClientes.DataSource = DALClientes.mostrartabla();
+
         }
 
         //MOSTRAR DATOS CLIENTE
@@ -365,6 +366,11 @@ namespace Sandchips.Formularios
         private void cmbTipoDoc_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
