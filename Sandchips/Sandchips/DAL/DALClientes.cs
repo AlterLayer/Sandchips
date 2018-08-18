@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Sandchips.Models;
 using Sandchips;
+using System.Windows.Forms;
 
 namespace Sandchips.DAL
 {
@@ -15,8 +16,17 @@ namespace Sandchips.DAL
         public static int agregar(ModelClientes Modelo)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeclientes(Nombre,Apellidos,Documento,Telefono,IdGenero,IdEstado,IdUsuario, IdTipoDocumento)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", Modelo.Nombre, Modelo.Apellidos, Modelo.Documento, Modelo.Telefono, Modelo.IdGenero, 1, Modelo.IdUsuario, Modelo.IdTipoDocumento), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeclientes(Nombre,Apellidos,Documento,Telefono,IdGenero,IdEstado,IdUsuario, IdTipoDocumento)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", Modelo.Nombre, Modelo.Apellidos, Modelo.Documento, Modelo.Telefono, Modelo.IdGenero, 1, Modelo.IdUsuario, Modelo.IdTipoDocumento), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros " + ex );
+            }
             return retorno;
         }
 
@@ -36,7 +46,7 @@ namespace Sandchips.DAL
             DataTable Consulta = new DataTable();
             adapter.Fill(Consulta);
             return Consulta;
-        } 
+        }
         public static int eliminar(ModelClientes model)
         {
             int retorno = 0;

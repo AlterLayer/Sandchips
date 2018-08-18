@@ -24,38 +24,7 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click(object sender, EventArgs e)
         {
-            if(txtusuario.Text.Trim() != ""|| mtbcontraseña.Text.Trim() != "")
-                {
-
-                try
-                {
-                    string Contra = HassPassword(mtbcontraseña.Text);
-                    ModelUsuario model = new ModelUsuario();
-                    model.Usuario = txtusuario.Text;
-                    model.Clave = HassPassword(mtbcontraseña.Text);
-                    bool datos = DALUsuarios.IniciarSession(model);
-                    if (datos)
-                    {
-                        MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        inicio hab = new inicio();
-                        hab.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Haz introducido el usurio o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Exception " + ex);
-                }
-            }
-            else
-            {
-
-                MessageBox.Show("Hay campos vacios", "Verifique");
-            }
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -155,6 +124,53 @@ namespace Sandchips.Formularios
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnacceder_Click_1(object sender, EventArgs e)
+        {
+            if (txtusuario.Text.Trim() != "" || mtbcontraseña.Text.Trim() != "")
+            {
+
+                try
+                {
+                    string Contra = HassPassword(mtbcontraseña.Text);
+                    ModelUsuario model = new ModelUsuario();
+                    model.Usuario = txtusuario.Text;
+                    model.Clave = HassPassword(mtbcontraseña.Text);
+                    bool datos = DALUsuarios.IniciarSession(model);
+                    if (datos)
+                    {
+                        MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        inicio hab = new inicio();
+                        hab.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Haz introducido el usurio o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception " + ex);
+                }
+            }
+            else
+            {
+
+                MessageBox.Show("Hay campos vacios", "Verifique");
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

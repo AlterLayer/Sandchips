@@ -204,6 +204,10 @@ namespace Sandchips.Formularios
         //ELIMINAR EMPRESA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             ModelEmpresa model = new ModelEmpresa();
             model.IdEmpresa = Convert.ToInt32(txtIdEmpresa.Text);
             DALEmpresa.eliminar(model);
@@ -300,7 +304,11 @@ namespace Sandchips.Formularios
 
         //ELMINAR TIPO EMPRESA
         private void btnEliminarT_Click(object sender, EventArgs e)
-        { 
+        {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             int id = Convert.ToInt32(txtIdEmpresa.Text);
             int respuesta = DALTipoEmpresa.eliminar(id);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
