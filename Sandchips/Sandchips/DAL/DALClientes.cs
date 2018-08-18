@@ -18,24 +18,33 @@ namespace Sandchips.DAL
             int retorno = 0;
             try
             {
-                
+
                 MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaeclientes(Nombre,Apellidos,Documento,Telefono,IdGenero,IdEstado,IdUsuario, IdTipoDocumento)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", Modelo.Nombre, Modelo.Apellidos, Modelo.Documento, Modelo.Telefono, Modelo.IdGenero, 1, Modelo.IdUsuario, Modelo.IdTipoDocumento), Conexion.obtenerconexion());
                 retorno = comando.ExecuteNonQuery();
-                
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR al intentar insertar registros " + ex );
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
             }
             return retorno;
-        }
+        }//fin de try - catch
 
         public static int actualizar(ModelClientes update)
         {
-            //tipo entero
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE FROM tbmaeclientes WHERE Nombre='{1}', Apellidos='{2}', Documento='{3}', Telefono='{4}', IdGenero='{5}', IdEstado='{6}', IdUsuario='{7}', IdTipoDocumento='{8}' 'IdClientes='{0}'", update.IdClientes, update.Nombre, update.Apellidos, update.Telefono, update.IdGenero, 1, update.IdUsuario, update.IdTipoDocumento), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                //tipo entero
+
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE FROM tbmaeclientes WHERE Nombre='{1}', Apellidos='{2}', Documento='{3}', Telefono='{4}', IdGenero='{5}', IdEstado='{6}', IdUsuario='{7}', IdTipoDocumento='{8}' 'IdClientes='{0}'", update.IdClientes, update.Nombre, update.Apellidos, update.Telefono, update.IdGenero, 1, update.IdUsuario, update.IdTipoDocumento), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al intentar actualizar un dato. " + ex);
+            }
             return retorno;
         }
         public static DataTable mostrartabla()
