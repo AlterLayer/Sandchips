@@ -46,16 +46,27 @@ namespace Sandchips.DAL
                 MessageBox.Show("Ha ocurrido un error al intentar actualizar un dato. " + ex);
             }
             return retorno;
-        }
+        }//fin del try - Catch
         public static DataTable mostrartabla()
-        {
+        { 
             string instruccion;
-            instruccion = "SELECT*FROM  tbmaeclientes WHERE IdEstado = 1";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+
+                instruccion = "SELECT*FROM  tbmaeclientes WHERE IdEstado = 1";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al intentar consultar un dato. " + ex);
+            }
             return Consulta;
         }
+
+
         public static int eliminar(ModelClientes model)
         {
             int retorno = 0;
