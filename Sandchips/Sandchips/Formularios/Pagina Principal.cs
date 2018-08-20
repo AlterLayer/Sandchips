@@ -95,5 +95,10 @@ namespace Sandchips.Formularios
             Pagina_Principal.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
