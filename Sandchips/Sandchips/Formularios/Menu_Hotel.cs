@@ -134,5 +134,22 @@ namespace Sandchips.Formularios
         {
 
         }
+
+        private void Menu_Hotel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Form Menu_Hotel = new inicio();
+            Menu_Hotel.Show();
+            this.Hide();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
