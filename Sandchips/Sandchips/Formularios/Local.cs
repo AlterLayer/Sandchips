@@ -238,6 +238,10 @@ namespace Sandchips.Formularios
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
             DALTipoLocal.eliminar(Convert.ToInt32(txtIdTipoLocal.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();

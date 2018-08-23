@@ -157,7 +157,6 @@ namespace Sandchips.Formularios
         //ELIMINAR CLIENTE
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-
             if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)  {
                 return;
             }
