@@ -33,29 +33,31 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mtbcontraseña = new System.Windows.Forms.MaskedTextBox();
-            this.btnacceder = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.btnacceder = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnacceder)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnacceder);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.mtbcontraseña);
-            this.panel1.Controls.Add(this.btnacceder);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtusuario);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 788);
+            this.panel1.Size = new System.Drawing.Size(1323, 788);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -91,24 +93,12 @@
             this.mtbcontraseña.Size = new System.Drawing.Size(271, 28);
             this.mtbcontraseña.TabIndex = 2;
             // 
-            // btnacceder
-            // 
-            this.btnacceder.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnacceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnacceder.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnacceder.Location = new System.Drawing.Point(652, 629);
-            this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(75, 27);
-            this.btnacceder.TabIndex = 3;
-            this.btnacceder.Text = "Acceder";
-            this.btnacceder.UseVisualStyleBackColor = false;
-            this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click_1);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Bisque;
             this.label2.Location = new System.Drawing.Point(634, 492);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 24);
@@ -120,6 +110,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Bisque;
             this.label1.Location = new System.Drawing.Point(648, 351);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 24);
@@ -136,6 +127,30 @@
             this.txtusuario.Size = new System.Drawing.Size(271, 29);
             this.txtusuario.TabIndex = 1;
             // 
+            // btnacceder
+            // 
+            this.btnacceder.BackColor = System.Drawing.Color.Transparent;
+            this.btnacceder.Image = ((System.Drawing.Image)(resources.GetObject("btnacceder.Image")));
+            this.btnacceder.Location = new System.Drawing.Point(668, 617);
+            this.btnacceder.Name = "btnacceder";
+            this.btnacceder.Size = new System.Drawing.Size(49, 46);
+            this.btnacceder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnacceder.TabIndex = 6;
+            this.btnacceder.TabStop = false;
+            this.btnacceder.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.label3.Location = new System.Drawing.Point(668, 666);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 15);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Acceder";
+            // 
             // Login_Hotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,11 +164,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel_Reservacion_y_Chequeo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Login_Hotel_Load);
             this.Enter += new System.EventHandler(this.Login_Hotel_Enter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnacceder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,12 +178,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnacceder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.MaskedTextBox mtbcontraseña;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnacceder;
+        private System.Windows.Forms.Label label3;
     }
 }
