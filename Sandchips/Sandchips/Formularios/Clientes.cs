@@ -398,9 +398,6 @@ namespace Sandchips.Formularios
             btnGuardar.Enabled = true;
         }
 
-        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+   
     }
 }

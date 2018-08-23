@@ -366,7 +366,6 @@ namespace Sandchips.Formularios
             this.dgvClientes.Size = new System.Drawing.Size(613, 228);
             this.dgvClientes.TabIndex = 78;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick_1);
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // txtDocumento
             // 
