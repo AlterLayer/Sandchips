@@ -13,6 +13,7 @@ using System.Security.Cryptography;
 using System.IO;
 using Sandchips.Models;
 
+
 namespace Sandchips.Formularios
 {
     public partial class Login_Hotel : Form
@@ -135,6 +136,27 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click_1(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Login_Hotel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             if (txtusuario.Text.Trim() != "" || mtbcontraseña.Text.Trim() != "")
             {
 
@@ -167,12 +189,6 @@ namespace Sandchips.Formularios
 
                 MessageBox.Show("Hay campos vacios", "Verifique");
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

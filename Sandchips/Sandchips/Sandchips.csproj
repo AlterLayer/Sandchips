@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Botones redondos.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
     <Compile Include="DAL\DALRestaurante.cs" />
@@ -267,6 +268,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1857b82f9817d3d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrra programa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\despues del login.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

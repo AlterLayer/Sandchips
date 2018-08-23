@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Sandchips.Models;
 using Sandchips;
+using System.Windows.Forms;
 
 namespace Sandchips.DAL
 {
@@ -15,25 +16,46 @@ namespace Sandchips.DAL
         public static int agregar(ModelHabitaciones Modelo)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaehabitaciones(NumeroHabitacion,IdTipoHabitacion,IdEstado)VALUES('{0}','{1}','{2}')", Modelo.NumeroHabitacion, Modelo.IdTipoHabitacion, Modelo.IdEstado), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO tbmaehabitaciones(NumeroHabitacion,IdTipoHabitacion,IdEstado)VALUES('{0}','{1}','{2}')", Modelo.NumeroHabitacion, Modelo.IdTipoHabitacion, Modelo.IdEstado), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
         }
-
         public static int modificar(ModelHabitaciones Modelo)
         {
             int retorno = 0;
-            MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaehabitaciones SET NumeroHabitacion='{1}', IdTipoHabitacion='{2}', IdEstado='{3}' WHERE IdHabitacion='{0}'", Modelo.IdHabitacion ,Modelo.NumeroHabitacion, Modelo.IdTipoHabitacion, Modelo.IdEstado), Conexion.obtenerconexion());
-            retorno = consulta.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaehabitaciones SET NumeroHabitacion='{1}', IdTipoHabitacion='{2}', IdEstado='{3}' WHERE IdHabitacion='{0}'", Modelo.IdHabitacion, Modelo.NumeroHabitacion, Modelo.IdTipoHabitacion, Modelo.IdEstado), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
         }
         public static DataTable mostrartabla()
         {
             string instruccion;
-            instruccion = "SELECT IdHabitaciones, NumeroHabitacion, H.IdTipoHabitacion, E.Estado FROM tbmaehabitaciones AS Ha, tbdettipohabitacion AS H, tbmaeestado AS E WHERE H.IdTipoHabitacion = Ha.IdTipoHabitacion AND E.IdEstado = Ha.IdEstado AND Ha.IdEstado = 1";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
             DataTable Consulta = new DataTable();
-            adapter.Fill(Consulta);
+            try
+            {
+
+                instruccion = "SELECT IdHabitaciones, NumeroHabitacion, H.IdTipoHabitacion, E.Estado FROM tbmaehabitaciones AS Ha, tbdettipohabitacion AS H, tbmaeestado AS E WHERE H.IdTipoHabitacion = Ha.IdTipoHabitacion AND E.IdEstado = Ha.IdEstado AND Ha.IdEstado = 1";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
+                adapter.Fill(Consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return Consulta;
         }
         public static List<ModelTipoHabitacion> ObtenerTipo_Hab()
@@ -97,10 +119,16 @@ namespace Sandchips.DAL
         public static int eliminar(ModelHabitaciones model)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaehabitaciones WHERE IdHabitaciones='{0}'", model.IdHabitacion), Conexion.obtenerconexion());
-            retorno = comando.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM tbmaehabitaciones WHERE IdHabitaciones='{0}'", model.IdHabitacion), Conexion.obtenerconexion());
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registro. " + ex);
+            }
             return retorno;
-
         }
         public static List<ModelHabitaciones> buscar(int user)
         {

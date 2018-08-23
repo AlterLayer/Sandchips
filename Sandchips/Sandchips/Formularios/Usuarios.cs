@@ -151,6 +151,8 @@ namespace Sandchips.Formularios
             cmbTipoUsuario.SelectedIndex = 0;
             cmbTipoDocumento.SelectedIndex = 0;
             cmbGenero.SelectedIndex = 0;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
         }
 
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -171,6 +173,9 @@ namespace Sandchips.Formularios
             cmbTipoDocumento.SelectedValue = Convert.ToInt32(dgvusuarios[10, pocision].Value.ToString());
             cmbGenero.SelectedValue = Convert.ToInt32(dgvusuarios[11, pocision].Value.ToString());
             cmbTipoUsuario.SelectedValue = Convert.ToInt32(dgvusuarios[13, pocision].Value.ToString());
+            btnModificar.Enabled = true;
+            btnGuardar.Enabled = false;
+            btnEliminar.Enabled = true;
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
@@ -470,6 +475,29 @@ namespace Sandchips.Formularios
         private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlimpiiar_Click(object sender, EventArgs e)
+        {
+            txtIdUsuario.Text = "";
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            txtCorreo.Text = "";
+            txtDireccion.Text = "";
+            mtbconfirmcontrasena.Text = "";
+            mtbcontrasena.Text = "";
+            txtusuario.Text = "";
+            txtNumeroDocumento.Text = "";
+            mtbTelefono.Text = "";
+            cmbTipoDocumento.SelectedIndex = 0;
+            cmbTipoUsuario.SelectedIndex = 0;
+            dtpNacimiento.Text = "";
+            cmbGenero.SelectedIndex = 0;
+            dtpNacimiento.Text = "";
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnGuardar.Enabled = true;
+            
         }
     }
 }
