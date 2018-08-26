@@ -108,11 +108,11 @@
     <Compile Include="Formularios\Habitaciones.designer.cs">
       <DependentUpon>Habitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Login_Hotel.cs">
+    <Compile Include="Formularios\Log_in_general.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Login_Hotel.designer.cs">
-      <DependentUpon>Login_Hotel.cs</DependentUpon>
+    <Compile Include="Formularios\Log_in_general.designer.cs">
+      <DependentUpon>Log_in_general.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Introduccion.cs">
       <SubType>Form</SubType>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="Formularios\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Login_Hotel.resx">
-      <DependentUpon>Login_Hotel.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Log_in_general.resx">
+      <DependentUpon>Log_in_general.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Introduccion.resx">
       <DependentUpon>Introduccion.cs</DependentUpon>

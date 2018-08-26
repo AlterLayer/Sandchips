@@ -92,6 +92,23 @@ namespace Sandchips.Formularios
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form Menu_Restaurante = new Clientes();
+            Menu_Restaurante.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
             Form Form1 = new Restaurante();
             Form1.Show();
             this.Hide();

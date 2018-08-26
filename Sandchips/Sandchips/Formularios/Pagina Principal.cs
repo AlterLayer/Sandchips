@@ -105,5 +105,12 @@ namespace Sandchips.Formularios
         {
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form Pagina_Principal = new Menu_Restaurante();
+            Pagina_Principal.Show();
+            this.Hide();
+        }
     }
 }

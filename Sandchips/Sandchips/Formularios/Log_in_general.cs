@@ -16,9 +16,9 @@ using Sandchips.Models;
 
 namespace Sandchips.Formularios
 {
-    public partial class Login_Hotel : Form
+    public partial class Log_in_general : Form
     {
-        public Login_Hotel()
+        public Log_in_general()
         {            
             InitializeComponent();
         }
@@ -189,6 +189,11 @@ namespace Sandchips.Formularios
 
                 MessageBox.Show("Hay campos vacios", "Verifique");
             }
+        }
+
+        private void txtusuario_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

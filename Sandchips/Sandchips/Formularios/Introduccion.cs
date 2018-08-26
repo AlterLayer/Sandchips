@@ -22,7 +22,7 @@ namespace Sandchips.Formularios
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Form Introduccion = new Login_Hotel();
+            Form Introduccion = new Log_in_general();
             Introduccion.Show();
             this.Hide();
             timer1.Enabled = false;

@@ -172,5 +172,109 @@ namespace Sandchips.Formularios
         {
 
         }
+
+        private void txtNombreRestaurante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNRC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_hab_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRestaurante_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            //Validar contraseñas que sean iguales
+            if (ValidarRes())
+            {
+                ModelRestaurante model = new ModelRestaurante();
+                model.NRC = txtNRC.Text;
+                model.Restaurante = txtNombreRestaurante.Text;
+                int datos = DALRestaurante.agregar(model);
+                if (datos > 0)
+                {
+                    MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvRestaurante.DataSource = DALRestaurante.mostrartabla();
+                    txtNRC.Clear();
+                    txtNombreRestaurante.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Registro no ingresado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            dgvRestaurante.DataSource = DALRestaurante.mostrartabla();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ModelRestaurante model = new ModelRestaurante();
+            model.IdRestaurante = Convert.ToInt32(txtIdRestaurante.Text);
+            DALRestaurante.eliminar(model);
+            MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvRestaurante.DataSource = DALRestaurante.mostrartabla();
+            txtIdRestaurante.Clear();
+            txtNRC.Clear();
+            txtNombreRestaurante.Clear();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (ValidarRes())
+            {
+                ModelRestaurante model = new ModelRestaurante();
+                model.IdRestaurante = Convert.ToInt32(txtIdRestaurante.Text);
+                model.NRC = txtNRC.Text;
+                model.Restaurante = txtNombreRestaurante.Text;
+                int datos = DALRestaurante.modificar(model);
+                if (datos > 0)
+                {
+                    MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvRestaurante.DataSource = DALRestaurante.mostrartabla();
+                    txtIdRestaurante.Clear();
+                    txtNRC.Clear();
+                    txtNombreRestaurante.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Registro no modificado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvRestaurante.DataSource = DALRestaurante.buscar(txtNombreRestaurante.Text);
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            Form Restaurante = new Menu_Restaurante();
+            Restaurante.Show();
+            this.Hide();
+        }
     }
 }
