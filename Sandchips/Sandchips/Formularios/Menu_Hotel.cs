@@ -36,7 +36,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            Form Chequeo_habitaciones = new Empresa();
+            Form Chequeo_habitaciones = new empresa();
             Chequeo_habitaciones.Show();
             this.Hide();
         }
@@ -90,7 +90,7 @@ namespace Sandchips.Formularios
         private void pictureBox14_Click_1(object sender, EventArgs e)
         {
 
-            Form Form1 = new Empresa();
+            Form Form1 = new empresa();
             Form1.Show();
             this.Hide();
         }
@@ -150,6 +150,13 @@ namespace Sandchips.Formularios
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            Form Menu_Hotel = new empresa();
+            Menu_Hotel.Show();
+            this.Hide();
         }
     }
 }
