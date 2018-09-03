@@ -214,7 +214,7 @@ namespace Sandchips.DAL
 
                 MySqlCommand comando = new MySqlCommand(string.Format("SELECT IdUsuario FROM tbmaeusuarios WHERE Usuario = '" + model.Usuario + "' and Clave = '" + model.Clave + "' and IdEstado = 1 "), Conexion.obtenerconexion());
                 //* seleccione todo de la tabla..
-                MySqlDataReader reader = comando.ExecuteReader();
+                MySqlDataReader reader = comando.ExecuteReader(); 
                 while (reader.Read())
                 {
                     valid = true;
@@ -226,6 +226,33 @@ namespace Sandchips.DAL
                 throw ex;
             }
         }
+
+
+        public static List<ModelTipoUsuario> ObtenerPermiso(string Usuario)
+        {
+            List<ModelTipoUsuario> listabuscar = new List<ModelTipoUsuario>();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT TipoUsuario FROM tbmaeusuarios AS U, tbdettipousuarios AS T WHERE  Usuario = '" + Usuario + "' AND U.IdTipoUsuarios = T.IdTipoUsuarios "), Conexion.obtenerconexion());
+                //* seleccione todo de la tabla..
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    listabuscar.Add(new ModelTipoUsuario()
+                    {
+                        TipoUsuarioP = reader.GetString(0)
+                    });
+
+                    ModelPermiso.TipoUsuarioP = reader.GetString(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listabuscar;
+        }
+
 
         #endregion
     }

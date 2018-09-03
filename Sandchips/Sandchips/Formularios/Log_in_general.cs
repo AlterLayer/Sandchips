@@ -170,7 +170,8 @@ namespace Sandchips.Formularios
                     if (datos)
                     {
                         MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        inicio hab = new inicio();
+                        DALUsuarios.ObtenerPermiso(model.Usuario);
+                        inicio hab = new inicio();  
                         hab.Show();
                         this.Hide();
                     }

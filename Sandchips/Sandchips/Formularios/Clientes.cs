@@ -43,7 +43,7 @@ namespace Sandchips.Formularios
             cmbUsuario.SelectedIndex = 0;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
-            
+
         }
 
 
@@ -160,16 +160,24 @@ namespace Sandchips.Formularios
         //ELIMINAR CLIENTE
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)  {
-                return;
-            }
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                {
+                    return;
+                }
 
-            ModelClientes eliminar = new ModelClientes();
-            eliminar.IdClientes = Convert.ToInt32(txtIdClientes.Text);
-            eliminar.IdEstado = Convert.ToInt32(cmbTipoDoc.SelectedIndex.ToString());
-            DALClientes.eliminar(eliminar);
-            MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            dgvClientes.DataSource = DALClientes.mostrartabla();
+                ModelClientes eliminar = new ModelClientes();
+                eliminar.IdClientes = Convert.ToInt32(txtIdClientes.Text);
+                eliminar.IdEstado = Convert.ToInt32(cmbTipoDoc.SelectedIndex.ToString());
+                DALClientes.eliminar(eliminar);
+                MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvClientes.DataSource = DALClientes.mostrartabla();
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -210,7 +218,7 @@ namespace Sandchips.Formularios
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-           if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -226,7 +234,7 @@ namespace Sandchips.Formularios
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -380,7 +388,7 @@ namespace Sandchips.Formularios
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnlimpiar_Click(object sender, EventArgs e)
@@ -398,6 +406,6 @@ namespace Sandchips.Formularios
             btnGuardar.Enabled = true;
         }
 
-   
+
     }
 }

@@ -151,5 +151,12 @@ namespace Sandchips.Formularios
         {
             Application.Exit();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form Menu_Hotel = new Usuarios();
+            Menu_Hotel.Show();
+            this.Hide();
+        }
     }
 }

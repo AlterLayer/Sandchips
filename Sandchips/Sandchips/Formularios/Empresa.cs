@@ -43,7 +43,7 @@ namespace Sandchips.Formularios
             Servicios.Show();
             this.Hide();
         }
-        
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -82,10 +82,10 @@ namespace Sandchips.Formularios
                 validar = false;
                 MessageBox.Show("El campo tipo de servicio es requerido", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return validar;
-            } 
+            }
             return validar;
 
-        }   
+        }
         public bool ValidarTipoEmpresa()
         {
             bool validar = false;
@@ -102,16 +102,16 @@ namespace Sandchips.Formularios
             return validar;
 
         }
-        
-         
- 
+
+
+
 
         private void btnBuscar_TS_Click(object sender, EventArgs e)
         {
             dgvEmpresas.DataSource = DALTipoEmpresa.buscar(txtBuscarE.Text);
         }
-         
-         
+
+
 
         private void pEmpresas_Paint(object sender, PaintEventArgs e)
         {
@@ -134,36 +134,43 @@ namespace Sandchips.Formularios
         //AGREGAR EMPRESA
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Validar contraseñas que sean iguales
-            if (ValidarEmpresa())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
             {
-                ModelEmpresa model = new ModelEmpresa();
-                model.Empresa = txtEmpresa.Text;
-                var vnrc1 = txtNRC.Text.TrimStart();
-                var vnrc2 = vnrc1.TrimEnd();
-                model.NRC = vnrc2;
-                model.NIT = txtNIT.Text;
-                model.Direccion = txtDescripcion.Text;
-                model.Correo = txtCorreo.Text;
-                model.RegistroIVA = txtRegistroIVA.Text;
-                model.RegistroAuditor = txtRegistroAuditor.Text;
-                model.IdTipoEmpresa = Convert.ToInt32(cmbTipoEmpresa.SelectedValue);
-                int datos = DALEmpresa.agregar(model);
-                if (datos > 0)
+                //Validar contraseñas que sean iguales
+                if (ValidarEmpresa())
                 {
-                    MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
-                    txtEmpresa.Clear();
-                    cmbTipoEmpresa.SelectedIndex = 0;
+                    ModelEmpresa model = new ModelEmpresa();
+                    model.Empresa = txtEmpresa.Text;
+                    var vnrc1 = txtNRC.Text.TrimStart();
+                    var vnrc2 = vnrc1.TrimEnd();
+                    model.NRC = vnrc2;
+                    model.NIT = txtNIT.Text;
+                    model.Direccion = txtDescripcion.Text;
+                    model.Correo = txtCorreo.Text;
+                    model.RegistroIVA = txtRegistroIVA.Text;
+                    model.RegistroAuditor = txtRegistroAuditor.Text;
+                    model.IdTipoEmpresa = Convert.ToInt32(cmbTipoEmpresa.SelectedValue);
+                    int datos = DALEmpresa.agregar(model);
+                    if (datos > 0)
+                    {
+                        MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
+                        txtEmpresa.Clear();
+                        cmbTipoEmpresa.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro no ingresado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Registro no ingresado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
                 }
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -171,42 +178,51 @@ namespace Sandchips.Formularios
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
-            //Validar contraseñas que sean iguales
-            if (ValidarEmpresa())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
             {
-                ModelEmpresa model = new ModelEmpresa();
-                model.IdEmpresa = Convert.ToInt32(txtIdEmpresa.Text);
-                model.Empresa = txtEmpresa.Text;
-                model.NRC = txtNRC.Text;
-                model.NIT = txtNIT.Text;
-                model.Direccion = txtDescripcion.Text;
-                model.Correo = txtCorreo.Text;
-                model.RegistroIVA = txtRegistroIVA.Text;
-                model.RegistroAuditor = txtRegistroAuditor.Text;
-                model.IdTipoEmpresa = Convert.ToInt32(cmbTipoEmpresa.SelectedValue);
-                int datos = DALEmpresa.modificar(model);
-                if (datos > 0)
+                //Validar contraseñas que sean iguales
+                if (ValidarEmpresa())
                 {
-                    MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
-                    txtEmpresa.Clear();
-                    cmbTipoEmpresa.SelectedIndex = 0;
+                    ModelEmpresa model = new ModelEmpresa();
+                    model.IdEmpresa = Convert.ToInt32(txtIdEmpresa.Text);
+                    model.Empresa = txtEmpresa.Text;
+                    model.NRC = txtNRC.Text;
+                    model.NIT = txtNIT.Text;
+                    model.Direccion = txtDescripcion.Text;
+                    model.Correo = txtCorreo.Text;
+                    model.RegistroIVA = txtRegistroIVA.Text;
+                    model.RegistroAuditor = txtRegistroAuditor.Text;
+                    model.IdTipoEmpresa = Convert.ToInt32(cmbTipoEmpresa.SelectedValue);
+                    int datos = DALEmpresa.modificar(model);
+                    if (datos > 0)
+                    {
+                        MessageBox.Show("Registro modificado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
+                        txtEmpresa.Clear();
+                        cmbTipoEmpresa.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro no modificado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Registro no modificado", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
                 }
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         //ELIMINAR EMPRESA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 return;
             }
@@ -215,6 +231,11 @@ namespace Sandchips.Formularios
             DALEmpresa.eliminar(model);
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvEmpresas.DataSource = DALEmpresa.mostrartabla();
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //MOSTRAR DATOS EMPRESA
@@ -253,8 +274,10 @@ namespace Sandchips.Formularios
         //AGREGAR TIPO EMPRESA
         private void button5_Click(object sender, EventArgs e)
         {
-            //Validar contraseñas que sean iguales
-            if (ValidarTipoEmpresa())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                //Validar contraseñas que sean iguales
+                if (ValidarTipoEmpresa())
             {
                 ModelTipoEmpresa model = new ModelTipoEmpresa();
                 model.TipoEmpresa = txtTipoEmpresa.Text;
@@ -263,7 +286,7 @@ namespace Sandchips.Formularios
                 {
                     MessageBox.Show("Registro ingresado correctamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
-                    txtTipoEmpresa.Clear(); 
+                    txtTipoEmpresa.Clear();
                 }
                 else
                 {
@@ -272,14 +295,21 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         //MODIFICAR TIPO EMPRESA
         private void btnModificarT_Click(object sender, EventArgs e)
         {  //Validar contraseñas que sean iguales
-            if (ValidarTipoEmpresa())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (ValidarTipoEmpresa())
             {
                 ModelTipoEmpresa model = new ModelTipoEmpresa();
                 model.IdTipoEmpresa = Convert.ToInt32(txtIdTipoEmpresaT.Text);
@@ -299,14 +329,21 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         //ELMINAR TIPO EMPRESA
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 return;
             }
@@ -315,7 +352,12 @@ namespace Sandchips.Formularios
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvTipoEmpresa.DataSource = DALTipoEmpresa.mostrartabla();
             txtTipoEmpresa.Clear();
-            txtIdTipoEmpresaT.Clear(); 
+            txtIdTipoEmpresaT.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnConsultatT_Click(object sender, EventArgs e)
@@ -352,7 +394,7 @@ namespace Sandchips.Formularios
 
         private void txtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void txtNRC_KeyPress(object sender, KeyPressEventArgs e)
@@ -373,12 +415,12 @@ namespace Sandchips.Formularios
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void txtRegistroIVA_KeyPress(object sender, KeyPressEventArgs e)
@@ -391,7 +433,7 @@ namespace Sandchips.Formularios
 
         private void txtRegistroAuditor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void cmbTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -413,7 +455,7 @@ namespace Sandchips.Formularios
 
         private void txtTipoEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-           if (Char.IsNumber(e.KeyChar))
+            if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -428,7 +470,7 @@ namespace Sandchips.Formularios
         }
 
         private void txtNRC_TextChanged(object sender, EventArgs e)
-       {
+        {
             txtNRC.Text.TrimStart();
             txtNRC.Text.TrimEnd();
         }
