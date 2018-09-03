@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Sandchips.Formularios
 {
-    public partial class Empresa : Form
+    public partial class empresa : Form
     {
-        public Empresa()
+        public empresa()
         {
             InitializeComponent();
         }
@@ -546,6 +546,31 @@ namespace Sandchips.Formularios
             btnAgregar.Enabled = true;
             btnModificarT.Enabled = false;
             btnEliminarT.Enabled = false;
+        }
+
+        private void dgvEmpresas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtIdTipoEmpresaT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTipoEmpresa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTipoEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
