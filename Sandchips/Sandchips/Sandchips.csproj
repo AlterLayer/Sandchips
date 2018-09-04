@@ -66,6 +66,12 @@
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
+    <Compile Include="Formularios\Bienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Bienvenido.Designer.cs">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Restaurante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,12 +150,6 @@
     <Compile Include="Formularios\Login_Restaurante.designer.cs">
       <DependentUpon>Login_Restaurante.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Empresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Empresa.designer.cs">
-      <DependentUpon>Empresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Tiempo de estadia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +171,9 @@
     <Compile Include="Models\ModelTipoUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Bienvenido.resx">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Restaurante.resx">
       <DependentUpon>Restaurante.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login_Restaurante.resx">
       <DependentUpon>Login_Restaurante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Empresa.resx">
-      <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tiempo de estadia.resx">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>

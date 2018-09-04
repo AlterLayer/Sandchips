@@ -71,7 +71,7 @@ namespace Sandchips.Formularios
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
-            Form Menu_H = new Menu_Hotel();
+            Menu_Restaurante Menu_H = new Menu_Restaurante();
             Menu_H.Show();
             this.Hide();
         }
@@ -181,11 +181,11 @@ namespace Sandchips.Formularios
             txtIdClientes.Text = dgvClientes[0, pocision].Value.ToString();
             txtNombre.Text = dgvClientes[1, pocision].Value.ToString();
             txtApellido.Text = dgvClientes[2, pocision].Value.ToString();
-            txtDocumento.Text = dgvClientes[3, pocision].Value.ToString();
-            mtbTelefono.Text = dgvClientes[4, pocision].Value.ToString();
-            cmbGenero.SelectedValue = Convert.ToInt32(dgvClientes[5, pocision].Value.ToString());
-            cmbUsuario.SelectedValue = Convert.ToInt32(dgvClientes[7, pocision].Value.ToString());
-            cmbTipoDoc.SelectedValue = Convert.ToInt32(dgvClientes[8, pocision].Value.ToString());
+            cmbTipoDoc.Text = dgvClientes[3, pocision].Value.ToString();
+            txtDocumento.Text = dgvClientes[4, pocision].Value.ToString();
+            mtbTelefono.Text = dgvClientes[5, pocision].Value.ToString();
+            cmbGenero.Text = dgvClientes[6, pocision].Value.ToString();
+            cmbUsuario.Text = dgvClientes[7, pocision].Value.ToString();
             btnEliminar.Enabled = true;
             btnActualizar.Enabled = true;
             btnGuardar.Enabled = false;
@@ -398,6 +398,9 @@ namespace Sandchips.Formularios
             btnGuardar.Enabled = true;
         }
 
-   
+        private void dgvClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

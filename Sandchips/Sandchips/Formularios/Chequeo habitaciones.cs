@@ -37,9 +37,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            Form Chequeo_habitaciones = new empresa();
-            Chequeo_habitaciones.Show();
-            this.Hide();
+            
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
