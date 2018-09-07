@@ -34,7 +34,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form Chequeo_Mesa = new Menu_Hotel();
+            Form Chequeo_Mesa = new Log_in_general();
             Chequeo_Mesa.Show();
             this.Hide();
         }

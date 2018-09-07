@@ -265,46 +265,9 @@ namespace Sandchips.Formularios
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtusuario.Text.Trim() != "")
-                {
-                    var model = DALUsuarios.ObtenerCorreo(txtusuario.Text);
-                    var correo = "diegoalrama@gmail.com";
-                    var fromAddress = new MailAddress("sandchips.hotel.restaurant@gmail.com", "Sandchip's Hotel & Restaurant");
-                    var toAddress = new MailAddress(correo, model.Usuario);
-                    const string fromPassword = "sandchips2018";
-                    const string subject = "Subject";
-                    const string body = "Contraseña : ";
-
-                    var smtp = new SmtpClient
-                    {
-                        Host = "smtp.gmail.com",
-                        Port = 587,
-                        EnableSsl = true,
-                        DeliveryMethod = SmtpDeliveryMethod.Network,
-                        UseDefaultCredentials = false,
-                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-                    };
-                    using (var message = new MailMessage(fromAddress, toAddress)
-                    {
-                        Subject = subject,
-                        Body = body + HassPassword(model.Clave)
-                    })
-                    {
-                        smtp.Send(message);
-                    }
-                    MessageBox.Show("La contraseña ha sido enviada al correo vinculado con la cuenta de este usuario", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese su usuario para reestablecer contraseña", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al recuperar la contraseña, verifique su conexión -" + ex);
-            }
+            Recuperar hab = new Recuperar();
+            hab.Show();
+            this.Hide();
         }
     }
 }
