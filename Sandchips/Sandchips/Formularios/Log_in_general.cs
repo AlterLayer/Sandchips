@@ -12,6 +12,8 @@ using Sandchips.Formularios;
 using System.Security.Cryptography;
 using System.IO;
 using Sandchips.Models;
+using System.Net;
+using System.Net.Mail;
 
 
 namespace Sandchips.Formularios
@@ -21,13 +23,13 @@ namespace Sandchips.Formularios
         public new Point Location { get; set; }
         public Size tamano { get; set; }
         public Log_in_general()
-        {            
+        {
             InitializeComponent();
         }
 
         private void btnacceder_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -35,7 +37,7 @@ namespace Sandchips.Formularios
 
         }
 
-       
+
 
         private string HassPassword(string cadena)
         {
@@ -68,23 +70,23 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Enter(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void Login_Hotel_Enter(object sender, EventArgs e)
         {
-             
+
         }
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void mtbcontraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
@@ -138,7 +140,7 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click_1(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -158,17 +160,17 @@ namespace Sandchips.Formularios
             label2.BackColor = Color.Transparent;
             this.WindowState = FormWindowState.Maximized;
             double porceancho = this.Width - (this.Width * 0.63);
-            double porcealtura = this.Height - (this.Height *0.90);
+            double porcealtura = this.Height - (this.Height * 0.90);
             double anchoimg = this.Width * 0.2641;
             double alturaimg = this.Height * 0.71;
             double ancholabelusuario = this.Width * 0.474;
             double alturalabelusuario = this.Height * 0.45;
             double ancholabelclave = this.Width * 0.500;
             double alturalabelclave = this.Height * 0.60;
-            pictureBox3.Size = new Size(Convert.ToInt32(anchoimg),Convert.ToInt32(alturaimg));
+            pictureBox3.Size = new Size(Convert.ToInt32(anchoimg), Convert.ToInt32(alturaimg));
             pictureBox3.Location = new Point(Convert.ToInt32(porceancho), Convert.ToInt32(porcealtura));
-            label1.Location = new Point(Convert.ToInt32(ancholabelusuario),Convert.ToInt32(alturalabelusuario));
-            label2.Location = new Point(Convert.ToInt32(ancholabelclave),Convert.ToInt32(alturalabelclave));
+            label1.Location = new Point(Convert.ToInt32(ancholabelusuario), Convert.ToInt32(alturalabelusuario));
+            label2.Location = new Point(Convert.ToInt32(ancholabelclave), Convert.ToInt32(alturalabelclave));
 
             //Posicion de txtusuario
             double porceanchotxtusu = this.Width - (this.Width * 0.575);
@@ -199,7 +201,7 @@ namespace Sandchips.Formularios
                     {
                         MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DALUsuarios.ObtenerPermiso(model.Usuario);
-                        inicio hab = new inicio();  
+                        inicio hab = new inicio();
                         hab.Show();
                         this.Hide();
                     }
@@ -227,7 +229,7 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click_2(object sender, EventArgs e)
         {
-            if (txtusuario.Text.Trim() != "" || mtbcontraseña.Text.Trim() != "")
+            if (txtusuario.Text.Trim() != "" && mtbcontraseña.Text.Trim() != "")
             {
 
                 try
@@ -258,6 +260,50 @@ namespace Sandchips.Formularios
             {
 
                 MessageBox.Show("Hay campos vacios", "Verifique");
+            }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtusuario.Text.Trim() != "")
+                {
+                    var model = DALUsuarios.ObtenerCorreo(txtusuario.Text);
+                    var correo = "diegoalrama@gmail.com";
+                    var fromAddress = new MailAddress("sandchips.hotel.restaurant@gmail.com", "Sandchip's Hotel & Restaurant");
+                    var toAddress = new MailAddress(correo, model.Usuario);
+                    const string fromPassword = "sandchips2018";
+                    const string subject = "Subject";
+                    const string body = "Contraseña : ";
+
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                    };
+                    using (var message = new MailMessage(fromAddress, toAddress)
+                    {
+                        Subject = subject,
+                        Body = body + HassPassword(model.Clave)
+                    })
+                    {
+                        smtp.Send(message);
+                    }
+                    MessageBox.Show("La contraseña ha sido enviada al correo vinculado con la cuenta de este usuario", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese su usuario para reestablecer contraseña", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al recuperar la contraseña, verifique su conexión -" + ex);
             }
         }
     }

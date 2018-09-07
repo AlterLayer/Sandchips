@@ -69,6 +69,12 @@
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
+    <Compile Include="Formularios\RecuperarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RecuperarContra.Designer.cs">
+      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Restaurante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="Formularios\Chequeo habitaciones.designer.cs">
       <DependentUpon>Chequeo habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Recuperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recuperar.designer.cs">
+      <DependentUpon>Recuperar.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuarios.cs">
       <SubType>Form</SubType>
@@ -168,6 +180,9 @@
     <Compile Include="Models\ModelTipoUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\RecuperarContra.resx">
+      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Restaurante.resx">
       <DependentUpon>Restaurante.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Chequeo habitaciones.resx">
       <DependentUpon>Chequeo habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Recuperar.resx">
+      <DependentUpon>Recuperar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
