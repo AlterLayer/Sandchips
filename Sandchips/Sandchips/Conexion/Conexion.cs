@@ -20,7 +20,7 @@ namespace Sandchips
                 string database = "bdsandchips";
                 string Uid = "root";
                 string pwd = "";
-                MySqlConnection con = new MySqlConnection("server=" + server + ";database=" + database + ";SslMode=none"+";Uid=" + Uid + ";pwd=");
+                MySqlConnection con = new MySqlConnection("server=" + server + ";database=" + database + ";SslMode=none"+";Uid=" + Uid + ";pwd="+pwd);
 
                 con.Open();
                 return con;
