@@ -33,8 +33,8 @@ namespace Sandchips.Formularios
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtIdEmpresa = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -72,6 +72,13 @@ namespace Sandchips.Formularios
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtIdEmpresa
+            // 
+            this.txtIdEmpresa.Location = new System.Drawing.Point(356, 87);
+            this.txtIdEmpresa.Name = "txtIdEmpresa";
+            this.txtIdEmpresa.Size = new System.Drawing.Size(100, 20);
+            this.txtIdEmpresa.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -81,13 +88,6 @@ namespace Sandchips.Formularios
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txtIdEmpresa
-            // 
-            this.txtIdEmpresa.Location = new System.Drawing.Point(132, 85);
-            this.txtIdEmpresa.Name = "txtIdEmpresa";
-            this.txtIdEmpresa.Size = new System.Drawing.Size(100, 20);
-            this.txtIdEmpresa.TabIndex = 0;
             // 
             // empresa
             // 
