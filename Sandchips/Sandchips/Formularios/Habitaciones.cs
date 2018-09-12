@@ -72,9 +72,11 @@ namespace Sandchips.Formularios
         }
 
         private void button2_Click(object sender, EventArgs e)
-        { 
-            //Validar contraseñas que sean iguales
-            if (ValidarHab())
+        {
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                //Validar contraseñas que sean iguales
+                if (ValidarHab())
             {
                 ModelHabitaciones model = new ModelHabitaciones();
                 model.NumeroHabitacion = Convert.ToInt32(txtNumero_hab.Text);
@@ -96,7 +98,12 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -142,7 +149,9 @@ namespace Sandchips.Formularios
         
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (ValidarHab())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (ValidarHab())
             {
                 ModelHabitaciones model = new ModelHabitaciones();
                 model.IdHabitacion = Convert.ToInt32(txtId_hab.Text);
@@ -166,7 +175,12 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -185,7 +199,9 @@ namespace Sandchips.Formularios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 return;
             }
@@ -199,6 +215,11 @@ namespace Sandchips.Formularios
             txtNumero_hab.Clear();
             cmbTipo_hab.SelectedIndex = 0;
             cmbEstado_hab.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -216,8 +237,10 @@ namespace Sandchips.Formularios
 
         private void btnAgregarT_Click(object sender, EventArgs e)
         {
-            //Validar contraseñas que sean iguales
-            if (ValidarHabT())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                //Validar contraseñas que sean iguales
+                if (ValidarHabT())
             {
                 ModelTipoHabitacion model = new ModelTipoHabitacion();
                 model.TipoHabitacion = txtTipo_Habitacion.Text;
@@ -235,13 +258,20 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnModificarT_Click(object sender, EventArgs e)
         {
-            if (ValidarHabT())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (ValidarHabT())
             {
                 ModelTipoHabitacion model = new ModelTipoHabitacion();
                 model.IdTipoHabitacion = Convert.ToInt32(txtId_Tipo_Habitacion.Text);
@@ -260,19 +290,31 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 return;
             }
             DALTipoHabitaciones.eliminar(Convert.ToInt32(txtId_Tipo_Habitacion.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvTipoHabitacion.DataSource = DALTipoHabitaciones.mostrartabla();
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnConsultarT_Click(object sender, EventArgs e)

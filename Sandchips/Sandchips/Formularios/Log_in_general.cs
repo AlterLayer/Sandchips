@@ -18,6 +18,8 @@ namespace Sandchips.Formularios
 {
     public partial class Log_in_general : Form
     {
+        public new Point Location { get; set; }
+        public Size tamano { get; set; }
         public Log_in_general()
         {            
             InitializeComponent();
@@ -152,10 +154,78 @@ namespace Sandchips.Formularios
 
         private void Login_Hotel_Load(object sender, EventArgs e)
         {
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            this.WindowState = FormWindowState.Maximized;
+            double porceancho = this.Width - (this.Width * 0.63);
+            double porcealtura = this.Height - (this.Height *0.90);
+            double anchoimg = this.Width * 0.2641;
+            double alturaimg = this.Height * 0.71;
+            double ancholabelusuario = this.Width * 0.474;
+            double alturalabelusuario = this.Height * 0.45;
+            double ancholabelclave = this.Width * 0.500;
+            double alturalabelclave = this.Height * 0.60;
+            pictureBox3.Size = new Size(Convert.ToInt32(anchoimg),Convert.ToInt32(alturaimg));
+            pictureBox3.Location = new Point(Convert.ToInt32(porceancho), Convert.ToInt32(porcealtura));
+            label1.Location = new Point(Convert.ToInt32(ancholabelusuario),Convert.ToInt32(alturalabelusuario));
+            label2.Location = new Point(Convert.ToInt32(ancholabelclave),Convert.ToInt32(alturalabelclave));
+
+            //Posicion de txtusuario
+            double porceanchotxtusu = this.Width - (this.Width * 0.575);
+            double porcealturatxtusu = this.Height - (this.Height * 0.52);
+            txtusuario.Location = new Point(Convert.ToInt32(porceanchotxtusu), Convert.ToInt32(porcealturatxtusu));
+
+            //Posicion de txtusuario
+            double porceanchotxtclave = this.Width - (this.Width * 0.575);
+            double porcealturatxtclave = this.Height - (this.Height * 0.40);
+            mtbcontraseña.Location = new Point(Convert.ToInt32(porceanchotxtclave), Convert.ToInt32(porcealturatxtclave));
+
 
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (txtusuario.Text.Trim() != "" || mtbcontraseña.Text.Trim() != "")
+            {
+
+                try
+                {
+                    string Contra = HassPassword(mtbcontraseña.Text);
+                    ModelUsuario model = new ModelUsuario();
+                    model.Usuario = txtusuario.Text;
+                    model.Clave = HassPassword(mtbcontraseña.Text);
+                    bool datos = DALUsuarios.IniciarSession(model);
+                    if (datos)
+                    {
+                        MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DALUsuarios.ObtenerPermiso(model.Usuario);
+                        inicio hab = new inicio();  
+                        hab.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Haz introducido el usurio o contraseña incorrecta", "Operacón fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception " + ex);
+                }
+            }
+            else
+            {
+
+                MessageBox.Show("Hay campos vacios", "Verifique");
+            }
+        }
+
+        private void txtusuario_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnacceder_Click_2(object sender, EventArgs e)
         {
             if (txtusuario.Text.Trim() != "" || mtbcontraseña.Text.Trim() != "")
             {
@@ -189,11 +259,6 @@ namespace Sandchips.Formularios
 
                 MessageBox.Show("Hay campos vacios", "Verifique");
             }
-        }
-
-        private void txtusuario_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

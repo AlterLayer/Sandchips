@@ -188,8 +188,10 @@ namespace Sandchips.Formularios
 
         private void btnAgregarT_Click(object sender, EventArgs e)
         {
-            //Validar contraseñas que sean iguales
-            if (ValidarTipoLocal())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                //Validar contraseñas que sean iguales
+                if (ValidarTipoLocal())
             {
                 ModelTipoLocal model = new ModelTipoLocal();
                 model.TipoLocal = txtTipoLocal.Text;
@@ -207,13 +209,20 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnModificarT_Click(object sender, EventArgs e)
         {
-            if (ValidarTipoLocal())
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (ValidarTipoLocal())
             {
                 ModelTipoLocal model = new ModelTipoLocal();
                 model.IdTipoLocal = Convert.ToInt32(txtIdTipoLocal.Text);
@@ -232,19 +241,31 @@ namespace Sandchips.Formularios
             }
             else
             {
-                //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                    //MessageBox.Show("", "Operacón fallida", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnEliminarT_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            if (ModelPermiso.TipoUsuarioP != "Empleado")
+            {
+                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 return;
             }
             DALTipoLocal.eliminar(Convert.ToInt32(txtIdTipoLocal.Text));
             MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvTipoLocal.DataSource = DALTipoLocal.mostrartabla();
+            }
+            else
+            {
+                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnConsultarT_Click(object sender, EventArgs e)
