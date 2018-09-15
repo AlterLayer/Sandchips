@@ -36,7 +36,7 @@ namespace Sandchips.DAL
             DataTable Consulta = new DataTable();
             try
             {
-                instruccion = "SELECT* FROM  tbmaeusuarios  WHERE IdEstado = 1";
+                instruccion = "SELECT u.IdUsuario, u.Usuario, u.Clave AS Contraseña, u.Nombres AS Nombre, u.Apellidos, u.Correo, u.NumeroDocumento, u.Direccion, u.Telefono, u.Nacimiento, td.Documento, g.Genero, e.Estado, tu.TipoUsuario FROM tbmaeusuarios u, tbdettipodocumento td, tbdetgenero g, tbmaeestado e, tbdettipousuarios tu WHERE u.IdEstado = e.IdEstado AND u.IdTipoDocumento = td.IdTipoDocumento GROUP BY u.IdUsuario";
                 //Guardamos en una variable tipo string la consulta a realizar a la base 
                 //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
                 MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());

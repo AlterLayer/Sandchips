@@ -37,6 +37,7 @@ namespace Sandchips.Formularios
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnlimpiiar = new System.Windows.Forms.Button();
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
@@ -74,7 +75,6 @@ namespace Sandchips.Formularios
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnlimpiiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -124,7 +124,7 @@ namespace Sandchips.Formularios
             this.panel2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 586);
+            this.panel2.Size = new System.Drawing.Size(8, 616);
             this.panel2.TabIndex = 1;
             // 
             // label11
@@ -183,13 +183,28 @@ namespace Sandchips.Formularios
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1032, 621);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnlimpiiar
+            // 
+            this.btnlimpiiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnlimpiiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnlimpiiar.ForeColor = System.Drawing.Color.Black;
+            this.btnlimpiiar.Location = new System.Drawing.Point(743, 199);
+            this.btnlimpiiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlimpiiar.Name = "btnlimpiiar";
+            this.btnlimpiiar.Size = new System.Drawing.Size(115, 31);
+            this.btnlimpiiar.TabIndex = 110;
+            this.btnlimpiiar.Text = "Limpiar campos";
+            this.btnlimpiiar.UseVisualStyleBackColor = false;
+            this.btnlimpiiar.Click += new System.EventHandler(this.btnlimpiiar_Click);
             // 
             // cmbTipoUsuario
             // 
             this.cmbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoUsuario.FormattingEnabled = true;
             this.cmbTipoUsuario.Location = new System.Drawing.Point(780, 143);
-            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(174, 21);
             this.cmbTipoUsuario.TabIndex = 109;
@@ -201,7 +216,7 @@ namespace Sandchips.Formularios
             this.dtpNacimiento.CustomFormat = "yyyy/mm/dd";
             this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNacimiento.Location = new System.Drawing.Point(780, 77);
-            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNacimiento.MaxDate = new System.DateTime(2018, 12, 31, 0, 0, 0, 0);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(151, 20);
@@ -210,7 +225,7 @@ namespace Sandchips.Formularios
             // mtbTelefono
             // 
             this.mtbTelefono.Location = new System.Drawing.Point(780, 43);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mtbTelefono.Mask = "9999-9999";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(66, 20);
@@ -273,7 +288,7 @@ namespace Sandchips.Formularios
             "Masculino",
             "Femenino"});
             this.cmbGenero.Location = new System.Drawing.Point(780, 107);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(174, 21);
             this.cmbGenero.TabIndex = 97;
@@ -295,7 +310,7 @@ namespace Sandchips.Formularios
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(460, 78);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(174, 20);
             this.txtCorreo.TabIndex = 95;
@@ -305,7 +320,7 @@ namespace Sandchips.Formularios
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(460, 177);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(174, 53);
@@ -316,7 +331,7 @@ namespace Sandchips.Formularios
             // txtNumeroDocumento
             // 
             this.txtNumeroDocumento.Location = new System.Drawing.Point(460, 143);
-            this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(174, 20);
             this.txtNumeroDocumento.TabIndex = 93;
@@ -374,7 +389,7 @@ namespace Sandchips.Formularios
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(460, 43);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(174, 20);
             this.txtApellidos.TabIndex = 90;
@@ -384,7 +399,7 @@ namespace Sandchips.Formularios
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(136, 177);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(174, 20);
             this.txtNombre.TabIndex = 85;
@@ -430,7 +445,7 @@ namespace Sandchips.Formularios
             // 
             this.txtIdUsuario.Enabled = false;
             this.txtIdUsuario.Location = new System.Drawing.Point(136, 43);
-            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.ReadOnly = true;
             this.txtIdUsuario.Size = new System.Drawing.Size(76, 20);
@@ -454,7 +469,7 @@ namespace Sandchips.Formularios
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Location = new System.Drawing.Point(16, 239);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(69, 31);
             this.btnGuardar.TabIndex = 78;
@@ -482,7 +497,7 @@ namespace Sandchips.Formularios
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.Location = new System.Drawing.Point(124, 239);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(69, 31);
             this.btnModificar.TabIndex = 79;
@@ -510,7 +525,7 @@ namespace Sandchips.Formularios
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(233, 239);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(69, 31);
             this.btnEliminar.TabIndex = 80;
@@ -526,7 +541,7 @@ namespace Sandchips.Formularios
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(350, 239);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(69, 31);
             this.btnCancelar.TabIndex = 81;
@@ -539,7 +554,7 @@ namespace Sandchips.Formularios
             // mtbconfirmcontrasena
             // 
             this.mtbconfirmcontrasena.Location = new System.Drawing.Point(136, 140);
-            this.mtbconfirmcontrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbconfirmcontrasena.Margin = new System.Windows.Forms.Padding(2);
             this.mtbconfirmcontrasena.Name = "mtbconfirmcontrasena";
             this.mtbconfirmcontrasena.PasswordChar = '*';
             this.mtbconfirmcontrasena.Size = new System.Drawing.Size(174, 20);
@@ -552,7 +567,7 @@ namespace Sandchips.Formularios
             this.cmbTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDocumento.FormattingEnabled = true;
             this.cmbTipoDocumento.Location = new System.Drawing.Point(460, 107);
-            this.cmbTipoDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoDocumento.Name = "cmbTipoDocumento";
             this.cmbTipoDocumento.Size = new System.Drawing.Size(174, 21);
             this.cmbTipoDocumento.TabIndex = 73;
@@ -561,7 +576,7 @@ namespace Sandchips.Formularios
             // mtbcontrasena
             // 
             this.mtbcontrasena.Location = new System.Drawing.Point(136, 109);
-            this.mtbcontrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbcontrasena.Margin = new System.Windows.Forms.Padding(2);
             this.mtbcontrasena.Name = "mtbcontrasena";
             this.mtbcontrasena.PasswordChar = '*';
             this.mtbcontrasena.Size = new System.Drawing.Size(174, 20);
@@ -572,7 +587,7 @@ namespace Sandchips.Formularios
             // txtusuario
             // 
             this.txtusuario.Location = new System.Drawing.Point(136, 77);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(174, 20);
             this.txtusuario.TabIndex = 75;
@@ -595,7 +610,7 @@ namespace Sandchips.Formularios
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvusuarios.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvusuarios.Location = new System.Drawing.Point(16, 290);
-            this.dgvusuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvusuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvusuarios.Name = "dgvusuarios";
             this.dgvusuarios.ReadOnly = true;
             this.dgvusuarios.RowHeadersVisible = false;
@@ -612,7 +627,7 @@ namespace Sandchips.Formularios
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(874, 254);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(138, 28);
             this.btnBuscar.TabIndex = 50;
@@ -622,7 +637,7 @@ namespace Sandchips.Formularios
             // txtbuscar
             // 
             this.txtbuscar.Location = new System.Drawing.Point(614, 260);
-            this.txtbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(230, 20);
             this.txtbuscar.TabIndex = 51;
@@ -640,26 +655,12 @@ namespace Sandchips.Formularios
             this.label12.TabIndex = 52;
             this.label12.Text = "Nombre de Usuario";
             // 
-            // btnlimpiiar
-            // 
-            this.btnlimpiiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
-            this.btnlimpiiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlimpiiar.ForeColor = System.Drawing.Color.Black;
-            this.btnlimpiiar.Location = new System.Drawing.Point(743, 199);
-            this.btnlimpiiar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnlimpiiar.Name = "btnlimpiiar";
-            this.btnlimpiiar.Size = new System.Drawing.Size(115, 31);
-            this.btnlimpiiar.TabIndex = 110;
-            this.btnlimpiiar.Text = "Limpiar campos";
-            this.btnlimpiiar.UseVisualStyleBackColor = false;
-            this.btnlimpiiar.Click += new System.EventHandler(this.btnlimpiiar_Click);
-            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(1032, 640);
+            this.ClientSize = new System.Drawing.Size(1032, 670);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
