@@ -64,6 +64,7 @@ namespace Sandchips.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnreporteC = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,6 +76,7 @@ namespace Sandchips.Formularios
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.panel1.Controls.Add(this.btnreporteC);
             this.panel1.Controls.Add(this.btnlimpiar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.mtbTelefono);
@@ -118,7 +120,7 @@ namespace Sandchips.Formularios
             this.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlimpiar.ForeColor = System.Drawing.Color.Black;
-            this.btnlimpiar.Location = new System.Drawing.Point(668, 51);
+            this.btnlimpiar.Location = new System.Drawing.Point(521, 51);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(90, 26);
             this.btnlimpiar.TabIndex = 112;
@@ -483,6 +485,19 @@ namespace Sandchips.Formularios
             this.panel2.Size = new System.Drawing.Size(859, 76);
             this.panel2.TabIndex = 110;
             // 
+            // btnreporteC
+            // 
+            this.btnreporteC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnreporteC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnreporteC.ForeColor = System.Drawing.Color.Black;
+            this.btnreporteC.Location = new System.Drawing.Point(635, 51);
+            this.btnreporteC.Name = "btnreporteC";
+            this.btnreporteC.Size = new System.Drawing.Size(90, 26);
+            this.btnreporteC.TabIndex = 113;
+            this.btnreporteC.Text = "Reporte";
+            this.btnreporteC.UseVisualStyleBackColor = false;
+            this.btnreporteC.Click += new System.EventHandler(this.btnreporteC_Click);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,6 +555,7 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btnreporteC;
     }
 }
 

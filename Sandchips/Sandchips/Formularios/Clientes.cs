@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Sandchips.Models;
 using Sandchips.DAL;
 using Sandchips;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace Sandchips.Formularios
 {
@@ -401,6 +403,57 @@ namespace Sandchips.Formularios
         private void dgvClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public float[] columasdatagrid(DataGridView dg)
+        {
+            //Declarando un objeto(vector) de tipo flotante que contara
+            //las columnas de un objeto DataGridView
+            float[] values = new float[dg.ColumnCount];
+            //Evaluar el numero de columnas
+            for (int i = 0; i < dg.ColumnCount; i++)
+            {
+                values[i] = (float)dg.Columns[i].Width;
+            }
+            //Retorno el numero de Columnas
+            return values;
+        }
+
+
+        public void reporte(Document document)
+        {
+            int i, j;
+            PdfPTable datos = new PdfPTable(dgvClientes.ColumnCount);
+            datos.DefaultCell.Padding = 3;
+            float[] margenAncho = columasdatagrid(dgvClientes);
+            datos.SetWidths(margenAncho);
+            datos.WidthPercentage = 100;
+            datos.DefaultCell.BorderWidth = 1;
+            datos.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            for (i = 0; i < dgvClientes.ColumnCount; i++)
+            {
+                datos.AddCell(dgvClientes.Columns[i].HeaderText);
+            }
+            datos.HeaderRows = 1;
+            datos.DefaultCell.BorderWidth = 1;
+            for (i = 0; i < dgvClientes.Rows.Count; i++)
+            {
+                for (j = 0; j < dgvClientes.Columns.Count; j++)
+                {
+                    if (dgvClientes[j, i].Value != null)
+                    {
+                        datos.AddCell(new Phrase(dgvClientes[j, i].Value.ToString()));
+                    }
+                }
+                datos.CompleteRow();
+            }
+            document.Add(datos);
+        }
+
+        private void btnreporteC_Click(object sender, EventArgs e)
+        {
+            Reporte reporteC = new Reporte();
+            reporteC.Show();
         }
     }
 }

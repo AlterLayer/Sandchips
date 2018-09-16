@@ -75,6 +75,7 @@ namespace Sandchips.Formularios
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnreporteU = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -141,6 +142,7 @@ namespace Sandchips.Formularios
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.panel3.Controls.Add(this.btnreporteU);
             this.panel3.Controls.Add(this.btnlimpiiar);
             this.panel3.Controls.Add(this.cmbTipoUsuario);
             this.panel3.Controls.Add(this.dtpNacimiento);
@@ -190,7 +192,7 @@ namespace Sandchips.Formularios
             this.btnlimpiiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnlimpiiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlimpiiar.ForeColor = System.Drawing.Color.Black;
-            this.btnlimpiiar.Location = new System.Drawing.Point(743, 199);
+            this.btnlimpiiar.Location = new System.Drawing.Point(682, 199);
             this.btnlimpiiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnlimpiiar.Name = "btnlimpiiar";
             this.btnlimpiiar.Size = new System.Drawing.Size(115, 31);
@@ -655,6 +657,20 @@ namespace Sandchips.Formularios
             this.label12.TabIndex = 52;
             this.label12.Text = "Nombre de Usuario";
             // 
+            // btnreporteU
+            // 
+            this.btnreporteU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnreporteU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnreporteU.ForeColor = System.Drawing.Color.Black;
+            this.btnreporteU.Location = new System.Drawing.Point(830, 199);
+            this.btnreporteU.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreporteU.Name = "btnreporteU";
+            this.btnreporteU.Size = new System.Drawing.Size(115, 31);
+            this.btnreporteU.TabIndex = 111;
+            this.btnreporteU.Text = "Reporte";
+            this.btnreporteU.UseVisualStyleBackColor = false;
+            this.btnreporteU.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -728,5 +744,6 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.DateTimePicker dtpNacimiento;
         private System.Windows.Forms.Button btnlimpiiar;
+        private System.Windows.Forms.Button btnreporteU;
     }
 }
