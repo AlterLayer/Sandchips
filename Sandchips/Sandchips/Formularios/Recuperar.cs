@@ -136,51 +136,57 @@ namespace Sandchips.Formularios
         //GUARDAR USUARIO
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtusuario.Text != "" && mtbcontrasena.Text == mtbconfirmcontrasena.Text)
             {
-                var model = DALUsuarios.ObtenerCorreo(txtusuario.Text);
-                if (model == null)
+                try
                 {
-                    var correo = "diegoalrama@gmail.com";
-                    var fromAddress = new MailAddress("sandchips.hotel.restaurant@gmail.com", "Sandchip's Hotel & Restaurant");
-                    var toAddress = new MailAddress(model.Correo, model.Usuario);
-                    const string fromPassword = "sandchips2018";
-                    const string subject = "s";
-                    const string body = "Su nueva contraseña : ";
-                    var contra = DALUsuarios.ModificarContra(HassPassword(mtbcontrasena.Text), txtusuario.Text);
-                    if (contra > 0)
+                    var model = DALUsuarios.ObtenerCorreo(txtusuario.Text);
+                    if (model != null)
                     {
-                        var smtp = new SmtpClient
+                        var correo = "diegoalrama@gmail.com";
+                        var fromAddress = new MailAddress("sandchips.hotel.restaurant@gmail.com", "Sandchip's Hotel & Restaurant");
+                        var toAddress = new MailAddress(model.Correo, model.Usuario);
+                        const string fromPassword = "sandchips2018";
+                        const string subject = "Cambio de contraseña";
+                        const string body = "Su nueva contraseña : ";
+                        var contra = DALUsuarios.ModificarContra(HassPassword(mtbcontrasena.Text), txtusuario.Text);
+                        if (contra > 0)
                         {
-                            Host = "smtp.gmail.com",
-                            Port = 587,
-                            EnableSsl = true,
-                            DeliveryMethod = SmtpDeliveryMethod.Network,
-                            UseDefaultCredentials = false,
-                            Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-                        };
-                        using (var message = new MailMessage(fromAddress, toAddress)
-                        {
-                            Subject = subject,
-                            Body = body + mtbcontrasena.Text
-                        })
-                        {
-                            smtp.Send(message);
+                            var smtp = new SmtpClient
+                            {
+                                Host = "smtp.gmail.com",
+                                Port = 587,
+                                EnableSsl = true,
+                                DeliveryMethod = SmtpDeliveryMethod.Network,
+                                UseDefaultCredentials = false,
+                                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                            };
+                            using (var message = new MailMessage(fromAddress, toAddress)
+                            {
+                                Subject = subject,
+                                Body = body + mtbcontrasena.Text
+                            })
+                            {
+                                smtp.Send(message);
+                            }
+                            MessageBox.Show("Contraseña modificada exitosamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("La contraseña ha sido enviada al correo vinculado con la cuenta de este usuario", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        MessageBox.Show("Contraseña modificada exitosamente", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MessageBox.Show("La contraseña ha sido enviada al correo vinculado con la cuenta de este usuario", "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, usuario no existente");
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Error, usuario no existente");
+                    MessageBox.Show("Error al recuperar la contraseña, verifique su conexión -" + ex);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al recuperar la contraseña, verifique su conexión -" + ex);
+                MessageBox.Show("Verifique los datos ingresados");
             }
-
         }
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
