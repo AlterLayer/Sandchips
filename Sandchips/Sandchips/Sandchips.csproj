@@ -135,6 +135,7 @@
     </Compile>
     <EmbeddedResource Include="Formularios\RecuperarContra%28noseocupa%29.resx">
       <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
+    </EmbeddedResource> 
     <EmbeddedResource Include="Formularios\PruebadeSeguridad.resx">
       <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
     </EmbeddedResource> 
