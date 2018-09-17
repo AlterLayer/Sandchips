@@ -64,6 +64,7 @@ namespace Sandchips.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,6 +76,7 @@ namespace Sandchips.Formularios
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnlimpiar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.mtbTelefono);
@@ -482,6 +484,16 @@ namespace Sandchips.Formularios
             this.panel2.Size = new System.Drawing.Size(859, 76);
             this.panel2.TabIndex = 110;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(753, 169);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 113;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,6 +551,7 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

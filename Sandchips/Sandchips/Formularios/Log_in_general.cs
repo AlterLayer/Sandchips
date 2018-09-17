@@ -158,24 +158,29 @@ namespace Sandchips.Formularios
             label2.BackColor = Color.Transparent;
             this.WindowState = FormWindowState.Maximized;
             double porceancho = this.Width - (this.Width * 0.63);
-            double porcealtura = this.Height - (this.Height *0.90);
+            double porcealtura = this.Height - (this.Height * 0.90);
             double anchoimg = this.Width * 0.2641;
             double alturaimg = this.Height * 0.71;
             double ancholabelusuario = this.Width * 0.474;
             double alturalabelusuario = this.Height * 0.45;
-            double ancholabelclave = this.Width * 0.500;
-            double alturalabelclave = this.Height * 0.60;
+            double ancholabelclave = this.Width * 0.465;
+            double alturalabelclave = this.Height * 0.56;
+            double ancholabelacceder = this.Width * 0.48;
+            double alturalabelacceder = this.Height * 0.66;
+            double anchobtnacceder = this.Width * 0.48;
+            double alturabtnacceder = this.Height * 0.68;
             pictureBox3.Size = new Size(Convert.ToInt32(anchoimg),Convert.ToInt32(alturaimg));
             pictureBox3.Location = new Point(Convert.ToInt32(porceancho), Convert.ToInt32(porcealtura));
             label1.Location = new Point(Convert.ToInt32(ancholabelusuario),Convert.ToInt32(alturalabelusuario));
             label2.Location = new Point(Convert.ToInt32(ancholabelclave),Convert.ToInt32(alturalabelclave));
-
+            label3.Location = new Point(Convert.ToInt32(ancholabelacceder), Convert.ToInt32(alturalabelacceder));
+            btnacceder.Location = new Point(Convert.ToInt32(anchobtnacceder), Convert.ToInt32(alturabtnacceder));
             //Posicion de txtusuario
             double porceanchotxtusu = this.Width - (this.Width * 0.575);
             double porcealturatxtusu = this.Height - (this.Height * 0.52);
             txtusuario.Location = new Point(Convert.ToInt32(porceanchotxtusu), Convert.ToInt32(porcealturatxtusu));
 
-            //Posicion de txtusuario
+            //Posicion de txtcontraseña
             double porceanchotxtclave = this.Width - (this.Width * 0.575);
             double porcealturatxtclave = this.Height - (this.Height * 0.40);
             mtbcontraseña.Location = new Point(Convert.ToInt32(porceanchotxtclave), Convert.ToInt32(porcealturatxtclave));
@@ -259,6 +264,11 @@ namespace Sandchips.Formularios
 
                 MessageBox.Show("Hay campos vacios", "Verifique");
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Sandchips.Models;
 using Sandchips.DAL;
 using Sandchips;
-
 namespace Sandchips.Formularios
 {
     public partial class Clientes : Form
@@ -406,6 +405,12 @@ namespace Sandchips.Formularios
             btnGuardar.Enabled = true;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Clientes = new Grafico();
+            Clientes.Show();
+            this.Hide();
 
+        }
     }
 }

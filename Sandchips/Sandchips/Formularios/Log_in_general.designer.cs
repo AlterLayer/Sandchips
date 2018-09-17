@@ -32,10 +32,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnacceder = new System.Windows.Forms.PictureBox();
             this.mtbcontraseña = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnacceder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -73,18 +73,6 @@
             this.mtbcontraseña.Size = new System.Drawing.Size(271, 28);
             this.mtbcontraseña.TabIndex = 12;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Bisque;
-            this.label2.Location = new System.Drawing.Point(627, 516);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 24);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Contraseña:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -116,6 +104,18 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Bisque;
+            this.label2.Location = new System.Drawing.Point(641, 516);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 24);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Contraseña:";
             // 
             // Log_in_general
             // 
@@ -151,9 +151,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnacceder;
         private System.Windows.Forms.MaskedTextBox mtbcontraseña;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
     }
 }
