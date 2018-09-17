@@ -241,8 +241,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularios\RecuperarContra%28noseocupa%29.resx">
-      <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
     <EmbeddedResource Include="Formularios\PruebadeSeguridad.resx">
       <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,7 +335,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
