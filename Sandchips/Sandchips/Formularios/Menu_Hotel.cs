@@ -29,7 +29,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            Form Usuarios = new Usuarios();
+            Form Usuarios = new Usuario();
             Usuarios.Show();
             this.Hide();
         }
@@ -93,7 +93,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox15_Click_1(object sender, EventArgs e)
         {
-            Form Form1 = new Usuarios();
+            Form Form1 = new Usuario();
             Form1.Show();
             this.Hide();
         }
@@ -155,8 +155,8 @@ namespace Sandchips.Formularios
 
         private void pictureBox11_Click_2(object sender, EventArgs e)
         {
-            Form Menu_Hotel = new Usuarios();
-            Menu_Hotel.Show();
+            Form Hotel_Hotel = new Usuario();
+            Hotel_Hotel.Show();
             this.Hide();
         }
 

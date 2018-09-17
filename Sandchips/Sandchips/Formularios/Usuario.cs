@@ -1,58 +1,36 @@
-﻿using Sandchips.DAL;
-using Sandchips.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Security.Cryptography;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using Sandchips.Models;
+using Sandchips.DAL;
+using System.Security.Cryptography;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 
-
-
 namespace Sandchips.Formularios
 {
-    public partial class Usuarios : Form
+    public partial class Usuario : Form
     {
-        public Usuarios()
+        public Usuario()
         {
             InitializeComponent();
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Form Chequeo_Mesa = new Menu_Hotel();
-            Chequeo_Mesa.Show();
-            this.Hide();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private string HassPassword(string cadena)
         {
             UTF8Encoding enc = new UTF8Encoding();
@@ -77,7 +55,6 @@ namespace Sandchips.Formularios
             //Devolvemos la cadena con el hash en mayúsculas
             return sb.ToString().ToUpper();
         }
-
         public bool ValidarUsu()
         {
             bool validar = false;
@@ -133,12 +110,6 @@ namespace Sandchips.Formularios
             }
             return validar;
         }
-
-        private void Usuarios_LocationChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Usuarios_Load(object sender, EventArgs e)
         {
             dgvusuarios.DataSource = DALUsuarios.mostrartabla();
@@ -158,7 +129,6 @@ namespace Sandchips.Formularios
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
         }
-
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int pocision;
@@ -181,12 +151,6 @@ namespace Sandchips.Formularios
             btnGuardar.Enabled = false;
             btnEliminar.Enabled = true;
         }
-
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            dgvusuarios.DataSource = DALUsuarios.mostrartabla();
-        }
-
         //GUARDAR USUARIO
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
@@ -236,8 +200,6 @@ namespace Sandchips.Formularios
             {
                 MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void btnModificar_Click_1(object sender, EventArgs e)
@@ -290,7 +252,10 @@ namespace Sandchips.Formularios
                 MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            dgvusuarios.DataSource = DALUsuarios.mostrartabla();
+        }
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             if (ModelPermiso.TipoUsuarioP != "Empleado")
@@ -309,22 +274,6 @@ namespace Sandchips.Formularios
                 MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void mtbcontrasena_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void mtbconfirmcontrasena_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsNumber(e.KeyChar))
@@ -340,83 +289,6 @@ namespace Sandchips.Formularios
                 e.Handled = true;
             }
         }
-
-        private void Correo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void txtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void txtusuario_TextChanged(object sender, EventArgs e)
-        {
-            txtusuario.Text.TrimStart();
-        }
-
-        private void cmbTipoDocumento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void cmbGenero_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void cmbTipoUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void mtbcontrasena_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             mtbcontrasena.Text.TrimStart();
@@ -499,12 +371,6 @@ namespace Sandchips.Formularios
             btnCancelar.BackColor = Color.FromArgb(190, 239, 158);
             btnCancelar.ForeColor = Color.Black;
         }
-
-        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnlimpiiar_Click(object sender, EventArgs e)
         {
             txtIdUsuario.Text = "";
