@@ -65,6 +65,7 @@
     <Compile Include="Botones redondos.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
+    <Compile Include="DAL\DALReservacionRestaurante.cs" />
     <Compile Include="DAL\DALRestaurante.cs" />
     <Compile Include="DAL\DALLocal.cs" />
     <Compile Include="DAL\DALTipoEmpresa.cs" />
@@ -74,11 +75,11 @@
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
-    <Compile Include="Formularios\RecuperarContra.cs">
+    <Compile Include="Formularios\RecuperarContra%28noseocupa%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\RecuperarContra.Designer.cs">
-      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    <Compile Include="Formularios\RecuperarContra%28noseocupa%29.Designer.cs">
+      <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Bienvenido.cs">
       <SubType>Form</SubType>
@@ -91,6 +92,18 @@
     </Compile>
     <Compile Include="Formularios\Reporte.Designer.cs">
       <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReservacionRestaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReservacionRestaurante.Designer.cs">
+      <DependentUpon>ReservacionRestaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReservaRestaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReservaRestaurante.Designer.cs">
+      <DependentUpon>ReservaRestaurante.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Restaurante.cs">
       <SubType>Form</SubType>
@@ -183,6 +196,7 @@
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelGenero.cs" />
+    <Compile Include="Models\ModelReservacionRestaurante.cs" />
     <Compile Include="Models\ModelRestaurante.cs" />
     <Compile Include="Models\ModelTipoDocumento.cs" />
     <Compile Include="Models\ModelTipoLocal.cs" />
@@ -212,14 +226,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularios\RecuperarContra.resx">
-      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\RecuperarContra%28noseocupa%29.resx">
+      <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Bienvenido.resx">
       <DependentUpon>Bienvenido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reporte.resx">
       <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReservacionRestaurante.resx">
+      <DependentUpon>ReservacionRestaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReservaRestaurante.resx">
+      <DependentUpon>ReservaRestaurante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Restaurante.resx">
       <DependentUpon>Restaurante.cs</DependentUpon>
@@ -371,6 +391,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\despues del login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recervaciones Restaurante.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recervaciones Restaurante1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
