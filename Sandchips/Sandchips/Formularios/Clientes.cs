@@ -419,6 +419,11 @@ namespace Sandchips.Formularios
             return values;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Clientes = new Grafico();
+            Clientes.Show();
+            this.Hide();
 
         public void reporte(Document document)
         {

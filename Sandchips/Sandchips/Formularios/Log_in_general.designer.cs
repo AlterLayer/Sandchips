@@ -32,7 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnacceder = new System.Windows.Forms.PictureBox();
             this.mtbcontraseña = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -153,6 +152,18 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Recuperar contraseña";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Bisque;
+            this.label2.Location = new System.Drawing.Point(641, 516);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 24);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Contraseña:";
+            // 
             // Log_in_general
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -191,11 +202,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnacceder;
         private System.Windows.Forms.MaskedTextBox mtbcontraseña;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }
