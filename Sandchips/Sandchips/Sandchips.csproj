@@ -65,6 +65,7 @@
     <Compile Include="Botones redondos.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
+    <Compile Include="DAL\DALReservacionHotel.cs" />
     <Compile Include="DAL\DALRestaurante.cs" />
     <Compile Include="DAL\DALLocal.cs" />
     <Compile Include="DAL\DALTipoEmpresa.cs" />
@@ -74,6 +75,12 @@
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
+    <Compile Include="Formularios\PruebadeSeguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PruebadeSeguridad.Designer.cs">
+      <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\RecuperarContra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +190,7 @@
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelGenero.cs" />
+    <Compile Include="Models\ModelReservacionHotel.cs" />
     <Compile Include="Models\ModelRestaurante.cs" />
     <Compile Include="Models\ModelTipoDocumento.cs" />
     <Compile Include="Models\ModelTipoLocal.cs" />
@@ -212,6 +220,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formularios\PruebadeSeguridad.resx">
+      <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RecuperarContra.resx">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
