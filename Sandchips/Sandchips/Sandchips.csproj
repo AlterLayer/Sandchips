@@ -53,14 +53,14 @@
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" /> 
+    <Reference Include="Microsoft.CSharp" />
     <Compile Include="Botones redondos.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
     <Compile Include="DAL\DALReservacionRestaurante.cs" />
     <Compile Include="DAL\DALReservacionHotel.cs" />
     <Compile Include="DAL\DALRestaurante.cs" />
-    <Compile Include="DAL\DALLocal.cs" /> 
+    <Compile Include="DAL\DALLocal.cs" />
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
@@ -75,8 +75,7 @@
     <Compile Include="Formularios\PruebadeSeguridad.Designer.cs">
       <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RecuperarContra.cs">     
-    </Compile>
+    <Compile Include="Formularios\RecuperarContra.cs">
     <Compile Include="Formularios\RecuperarContra%28noseocupa%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +85,7 @@
       <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Bienvenido.cs">
-      <SubType>Form</SubType> 
+      <SubType>Form</SubType>
     <Compile Include="Formularios\Reporte.Designer.cs">
       <DependentUpon>Reporte.cs</DependentUpon>
     </Compile>
@@ -104,7 +103,7 @@
     </Compile>
     <Compile Include="Formularios\Restaurante.cs">
       <SubType>Form</SubType>
-    </Compile> 
+    </Compile>
     <Compile Include="Formularios\Recuperar.designer.cs">
       <DependentUpon>Recuperar.cs</DependentUpon>
     </Compile>
@@ -116,7 +115,7 @@
     </Compile>
     <Compile Include="Formularios\Habitaciones.cs">
       <SubType>Form</SubType>
-    </Compile> 
+    </Compile>
     <Compile Include="Formularios\Tiempo de estadia.designer.cs">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
@@ -130,16 +129,15 @@
     <Compile Include="Models\ModelReservacionRestaurante.cs" />
     <Compile Include="Models\ModelReservacionHotel.cs" />
     <Compile Include="Models\ModelRestaurante.cs" />
-    <Compile Include="Models\ModelTipoDocumento.cs" /> 
+    <Compile Include="Models\ModelTipoDocumento.cs" />
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Formularios\RecuperarContra%28noseocupa%29.resx">
       <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
-    </EmbeddedResource> 
     <EmbeddedResource Include="Formularios\PruebadeSeguridad.resx">
       <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
-    </EmbeddedResource> 
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reporte.resx">
       <DependentUpon>Reporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +149,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Restaurante.resx">
       <DependentUpon>Restaurante.cs</DependentUpon>
-    </EmbeddedResource> 
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Recuperar.resx">
       <DependentUpon>Recuperar.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,7 +158,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
-    </EmbeddedResource> 
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tiempo de estadia.resx">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,10 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput> 
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>     
-    </EmbeddedResource>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReportCliente.rdlc" />
     <EmbeddedResource Include="ReportHabitaciones.rdlc" />
@@ -190,8 +187,7 @@
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>      
-    </None>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +225,7 @@
     </None>
     <None Include="Resources\personal-de-servicio-del-hotel-y-restaurante-hombre-personaje-dibujos-animados-110196299.jpg" />
   </ItemGroup>
+  <ItemGroup> 
   <ItemGroup>
     <None Include="Resources\despues del login.jpg" />
   </ItemGroup>
