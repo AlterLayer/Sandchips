@@ -169,7 +169,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput> 
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
+      <DesignTime>True</DesignTime>     
+    </EmbeddedResource>
     </Compile>
     <EmbeddedResource Include="ReportCliente.rdlc" />
     <EmbeddedResource Include="ReportHabitaciones.rdlc" />
