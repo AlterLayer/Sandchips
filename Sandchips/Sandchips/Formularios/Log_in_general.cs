@@ -12,6 +12,8 @@ using Sandchips.Formularios;
 using System.Security.Cryptography;
 using System.IO;
 using Sandchips.Models;
+using System.Net;
+using System.Net.Mail;
 
 
 namespace Sandchips.Formularios
@@ -21,13 +23,13 @@ namespace Sandchips.Formularios
         public new Point Location { get; set; }
         public Size tamano { get; set; }
         public Log_in_general()
-        {            
+        {
             InitializeComponent();
         }
 
         private void btnacceder_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -35,7 +37,7 @@ namespace Sandchips.Formularios
 
         }
 
-       
+
 
         private string HassPassword(string cadena)
         {
@@ -68,23 +70,23 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Enter(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void Login_Hotel_Enter(object sender, EventArgs e)
         {
-             
+
         }
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void mtbcontraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
@@ -138,7 +140,7 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click_1(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -204,7 +206,7 @@ namespace Sandchips.Formularios
                     {
                         MessageBox.Show("Bienvenid@ " + model.Usuario, "Operacón exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DALUsuarios.ObtenerPermiso(model.Usuario);
-                        inicio hab = new inicio();  
+                        inicio hab = new inicio();
                         hab.Show();
                         this.Hide();
                     }
@@ -232,7 +234,7 @@ namespace Sandchips.Formularios
 
         private void btnacceder_Click_2(object sender, EventArgs e)
         {
-            if (txtusuario.Text.Trim() != "" || mtbcontraseña.Text.Trim() != "")
+            if (txtusuario.Text.Trim() != "" && mtbcontraseña.Text.Trim() != "")
             {
 
                 try
@@ -266,9 +268,11 @@ namespace Sandchips.Formularios
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-
+            Recuperar hab = new Recuperar();
+            hab.Show();
+            this.Hide();
         }
     }
 }

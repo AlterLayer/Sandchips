@@ -38,14 +38,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
-      <HintPath>..\..\..\..\..\Desktop\iTextSharp\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\iTextSharp\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfo1.cs" />
     <Compile Include="Botones redondos.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="DAL\DALEmpresa.cs" />
@@ -70,11 +75,23 @@
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
-    <Compile Include="Formularios\Grafico.cs">
+    <Compile Include="Formularios\RecuperarContra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Grafico.Designer.cs">
-      <DependentUpon>Grafico.cs</DependentUpon>
+    <Compile Include="Formularios\RecuperarContra.Designer.cs">
+      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Bienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Bienvenido.Designer.cs">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Restaurante.cs">
       <SubType>Form</SubType>
@@ -105,6 +122,12 @@
     </Compile>
     <Compile Include="Formularios\Chequeo habitaciones.designer.cs">
       <DependentUpon>Chequeo habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Recuperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recuperar.designer.cs">
+      <DependentUpon>Recuperar.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuarios.cs">
       <SubType>Form</SubType>
@@ -175,8 +198,29 @@
     <Compile Include="Models\ModelTipoUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Grafico.resx">
-      <DependentUpon>Grafico.cs</DependentUpon>
+    <Compile Include="ReporteUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHabitaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formularios\RecuperarContra.resx">
+      <DependentUpon>RecuperarContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Bienvenido.resx">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Restaurante.resx">
       <DependentUpon>Restaurante.cs</DependentUpon>
@@ -192,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Chequeo habitaciones.resx">
       <DependentUpon>Chequeo habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Recuperar.resx">
+      <DependentUpon>Recuperar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -230,6 +277,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportCliente.rdlc" />
+    <EmbeddedResource Include="ReportHabitaciones.rdlc" />
+    <EmbeddedResource Include="ReportUsuarios.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -244,6 +294,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ReporteUsuario.xsc">
+      <DependentUpon>ReporteUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReporteUsuario.xss">
+      <DependentUpon>ReporteUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteClientes.xsc">
+      <DependentUpon>ReporteClientes.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReporteClientes.xss">
+      <DependentUpon>ReporteClientes.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteHabitaciones.xsc">
+      <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteHabitaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteHabitaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReporteHabitaciones.xss">
+      <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
+    </None>
     <None Include="Resources\personal-de-servicio-del-hotel-y-restaurante-hombre-personaje-dibujos-animados-110196299.jpg" />
   </ItemGroup>
   <ItemGroup>

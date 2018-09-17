@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using Sandchips.Models;
 using Sandchips.DAL;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace Sandchips.Formularios
 {
@@ -585,6 +587,56 @@ namespace Sandchips.Formularios
             btnAgregarT.Enabled = true;
             btnModificarT.Enabled = false;
             btnEliminarT.Enabled = false;
+        }
+
+        public float[] columasdatagrid(DataGridView dg)
+        {
+            //Declarando un objeto(vector) de tipo flotante que contara
+            //las columnas de un objeto DataGridView
+            float[] values = new float[dg.ColumnCount];
+            //Evaluar el numero de columnas
+            for (int i = 0; i < dg.ColumnCount; i++)
+            {
+                values[i] = (float)dg.Columns[i].Width;
+            }
+            //Retorno el numero de Columnas
+            return values;
+        }
+
+
+        public void reporte(Document document)
+        {
+            int i, j;
+            PdfPTable datos = new PdfPTable(dgvHabitaciones.ColumnCount);
+            datos.DefaultCell.Padding = 3;
+            float[] margenAncho = columasdatagrid(dgvHabitaciones);
+            datos.SetWidths(margenAncho);
+            datos.WidthPercentage = 100;
+            datos.DefaultCell.BorderWidth = 1;
+            datos.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            for (i = 0; i < dgvHabitaciones.ColumnCount; i++)
+            {
+                datos.AddCell(dgvHabitaciones.Columns[i].HeaderText);
+            }
+            datos.HeaderRows = 1;
+            datos.DefaultCell.BorderWidth = 1;
+            for (i = 0; i < dgvHabitaciones.Rows.Count; i++)
+            {
+                for (j = 0; j < dgvHabitaciones.Columns.Count; j++)
+                {
+                    if (dgvHabitaciones[j, i].Value != null)
+                    {
+                        datos.AddCell(new Phrase(dgvHabitaciones[j, i].Value.ToString()));
+                    }
+                }
+                datos.CompleteRow();
+            }
+            document.Add(datos);
+        }
+        private void btneporteH_Click(object sender, EventArgs e)
+        {
+            Reporte reporteH = new Reporte();
+            reporteH.Show();
         }
     }
 }

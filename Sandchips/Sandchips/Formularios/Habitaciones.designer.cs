@@ -78,6 +78,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btneporteH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -237,6 +238,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
+            this.tabPage1.Controls.Add(this.btneporteH);
             this.tabPage1.Controls.Add(this.btnLimpiar);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btnConsultar);
@@ -683,6 +685,20 @@
             this.pictureBox7.TabIndex = 47;
             this.pictureBox7.TabStop = false;
             // 
+            // btneporteH
+            // 
+            this.btneporteH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btneporteH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneporteH.ForeColor = System.Drawing.Color.Black;
+            this.btneporteH.Location = new System.Drawing.Point(492, 185);
+            this.btneporteH.Margin = new System.Windows.Forms.Padding(2);
+            this.btneporteH.Name = "btneporteH";
+            this.btneporteH.Size = new System.Drawing.Size(104, 30);
+            this.btneporteH.TabIndex = 32;
+            this.btneporteH.Text = "Reporte";
+            this.btneporteH.UseVisualStyleBackColor = false;
+            this.btneporteH.Click += new System.EventHandler(this.btneporteH_Click);
+            // 
             // Habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -766,5 +782,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btnlimpiarr;
+        private System.Windows.Forms.Button btneporteH;
     }
 }

@@ -36,7 +36,7 @@ namespace Sandchips.DAL
             DataTable Consulta = new DataTable();
             try
             {
-                instruccion = "SELECT* FROM  tbmaeusuarios  WHERE IdEstado = 1";
+                instruccion = "SELECT u.IdUsuario, u.Usuario, u.Clave AS Contraseña, u.Nombres AS Nombre, u.Apellidos, u.Correo, u.NumeroDocumento, u.Direccion, u.Telefono, u.Nacimiento, td.Documento, g.Genero, e.Estado, tu.TipoUsuario FROM tbmaeusuarios u, tbdettipodocumento td, tbdetgenero g, tbmaeestado e, tbdettipousuarios tu WHERE u.IdEstado = e.IdEstado AND u.IdTipoDocumento = td.IdTipoDocumento GROUP BY u.IdUsuario";
                 //Guardamos en una variable tipo string la consulta a realizar a la base 
                 //instruccion = "Select id_usuario as Numero, usuario as usuario, Password as Clave, id_estado"
                 MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
@@ -253,7 +253,57 @@ namespace Sandchips.DAL
             return listabuscar;
         }
 
+        public static ModelUsuario ObtenerCorreo(string user)
+        {
+            ModelUsuario listabuscar = new ModelUsuario();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM tbmaeusuarios WHERE IdEstado = 1 AND Usuario = '" + user + "'"), Conexion.obtenerconexion());
+                //* seleccione todo de la tabla..
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    listabuscar = new ModelUsuario()
+                    {
+                        IdUsuario = reader.GetInt32(0),
+                        Usuario = reader.GetString(1),
+                        Clave = reader.GetString(2),
+                        Nombre = reader.GetString(3),
+                        Apellidos = reader.GetString(4),
+                        Correo = reader.GetString(5),
+                        NumeroDocumento = reader.GetString(6),
+                        Direccion = reader.GetString(7),
+                        Telefono = reader.GetString(8),
+                        Nacimiento = reader.GetString(9),
+                        IdTipoDocumento = reader.GetInt32(10),
+                        IdGenero = reader.GetInt32(11),
+                        IdEstado = reader.GetInt32(12),
+                        IdTipoUsuarios = reader.GetInt32(13),
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listabuscar;
 
+        }
+
+        public static int ModificarContra(string clave, string usuario)
+        {
+            int retorno = 0;
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(string.Format("UPDATE tbmaeusuarios SET Clave='{0}' WHERE  Usuario='{1}'", clave, usuario), Conexion.obtenerconexion());
+                retorno = consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR al intentar insertar registros. " + ex);
+            }
+            return retorno;
+        }
         #endregion
     }
 }

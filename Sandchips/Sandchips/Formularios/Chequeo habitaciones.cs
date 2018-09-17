@@ -37,6 +37,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
+            
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)

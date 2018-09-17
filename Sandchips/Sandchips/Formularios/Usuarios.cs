@@ -10,6 +10,10 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+
+
 
 namespace Sandchips.Formularios
 {
@@ -162,17 +166,17 @@ namespace Sandchips.Formularios
             txtIdUsuario.Text = dgvusuarios[0, pocision].Value.ToString();
             txtusuario.Text = dgvusuarios[1, pocision].Value.ToString();
             mtbcontrasena.Text = dgvusuarios[2, pocision].Value.ToString();
-            mtbconfirmcontrasena.Text = dgvusuarios[2, pocision].Value.ToString();
-            txtNombre.Text = dgvusuarios[3, pocision].Value.ToString();
-            txtApellidos.Text = dgvusuarios[4, pocision].Value.ToString();
-            txtCorreo.Text = dgvusuarios[5, pocision].Value.ToString();
-            txtNumeroDocumento.Text = dgvusuarios[6, pocision].Value.ToString();
-            txtDireccion.Text = dgvusuarios[7, pocision].Value.ToString();
-            mtbTelefono.Text = dgvusuarios[8, pocision].Value.ToString();
-            dtpNacimiento.Value = Convert.ToDateTime(dgvusuarios[9, pocision].Value);
-            cmbTipoDocumento.SelectedValue = Convert.ToInt32(dgvusuarios[10, pocision].Value.ToString());
-            cmbGenero.SelectedValue = Convert.ToInt32(dgvusuarios[11, pocision].Value.ToString());
-            cmbTipoUsuario.SelectedValue = Convert.ToInt32(dgvusuarios[13, pocision].Value.ToString());
+            mtbconfirmcontrasena.Text = dgvusuarios[3, pocision].Value.ToString();
+            txtNombre.Text = dgvusuarios[4, pocision].Value.ToString();
+            txtApellidos.Text = dgvusuarios[5, pocision].Value.ToString();
+            txtCorreo.Text = dgvusuarios[6, pocision].Value.ToString();
+            cmbTipoDocumento.Text = dgvusuarios[7, pocision].Value.ToString();
+            txtNumeroDocumento.Text = dgvusuarios[8, pocision].Value.ToString();
+            txtDireccion.Text = dgvusuarios[9, pocision].Value.ToString();
+            mtbTelefono.Text = dgvusuarios[10, pocision].Value.ToString();
+            dtpNacimiento.Value = Convert.ToDateTime(dgvusuarios[11, pocision].Value);
+            cmbGenero.Text = dgvusuarios[12, pocision].Value.ToString();
+            cmbTipoUsuario.Text = dgvusuarios[13, pocision].Value.ToString();
             btnModificar.Enabled = true;
             btnGuardar.Enabled = false;
             btnEliminar.Enabled = true;
@@ -522,6 +526,55 @@ namespace Sandchips.Formularios
             btnModificar.Enabled = false;
             btnGuardar.Enabled = true;
 
+        }
+
+        public void reporte(Document document)
+        {
+            int i, j;
+            PdfPTable datos = new PdfPTable(dgvusuarios.ColumnCount);
+            datos.DefaultCell.Padding = 3;
+            float[] margenAncho = columasdatagrid(dgvusuarios);
+            datos.SetWidths(margenAncho);
+            datos.WidthPercentage = 100;
+            datos.DefaultCell.BorderWidth = 1;
+            datos.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            for (i = 0; i < dgvusuarios.ColumnCount; i++)
+            {
+                datos.AddCell(dgvusuarios.Columns[i].HeaderText);
+            }
+            datos.HeaderRows = 1;
+            datos.DefaultCell.BorderWidth = 1;
+            for (i = 0; i < dgvusuarios.Rows.Count; i++)
+            {
+                for (j = 0; j < dgvusuarios.Columns.Count; j++)
+                {
+                    if (dgvusuarios[j, i].Value != null)
+                    {
+                        datos.AddCell(new Phrase(dgvusuarios[j, i].Value.ToString()));
+                    }
+                }
+                datos.CompleteRow();
+            }
+            document.Add(datos);
+        }
+
+        public float[] columasdatagrid(DataGridView dg)
+        {
+            //Declarando un objeto(vector) de tipo flotante que contara
+            //las columnas de un objeto DataGridView
+            float[] values = new float[dg.ColumnCount];
+            //Evaluar el numero de columnas
+            for (int i = 0; i < dg.ColumnCount; i++)
+            {
+                values[i] = (float)dg.Columns[i].Width;
+            }
+            //Retorno el numero de Columnas
+            return values;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reporte reporteU = new Reporte();
+            reporteU.Show();
         }
     }
 }

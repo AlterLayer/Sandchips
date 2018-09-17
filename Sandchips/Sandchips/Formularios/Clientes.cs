@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using Sandchips.Models;
 using Sandchips.DAL;
 using Sandchips;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+
 namespace Sandchips.Formularios
 {
     public partial class Clientes : Form
@@ -42,7 +45,7 @@ namespace Sandchips.Formularios
             cmbUsuario.SelectedIndex = 0;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
-
+            
         }
 
 
@@ -70,7 +73,7 @@ namespace Sandchips.Formularios
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
-            Form Menu_H = new Menu_Hotel();
+            Menu_Restaurante Menu_H = new Menu_Restaurante();
             Menu_H.Show();
             this.Hide();
         }
@@ -159,24 +162,16 @@ namespace Sandchips.Formularios
         //ELIMINAR CLIENTE
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            if (ModelPermiso.TipoUsuarioP != "Empleado")
-            {
-                if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
-                {
-                    return;
-                }
+            if (MessageBox.Show("¿Estas seguro de eliminar este cliente?", "Precaución!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)  {
+                return;
+            }
 
-                ModelClientes eliminar = new ModelClientes();
-                eliminar.IdClientes = Convert.ToInt32(txtIdClientes.Text);
-                eliminar.IdEstado = Convert.ToInt32(cmbTipoDoc.SelectedIndex.ToString());
-                DALClientes.eliminar(eliminar);
-                MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dgvClientes.DataSource = DALClientes.mostrartabla();
-            }
-            else
-            {
-                MessageBox.Show("No posee los permisos para completar la acción", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            ModelClientes eliminar = new ModelClientes();
+            eliminar.IdClientes = Convert.ToInt32(txtIdClientes.Text);
+            eliminar.IdEstado = Convert.ToInt32(cmbTipoDoc.SelectedIndex.ToString());
+            DALClientes.eliminar(eliminar);
+            MessageBox.Show("Registro eliminado exitosamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            dgvClientes.DataSource = DALClientes.mostrartabla();
 
         }
 
@@ -188,11 +183,11 @@ namespace Sandchips.Formularios
             txtIdClientes.Text = dgvClientes[0, pocision].Value.ToString();
             txtNombre.Text = dgvClientes[1, pocision].Value.ToString();
             txtApellido.Text = dgvClientes[2, pocision].Value.ToString();
-            txtDocumento.Text = dgvClientes[3, pocision].Value.ToString();
-            mtbTelefono.Text = dgvClientes[4, pocision].Value.ToString();
-            cmbGenero.SelectedValue = Convert.ToInt32(dgvClientes[5, pocision].Value.ToString());
-            cmbUsuario.SelectedValue = Convert.ToInt32(dgvClientes[7, pocision].Value.ToString());
-            cmbTipoDoc.SelectedValue = Convert.ToInt32(dgvClientes[8, pocision].Value.ToString());
+            cmbTipoDoc.Text = dgvClientes[3, pocision].Value.ToString();
+            txtDocumento.Text = dgvClientes[4, pocision].Value.ToString();
+            mtbTelefono.Text = dgvClientes[5, pocision].Value.ToString();
+            cmbGenero.Text = dgvClientes[6, pocision].Value.ToString();
+            cmbUsuario.Text = dgvClientes[7, pocision].Value.ToString();
             btnEliminar.Enabled = true;
             btnActualizar.Enabled = true;
             btnGuardar.Enabled = false;
@@ -217,7 +212,7 @@ namespace Sandchips.Formularios
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+           if (Char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -233,7 +228,7 @@ namespace Sandchips.Formularios
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            
         }
 
         private void mtbTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -387,7 +382,7 @@ namespace Sandchips.Formularios
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void btnlimpiar_Click(object sender, EventArgs e)
@@ -405,12 +400,65 @@ namespace Sandchips.Formularios
             btnGuardar.Enabled = true;
         }
 
+        private void dgvClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public float[] columasdatagrid(DataGridView dg)
+        {
+            //Declarando un objeto(vector) de tipo flotante que contara
+            //las columnas de un objeto DataGridView
+            float[] values = new float[dg.ColumnCount];
+            //Evaluar el numero de columnas
+            for (int i = 0; i < dg.ColumnCount; i++)
+            {
+                values[i] = (float)dg.Columns[i].Width;
+            }
+            //Retorno el numero de Columnas
+            return values;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form Clientes = new Grafico();
             Clientes.Show();
             this.Hide();
 
+        public void reporte(Document document)
+        {
+            int i, j;
+            PdfPTable datos = new PdfPTable(dgvClientes.ColumnCount);
+            datos.DefaultCell.Padding = 3;
+            float[] margenAncho = columasdatagrid(dgvClientes);
+            datos.SetWidths(margenAncho);
+            datos.WidthPercentage = 100;
+            datos.DefaultCell.BorderWidth = 1;
+            datos.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            for (i = 0; i < dgvClientes.ColumnCount; i++)
+            {
+                datos.AddCell(dgvClientes.Columns[i].HeaderText);
+            }
+            datos.HeaderRows = 1;
+            datos.DefaultCell.BorderWidth = 1;
+            for (i = 0; i < dgvClientes.Rows.Count; i++)
+            {
+                for (j = 0; j < dgvClientes.Columns.Count; j++)
+                {
+                    if (dgvClientes[j, i].Value != null)
+                    {
+                        datos.AddCell(new Phrase(dgvClientes[j, i].Value.ToString()));
+                    }
+                }
+                datos.CompleteRow();
+            }
+            document.Add(datos);
+        }
+
+        private void btnreporteC_Click(object sender, EventArgs e)
+        {
+            Reporte reporteC = new Reporte();
+            reporteC.Show();
         }
     }
 }

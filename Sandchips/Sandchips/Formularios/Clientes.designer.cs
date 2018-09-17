@@ -64,7 +64,7 @@ namespace Sandchips.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnreporteC = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,7 +76,7 @@ namespace Sandchips.Formularios
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(110)))), ((int)(((byte)(93)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnreporteC);
             this.panel1.Controls.Add(this.btnlimpiar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.mtbTelefono);
@@ -120,7 +120,7 @@ namespace Sandchips.Formularios
             this.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlimpiar.ForeColor = System.Drawing.Color.Black;
-            this.btnlimpiar.Location = new System.Drawing.Point(668, 51);
+            this.btnlimpiar.Location = new System.Drawing.Point(521, 51);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(90, 26);
             this.btnlimpiar.TabIndex = 112;
@@ -355,7 +355,7 @@ namespace Sandchips.Formularios
             this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(215, 279);
+            this.dgvClientes.Location = new System.Drawing.Point(35, 279);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -365,9 +365,10 @@ namespace Sandchips.Formularios
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.ShowCellErrors = false;
             this.dgvClientes.ShowRowErrors = false;
-            this.dgvClientes.Size = new System.Drawing.Size(613, 228);
+            this.dgvClientes.Size = new System.Drawing.Size(793, 228);
             this.dgvClientes.TabIndex = 78;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick_1);
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick_1);
             // 
             // txtDocumento
             // 
@@ -484,15 +485,18 @@ namespace Sandchips.Formularios
             this.panel2.Size = new System.Drawing.Size(859, 76);
             this.panel2.TabIndex = 110;
             // 
-            // button1
+            // btnreporteC
             // 
-            this.button1.Location = new System.Drawing.Point(753, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 113;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnreporteC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(239)))), ((int)(((byte)(158)))));
+            this.btnreporteC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnreporteC.ForeColor = System.Drawing.Color.Black;
+            this.btnreporteC.Location = new System.Drawing.Point(635, 51);
+            this.btnreporteC.Name = "btnreporteC";
+            this.btnreporteC.Size = new System.Drawing.Size(90, 26);
+            this.btnreporteC.TabIndex = 113;
+            this.btnreporteC.Text = "Reporte";
+            this.btnreporteC.UseVisualStyleBackColor = false;
+            this.btnreporteC.Click += new System.EventHandler(this.btnreporteC_Click);
             // 
             // Clientes
             // 
@@ -551,7 +555,7 @@ namespace Sandchips.Formularios
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnlimpiar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnreporteC;
     }
 }
 

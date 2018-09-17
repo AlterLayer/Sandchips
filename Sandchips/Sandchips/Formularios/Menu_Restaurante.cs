@@ -36,6 +36,7 @@ namespace Sandchips.Formularios
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
+            
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
@@ -113,9 +114,10 @@ namespace Sandchips.Formularios
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            inicio principal = new inicio();
+            inicio paginaprincipal = new inicio();
             this.Hide();
-            principal.Show();
+            paginaprincipal.Show();
+
         }
     }
 }

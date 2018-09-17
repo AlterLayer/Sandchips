@@ -8,6 +8,7 @@ using System.Data;
 using Sandchips.Models;
 using Sandchips;
 using System.Windows.Forms;
+using Sandchips.DAL;
 
 namespace Sandchips.DAL
 {
@@ -54,10 +55,10 @@ namespace Sandchips.DAL
             try
             {
 
-                instruccion = "SELECT*FROM  tbmaeclientes WHERE IdEstado = 1";
+                instruccion = "SELECT C.IdClientes As Cliente, C.Nombre As Nombre_Cliente, C.Apellidos, T.Documento, C.Documento As Numero_Documento, C.Telefono, G.Genero, U.TipoUsuario FROM tbmaeclientes C, tbdettipodocumento T, tbdetgenero G, tbdettipousuarios U WHERE C.IdTipoDocumento = T.IdTipoDocumento AND C.IdGenero = G.IdGenero GROUP BY C.IdClientes";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(instruccion, Conexion.obtenerconexion());
                 adapter.Fill(Consulta);
-
+                
             }
             catch (Exception ex)
             {
