@@ -74,6 +74,11 @@
     <Compile Include="DAL\DALClientes.cs" />
     <Compile Include="DAL\DALUsuarios.cs" />
     <Compile Include="DAL\NoEspacios.cs" />
+    <Compile Include="DataSetUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\RecuperarContra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,12 +133,6 @@
     <Compile Include="Formularios\Recuperar.designer.cs">
       <DependentUpon>Recuperar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Usuarios.designer.cs">
-      <DependentUpon>Usuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Habitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +181,12 @@
     <Compile Include="Formularios\Tiempo de estadia.designer.cs">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ModelGenero.cs" />
     <Compile Include="Models\ModelRestaurante.cs" />
     <Compile Include="Models\ModelTipoDocumento.cs" />
@@ -197,21 +202,6 @@
     <Compile Include="Models\ModelTipoUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporteUsuario.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteUsuario.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteClientes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteClientes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteHabitaciones.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Formularios\RecuperarContra.resx">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,9 +229,6 @@
     <EmbeddedResource Include="Formularios\Recuperar.resx">
       <DependentUpon>Recuperar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Usuarios.resx">
-      <DependentUpon>Usuarios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +253,9 @@
     <EmbeddedResource Include="Formularios\Tiempo de estadia.resx">
       <DependentUpon>Tiempo de estadia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -276,9 +266,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReportCliente.rdlc" />
-    <EmbeddedResource Include="ReportHabitaciones.rdlc" />
     <EmbeddedResource Include="ReportUsuarios.rdlc" />
+    <None Include="DataSetUsuarios.xsc">
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUsuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetUsuarios.xss">
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -293,38 +292,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReporteUsuario.xsc">
-      <DependentUpon>ReporteUsuario.xsd</DependentUpon>
-    </None>
-    <None Include="ReporteUsuario.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReporteUsuario.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="ReporteUsuario.xss">
-      <DependentUpon>ReporteUsuario.xsd</DependentUpon>
-    </None>
-    <None Include="ReporteClientes.xsc">
-      <DependentUpon>ReporteClientes.xsd</DependentUpon>
-    </None>
-    <None Include="ReporteClientes.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReporteClientes.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="ReporteClientes.xss">
-      <DependentUpon>ReporteClientes.xsd</DependentUpon>
-    </None>
-    <None Include="ReporteHabitaciones.xsc">
-      <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
-    </None>
-    <None Include="ReporteHabitaciones.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReporteHabitaciones.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="ReporteHabitaciones.xss">
-      <DependentUpon>ReporteHabitaciones.xsd</DependentUpon>
-    </None>
     <None Include="Resources\personal-de-servicio-del-hotel-y-restaurante-hombre-personaje-dibujos-animados-110196299.jpg" />
   </ItemGroup>
   <ItemGroup>
