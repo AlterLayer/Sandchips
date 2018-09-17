@@ -189,7 +189,8 @@
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput> 
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>      
+    </None>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
