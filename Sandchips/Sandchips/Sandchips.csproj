@@ -88,13 +88,6 @@
     <Compile Include="Formularios\PruebadeSeguridad.Designer.cs">
       <DependentUpon>PruebadeSeguridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RecuperarContra.cs">
-    <Compile Include="Formularios\RecuperarContra%28noseocupa%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\RecuperarContra%28noseocupa%29.Designer.cs">
-      <DependentUpon>RecuperarContra%28noseocupa%29.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Bienvenido.cs">
       <SubType>Form</SubType>
     </Compile>
